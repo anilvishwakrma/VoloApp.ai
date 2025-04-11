@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- ===== Font Awesome CDN ===== -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- ============ owl slider ========== -->
+    <link rel="stylesheet" href="./assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="./assets/css/owl.theme.default.min.css">
+
+    <!-- ===== Custom CSS ===== -->
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/header.css">
+
+    <title>Event Booking - VoloApp</title>
+</head>
+
+<body>
+    <div class="volo_app_flex">
+        <div class="volo_app_site_bar">
+            <div class="sidebar">
+                <div class="side_barofile">
+                    <a class="side_mainLogo_class" href="#"><img src="./assets/images/logo/logo_crop.png" alt=""></a>
+                    <div class="user_profile_site_bar">
+                        <img src="https://cdn-icons-png.flaticon.com/512/21/21104.png" alt="">
+                        <h4>User name</h4>
+                    </div>
+                </div>
+                <div class="nav-item active"><a href="home-dashboard.html"><i class="fas fa-home"></i> Home</a></div>
+                <div class="nav-item"> <a href="flight-booking.html"><i class="fas fa-plane"></i> Bookings </a></div>
+                <div class="nav-item"> <a href="business-dashboard.html"><i class="fas fa-tachometer-alt"></i>
+                        Business Dashboard
+                    </a></div>
+                <div class="nav-item"> <a href="train-search.html"><i class="fas fa-train"></i> Book a Train </a>
+                </div>
+                <div class="nav-item"> <a href="car-rental.html"><i class="fas fa-car"></i> Car Rental </a>
+                </div>
+                <div class="nav-item"> <a href="task-listing.html"><i class="fas fa-tasks"></i> Tasks </a></div>
+                <div class="nav-item"> <a href="marketplace.html"><i class="fas fa-shopping-bag"></i> Marketplace </a>
+                </div>
+                <div class="nav-item"> <a href=""><i class="fas fa-comments"></i> Social </a></div>
+                <div class="nav-item"> <a href="list-service.html"><i class="fa fa-server"></i> List Services </a></div>
+                <div class="nav-item"> <a href=""><i class="fas fa-bell"></i> Notifications </a></div>
+                <div class="nav-item"> <a href="map-view.html"> <i class="fas fa-location-dot"></i> Map</a></div>
+                <div class="nav-item"> <a href=""><i class="fas fa-user"></i> Profile </a></div>
+                <hr>
+                <div class="nav-item"><a href="#"><i class="fas fa-question-circle"></i> Help & Support</a></div>
+                <div class="nav-item"><a href="#"><i class="fas fa-cog"></i> Settings</a></div>
+            </div>
+            <div class="nav-item"><a href="#"><i class="fas fa-cog"></i> Settings</a></div>
+        </div>
+        <div class="main_container">
+            <div class="container">
+                <div class="business-details">
+                    <div class="business_details_first_col">
+                        <!-- Header -->
+                        <div class="business_details_header">
+                            <div class="business_details_header_name_details">
+                                <button title="back" class="back_button" onclick="history.back()"><i
+                                        class="fa-solid fa-arrow-left-long"></i></button>
+                                <img src="https://images.pexels.com/photos/167636/pexels-photo-167636.jpeg"
+                                    alt="Business Logo">
+                                <h1>Live Music Concert</h1>
+                            </div>
+                        </div>
+
+                        <div class="business_details_section business-overview">
+                            <h3>Live Music Concert</h3>
+                            <p><strong>Description:</strong> Experience the Best Performances!</p>
+                            <p><i class="fa fa-calendar"></i> June 25, 2025 – 7:00 PM</p>
+                            <p><i class="fa fa-map-marker-alt"></i> Madison Square Garden, NY</p>
+                            <p><i class="fa fa-star"></i> 4.5/5 from 300 attendees</p>
+                        </div>
+
+                        <div class="event_seat_map_code">
+                            <h3>Seating Map</h3>
+                            <div class="event_seat_map_code_flex">
+                                <div class="available">A1</div>
+                                <div class="reserved">A2</div>
+                                <div class="available">A3</div>
+                                <div class="available">A4</div>
+                            </div>
+                        </div>
+
+
+                        <!-- business-details_Gallery -->
+                        <div class="business_details_section">
+                            <h3>Image</h3>
+                            <div class="owl-carousel owl-theme Gallery_slider">
+                                <div class="item">
+                                    <div class="business-details_gallery_img">
+                                        <img src="https://images.pexels.com/photos/167636/pexels-photo-167636.jpeg  "
+                                            alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="business_details_second_col">
+                        <div class="event_booking_call">
+                            <div class="event_booking_call_cont">
+                                <label> Ticket Type</label>
+                                <select>
+                                    <option value="general" data-price="50">General - $50</option>
+                                    <option value="vip" data-price="100">VIP - $100</option>
+                                    <option value="earlyBird" data-price="40">Early Bird - $40</option>
+                                </select>
+                            </div>
+
+                            <div class="event_booking_call_cont">
+                                <label>Quantity</label>
+                                <select>
+                                    <option value="1">1 Ticket</option>
+                                    <option value="2">2 Tickets</option>
+                                    <option value="3">3 Tickets</option>
+                                    <option value="4">4 Tickets</option>
+                                </select>
+                            </div>
+
+                            <div class="event_booking_call_cont">
+                                <label> Payment Method</label>
+                                <select>
+                                    <option>Credit Card</option>
+                                    <option>PayPal</option>
+                                    <option>Wallet</option>
+                                </select>
+                            </div>
+
+                            <div class="event_booking_call_cont">
+                                <label> Promo Code</label>
+                                <div class="promo_code_payment_option">
+                                    <input type="text" placeholder="Apply Promo Code">
+                                    <button class="apply_promo_succes">Apply</button>
+                                </div>
+                            </div>
+
+                            <div class=" price-breakdown">
+                                <h4>Pricing Breakdown</h4>
+                                <p>Ticket Price: <span>$50</span></p>
+                                <p>Service Fees: <span>$5</span></p>
+                                <p>Promo Discount: <span>$0</span></p>
+                                <p class="total-cost">Total: <span>$55</span></p>
+                            </div>
+
+                            <div class="event_booking_call_cont">
+                                <p><strong>Cancellation Policy:</strong> Non-refundable.</p>
+                            </div>
+                            <div class="business-details_footer">
+                                <button class="button_none_radi"><a href="booking-confirmation.html">Confirm
+                                        Booking</a></button>
+                                <button class="button_none_radi"><a href="">Contact Event Organizer</a></button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== jq ===== -->
+    <script src="./assets/js/jquery.min.js"></script>
+    <!-- ===== owl slider js ===== -->
+    <script src="./assets/js/owl.carousel.min.js"></script>
+    <!-- ===== Bootstrap JS ===== -->
+    <script src="./assets/js/bootstrap.bundle.min.js"></script>
+    <script>
+        $('.Gallery_slider').owlCarousel({
+            loop: true,
+            margin: 10,
+            nav: true,
+            responsive: {
+                0: {
+                    items: 1
+                },
+                600: {
+                    items: 3
+                },
+                1000: {
+                    items: 3
+                }
+            }
+        })
+    </script>
+
+</body>
+
+</html>

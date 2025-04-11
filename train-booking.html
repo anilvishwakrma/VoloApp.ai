@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        crossorigin="anonymous">
+
+    <!-- Owl Carousel -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+        crossorigin="anonymous">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+        crossorigin="anonymous">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/header.css">
+    <title>Train Booking - Voloapp</title>
+</head>
+
+<body>
+    <div class="volo_app_flex">
+        <div class="volo_app_site_bar">
+            <div class="sidebar">
+                <div class="side_barofile">
+                    <a class="side_mainLogo_class" href="#"><img src="./assets/images/logo/logo_crop.png" alt=""></a>
+                    <div class="user_profile_site_bar">
+                        <img src="https://cdn-icons-png.flaticon.com/512/21/21104.png" alt="">
+                        <h4>User name</h4>
+                    </div>
+                </div>
+                <div class="nav-item active"><a href="home-dashboard.html"><i class="fas fa-home"></i> Home</a></div>
+                <div class="nav-item"> <a href="flight-booking.html"><i class="fas fa-plane"></i> Bookings </a></div>
+                <div class="nav-item"> <a href="business-dashboard.html"><i class="fas fa-tachometer-alt"></i>
+                        Business Dashboard
+                    </a></div>
+                <div class="nav-item"> <a href="train-search.html"><i class="fas fa-train"></i> Book a Train </a>
+                </div>
+                <div class="nav-item"> <a href="car-rental.html"><i class="fas fa-car"></i> Car Rental </a>
+                </div>
+                <div class="nav-item"> <a href="task-listing.html"><i class="fas fa-tasks"></i> Tasks </a></div>
+                <div class="nav-item"> <a href="marketplace.html"><i class="fas fa-shopping-bag"></i> Marketplace </a>
+                </div>
+                <div class="nav-item"> <a href=""><i class="fas fa-comments"></i> Social </a></div>
+                <div class="nav-item"> <a href="list-service.html"><i class="fa fa-server"></i> List Services </a></div>
+                <div class="nav-item"> <a href=""><i class="fas fa-bell"></i> Notifications </a></div>
+                <div class="nav-item"> <a href="map-view.html"> <i class="fas fa-location-dot"></i> Map</a></div>
+                <div class="nav-item"> <a href=""><i class="fas fa-user"></i> Profile </a></div>
+                <hr>
+                <div class="nav-item"><a href="#"><i class="fas fa-question-circle"></i> Help & Support</a></div>
+                <div class="nav-item"><a href="#"><i class="fas fa-cog"></i> Settings</a></div>
+            </div>
+            <div class="nav-item"><a href="#"><i class="fas fa-cog"></i> Settings</a></div>
+        </div>
+
+        <div class="main_container">
+            <div class="container">
+                <div class="business_details_header">
+                    <div class="business_details_header_name_details">
+                        <button title="back" class="back_button" onclick="history.back()"><i
+                                class="fa-solid fa-arrow-left-long"></i></button>
+                        <h1>Review and Book Your Train Ticket</h1>
+                    </div>
+                </div>
+                <div class="business-details">
+                    <div class="business_details_first_col">
+                        <div class="business_details_section business-overview" style="padding: 0;">
+                            <h3 class="icon-label">Train Details</h3>
+                            <p><strong>Train Name & Number:</strong> Express 123</p>
+                            <p><strong>Departure & Arrival Stations:</strong> Station A → Station B</p>
+                            <p><strong>Departure & Arrival Times:</strong> 10:00 AM → 3:00 PM</p>
+                            <p><strong>Total Duration:</strong> 5h</p>
+                            <p><strong>Seat Class:</strong> Economy | Business | First Class</p>
+                        </div>
+                        <div class="tarin_seat_book_Show">
+                            <h4>Seat Selection</h4>
+                            <div class="seat-tabs">
+                                <button class="active" onclick="showSeats('1A')">1A</button>
+                                <button onclick="showSeats('2A')">2A</button>
+                                <button onclick="showSeats('3A')">3A</button>
+                                <button onclick="showSeats('3E')">3E</button>
+                                <button onclick="showSeats('SL')">SL</button>
+                            </div>
+                            <div id="1A" class="seat-grid active">
+                                <h5>1A</h5>
+                                <div class="train-seats">
+                                    <ul>
+                                        <li><a href="#">1</a></li>
+                                        <li><a href="#">2</a></li>
+                                        <li><a href="#">3</a></li>
+                                        <li><a href="#">4</a></li>
+                                        <li><a href="#">5</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div id="2A" class="seat-grid">Seat selection for 2A</div>
+                            <div id="3A" class="seat-grid">Seat selection for 3A</div>
+                            <div id="3E" class="seat-grid">Seat selection for 3E</div>
+                            <div id="SL" class="seat-grid">Seat selection for SL</div>
+                        </div>
+                        <form class="booking_form">
+                            <h4>Passenger Details</h4>
+                            <div class="bookin_input_box">
+                                <label>Full Name</label>
+                                <input type="text" placeholder="Enter your name as per passport">
+                            </div>
+                            <div class="bookin_input_box">
+                                <label>Date of Birth</label>
+                                <input type="date">
+                            </div>
+                            <div class="bookin_input_box">
+                                <label>Gender</label>
+                                <select>
+                                    <option>Male</option>
+                                    <option>Female</option>
+                                    <option>Other</option>
+                                </select>
+                            </div>
+                            <div class="bookin_input_box">
+                                <label>National ID/Passport</label>
+                                <input type="text" placeholder="Enter ID/passport number">
+                            </div>
+                            <div class="bookin_input_box">
+                                <label>Contact Email</label>
+                                <input type="email" placeholder="Enter your email">
+                            </div>
+                            <div class="bookin_input_box">
+                                <label>Phone Number</label>
+                                <input type="tel" placeholder="Enter phone number">
+                            </div>
+                        </form>
+                    </div>
+
+                    <div class="business_details_second_col">
+                        <div class="service_booking_sonce">
+                            <div class="Add_Ons_main">
+                                <h4>Add Ons</h4>
+                                <div class="service-option">
+                                    <input type="checkbox" id="extra-baggage">
+                                    <label for="extra-baggage">Extra Baggage</label>
+                                </div>
+                                <div class="service-option">
+                                    <input type="checkbox" id="travel-insurance">
+                                    <label for="travel-insurance">Travel Insurance</label>
+                                </div>
+                                <div class="service-option">
+                                    <input type="checkbox" id="meal-preference">
+                                    <label for="meal-preference">Meal Preference</label>
+                                </div>
+                            </div>
+
+                            <div class="price-breakdown">
+                                <h4>Pricing Breakdown</h4>
+                                <p>Ticket price per passenger: <span>$50</span></p>
+                                <p>Taxes & service fees: <span>$5</span></p>
+                                <p class="total-cost">Total cost: <span>$55</span></p>
+                            </div>
+
+                            <div class="Payment_main_box">
+                                <div class="event_booking_call_cont">
+                                    <label> Payment Method</label>
+                                    <select>
+                                        <option>Credit Card</option>
+                                        <option>PayPal</option>
+                                        <option>Wallet</option>
+                                    </select>
+                                </div>
+                                <div class="event_booking_call_cont">
+                                    <label> Promo Code</label>
+                                    <div class="promo_code_payment_option">
+                                        <input type="text" placeholder="Apply Promo Code">
+                                        <button class="apply_promo_succes">Apply</button>
+                                    </div>
+                                </div>
+                                <div class="check_box_from_vaild">
+                                    <div class="checkbox-group">
+                                        <input type="checkbox" id="flexible-dates">
+                                        <label for="flexible-dates">Flexible Dates?</label>
+                                    </div>
+                                    <div class="checkbox-group">
+                                        <input type="checkbox" id="available-seats">
+                                        <label for="available-seats">Refundable or non-refundable status</label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="business-details_footer">
+                                <button class="button_none_radi"><a href="booking-confirmation.html">Confirm
+                                        Booking</a></button>
+                                <button class="button_none_radi"><a href="#">Contact Train Operator</a></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== jq ===== -->
+    <script src="./assets/js/jquery.min.js"></script>
+    <!-- ===== owl slider js ===== -->
+    <script src="./assets/js/owl.carousel.min.js"></script>
+    <!-- ===== Bootstrap JS ===== -->
+    <script src="./assets/js/bootstrap.bundle.min.js"></script>
+
+
+    <script>
+        function showSeats(classType) {
+            document.querySelectorAll('.seat-grid').forEach(div => div.classList.remove('active'));
+            document.getElementById(classType).classList.add('active');
+            document.querySelectorAll('.seat-tabs button').forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+        }
+    </script>
+</body>
+
+</html>

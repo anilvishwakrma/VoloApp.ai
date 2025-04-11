@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- ===== Font Awesome CDN ===== -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- ============ owl slider ========== -->
+    <link rel="stylesheet" href="./assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="./assets/css/owl.theme.default.min.css">
+
+    <!-- ===== Custom CSS ===== -->
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/header.css">
+    <link rel="stylesheet" href="./assets/css/style_pm.css">
+    <title>User Reports & Complaints - Voloapp</title>
+</head>
+
+
+
+<body>
+
+    <div class="ALl_Inner_page">
+        <div class="Inner_flex_site_component Inner_width_Product">
+            <div class="Ineer_pages_second_box ">
+                <!-- ======== Header ======== -->
+                <div class="business_details_header header_other_option_add">
+                    <div class="business_details_header_name_details">
+                        <button title="back" class="back_button" onclick="history.back()"><i
+                                class="fa-solid fa-arrow-left-long"></i></button>
+                        <h1>User Reports & Complaints</h1>
+                    </div>
+                    <!-- <button class="header_button_items">
+                        <a href=""><i class="fa-solid fa-plus me-2"></i> Add New Partner</a>
+                    </button> -->
+                </div>
+                <div class="section_content_ineer">
+                    <div class="">
+                        <div class="reports-overview">
+                            <h5 class="heading_h5">Reports Overview & Statistics</h5>
+                            <div class="business_details_section business-overview">
+                                <p><strong>Total Open Reports:</strong> 50</p>
+                                <p><strong>Resolved vs. Unresolved:</strong> 30 Resolved / 20 Unresolved</p>
+                                <p><strong>Most Reported:</strong> User XYZ</p>
+                            </div>
+                        </div>
+
+                        <div class="user_repsot_Comreports_list">
+                            <div class="user_repost_fillter_flex d-flex justify-content-between align-items-center">
+                                <h5 class="heading_h5">List of User Reports</h5>
+                                <div class="user_repost_filters d-flex ">
+                                    <div class="bookin_input_box">
+                                        <select>
+                                            <option value="">Filter by Type</option>
+                                            <option value="scam">Scams</option>
+                                            <option value="inappropriate">Inappropriate Content</option>
+                                            <option value="dispute">Payment Disputes</option>
+                                            <option value="harassment">Harassment</option>
+                                        </select>
+                                    </div>
+                                    <div class="bookin_input_box">
+                                        <select>
+                                            <option value="">Filter by Status</option>
+                                            <option value="pending">Pending</option>
+                                            <option value="investigated">Investigated</option>
+                                            <option value="resolved">Resolved</option>
+                                        </select>
+                                    </div>
+                                    <div class="bookin_input_box">
+                                        <select>
+                                            <option value="">Sort By</option>
+                                            <option value="date">Date</option>
+                                            <option value="severity">Severity</option>
+                                            <option value="impact">User Impact</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="Manage_Advertisement_table">
+                                <table class="table table-bordered">
+                                    <thead>
+                                        <tr>
+                                            <th>ID</th>
+                                            <th>Date</th>
+                                            <th>User/Business</th>
+                                            <th>Reason</th>
+                                            <th>Status</th>
+                                            <th>Actions</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>#123</td>
+                                            <td>2023-11-20</td>
+                                            <td>User ABC - User</td>
+                                            <td>Scam</td>
+                                            <td class="pending">Pending</td>
+                                            <td class="Manage_Advertisement_table_button">
+                                                <button><i class="fas fa-eye"></i></button>
+                                                <button><i class="fas fa-exclamation-triangle"></i></button>
+                                                <button><i class="fas fa-ban"></i></button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>#124</td>
+                                            <td>2023-11-19</td>
+                                            <td>Business DEF - Business</td>
+                                            <td>Inappropriate Content</td>
+                                            <td class="resolved">Resolved</td>
+                                            <td class="Manage_Advertisement_table_button">
+                                                <button><i class="fas fa-eye"></i></button>
+                                                <button><i class="fas fa-exclamation-triangle"></i></button>
+                                                <button><i class="fas fa-ban"></i></button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>#125</td>
+                                            <td>2023-11-18</td>
+                                            <td>User GHI - User</td>
+                                            <td>Fraud</td>
+                                            <td class="critical pending">Pending</td>
+                                            <td class="Manage_Advertisement_table_button">
+                                                <button><i class="fas fa-eye"></i></button>
+                                                <button><i class="fas fa-exclamation-triangle"></i></button>
+                                                <button><i class="fas fa-ban"></i></button>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="Inner_footer">
+                    <div class="business-details_footer">
+                        <button class="button_none_radi"><a href="">View Moderation History</a></button>
+                        <button class="button_none_radi"><a href="">Escalate to Legal Team</a></button>
+                    </div>
+                </div>
+            </div>
+            <div class="Ineer_pages_first_box">
+                <div class="">
+                    <div class="report-details border_button_one_px">
+                        <h4 class="heading_h5">Report Details & Moderation Actions</h4>
+                        <p><strong>Report ID:</strong> #123</p>
+                        <p><strong>Reported User:</strong> User ABC</p>
+                        <p><strong>Reason:</strong> Scam</p>
+                        <p><strong>Description:</strong> User reported for fraudulent activities.</p>
+                        <div class="custom_button_border_bg_less margint_top_20">
+                            <button class="">Review Report</button>
+                            <button class="">Take Action</button>
+                            <button class="">Dismiss Report</button>
+                        </div>
+                    </div>
+
+                    <div class="user_report_escalation margint_top_30">
+                        <h5 class="heading_h5">Escalation & Appeals</h5>
+                        <p><strong>Flagged Reports:</strong> 3 reports require legal intervention.</p>
+                        <p><strong>User Appeals:</strong> 5 reinstatement requests.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- ===== jq ===== -->
+    <script src="./assets/js/jquery.min.js"></script>
+    <!-- ===== owl slider js ===== -->
+    <script src="./assets/js/owl.carousel.min.js"></script>
+    <!-- ===== Bootstrap JS ===== -->
+    <script src="./assets/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

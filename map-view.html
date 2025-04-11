@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Map - VoloApp</title>
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+
+    <!-- ===== Font Awesome CDN ===== -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- ===== Custom CSS ===== -->
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/header.css">
+
+    <!-- ===== map css ===== -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css">
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="https://unpkg.com/leaflet.markercluster/dist/leaflet.markercluster.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster/dist/MarkerCluster.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster/dist/MarkerCluster.Default.css">
+</head>
+<style>
+
+</style>
+
+
+
+<body>
+    <div class="volo_app_flex">
+        <div class="volo_app_site_bar">
+            <div class="sidebar">
+                <div class="side_barofile">
+                    <a class="side_mainLogo_class" href="#"><img src="./assets/images/logo/logo_crop.png" alt=""></a>
+                    <div class="user_profile_site_bar">
+                        <img src="https://cdn-icons-png.flaticon.com/512/21/21104.png" alt="">
+                        <h4>User name</h4>
+                    </div>
+                </div>
+                <div class="nav-item active"><a href="home-dashboard.html"><i class="fas fa-home"></i> Home</a></div>
+                <div class="nav-item"> <a href="flight-booking.html"><i class="fas fa-plane"></i> Bookings </a></div>
+                <div class="nav-item"> <a href="business-dashboard.html"><i class="fas fa-tachometer-alt"></i>
+                        Business Dashboard
+                    </a></div>
+                <div class="nav-item"> <a href="train-search.html"><i class="fas fa-train"></i> Book a Train </a>
+                </div>
+                <div class="nav-item"> <a href="car-rental.html"><i class="fas fa-car"></i> Car Rental </a>
+                </div>
+                <div class="nav-item"> <a href="task-listing.html"><i class="fas fa-tasks"></i> Tasks </a></div>
+                <div class="nav-item"> <a href="marketplace.html"><i class="fas fa-shopping-bag"></i> Marketplace </a>
+                </div>
+                <div class="nav-item"> <a href=""><i class="fas fa-comments"></i> Social </a></div>
+                <div class="nav-item"> <a href="list-service.html"><i class="fa fa-server"></i> List Services </a></div>
+                <div class="nav-item"> <a href=""><i class="fas fa-bell"></i> Notifications </a></div>
+                <div class="nav-item"> <a href="map-view.html"> <i class="fas fa-location-dot"></i> Map</a></div>
+                <div class="nav-item"> <a href=""><i class="fas fa-user"></i> Profile </a></div>
+                <hr>
+                <div class="nav-item"><a href="#"><i class="fas fa-question-circle"></i> Help & Support</a></div>
+                <div class="nav-item"><a href="#"><i class="fas fa-cog"></i> Settings</a></div>
+            </div>
+            <div class="nav-item"><a href="#"><i class="fas fa-cog"></i> Settings</a></div>
+        </div>
+        <div class="main_container">
+            <div class="container">
+                <header>
+                    <div class="top_header">
+                        <div class="container">
+                            <div class="top_header_top">
+                                <div class="welcome_name_user">
+                                    <p>Welcome to <span class="welcome_name_user_animated">VoloApp.io! </span></p>
+                                </div>
+                                <div class="top_searching">
+                                    <input type="text" class="search-input"
+                                        placeholder="Search bookings, tasks, posts...">
+                                    <button class="search-btn"><i class="fa fa-search"></i></button>
+                                </div>
+                                <div class="top_Notification_ball">
+                                    <div class="Notification_ball">
+                                        <i class="fa-solid fa-bell"></i>
+                                        <span class="notification-badge"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </header>
+                <!-- ================= map screen view ============== -->
+                <div class="map_section_container">
+                    <div class="controls">
+                        <button onclick="reloadMap()">🔄 Reload Map</button>
+                        <div class="dropdown">
+                            <button>📋 List View Toggle</button>
+                            <div class="dropdown-content">
+                                <ul>
+                                    <li>🏕 Activity: City Tour - Downtown</li>
+                                    <li>🎟 Event: Music Festival - Central Park</li>
+                                    <li>🛠 Service: Barbershop - Main Street</li>
+                                    <li>🛍 Product: Handcrafted Jewelry - Market Square</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Map View -->
+                    <div id="map"></div>
+                </div>
+                <div class="map_fillter">
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <div class="filter-panel">
+                                <h3>Filters & Sorting</h3>
+
+                                <div class="filter-group">
+                                    <label for="category">Select Category:</label>
+                                    <select id="category">
+                                        <option value="">-- Choose a Category --</option>
+                                        <option value="activities">🏕 Activities</option>
+                                        <option value="events">🎟 Events</option>
+                                        <option value="services">🛠 Services</option>
+                                        <option value="products">🛍 Products</option>
+                                    </select>
+                                </div>
+
+                                <div class="filter-group">
+                                    <label>Distance (in km):</label>
+                                    <input type="number" placeholder="Enter distance e.g., 5 km">
+                                </div>
+
+                                <div class="filter-group">
+                                    <label>Price Range:</label>
+                                    <input type="range" min="0" max="500" value="250" oninput="updatePrice(this.value)">
+                                    <div>Selected Price: $<span id="priceValue">250</span></div>
+                                </div>
+
+                                <div class="filter-group">
+                                    <label>Availability:</label>
+                                    <div class="availability-toggle">
+                                        <input type="checkbox" id="availability">
+                                        <label for="availability">Only show available listings</label>
+                                    </div>
+                                </div>
+                                <button><a href="location-filter.html">Apply Filters</a></button>
+                            </div>
+                        </div>
+                        <div class="col-sm-9">
+                            <div class="row">
+                                <div class="col-sm-4">
+                                    <div class="Upcoming_Bookings_cards">
+                                        <div class="card booking-card">
+                                            <div class="Upcoming_Bookings_card_body">
+                                                <img src="https://t4.ftcdn.net/jpg/10/39/47/43/360_F_1039474365_CKMm3ynxVsFQ9e3prQutwLx5V8OsDASq.jpg"
+                                                    alt="Flight Image" class="booking-img">
+                                                <h5 class="Upcoming_Bookings_title">Flight</h5>
+                                                <p class="Upcoming_Bookings_cty">City A to City B</p>
+                                                <div class="flex_book_date_time">
+                                                    <p class="Upcoming_Bookings_date"><i
+                                                            class="fas fa-calendar-days"></i> Date:
+                                                        01/01/2022</p>
+                                                    <p class="Upcoming_Bookings_time"><i class="fas fa-clock"></i> Time:
+                                                        12:00
+                                                        PM
+                                                    </p>
+                                                </div>
+                                                <button class="book_up_button"> View Details</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-4">
+                                    <div class="Upcoming_Bookings_cards">
+                                        <div class="card booking-card">
+                                            <div class="Upcoming_Bookings_card_body">
+                                                <img src="https://promos.makemytrip.com/Hotels_product/Luxe/brands.png"
+                                                    alt="Flight Image" class="booking-img">
+                                                <h5 class="Upcoming_Bookings_title">Hotel</h5>
+                                                <p class="Upcoming_Bookings_cty">Lorem, ipsum dolor.</p>
+                                                <div class="flex_book_date_time">
+                                                    <p class="Upcoming_Bookings_date"><i
+                                                            class="fas fa-calendar-days"></i> Date:
+                                                        01/01/2022</p>
+                                                    <p class="Upcoming_Bookings_time"><i class="fas fa-clock"></i> Time:
+                                                        12:00
+                                                        PM
+                                                    </p>
+                                                </div>
+                                                <button class="book_up_button"> View Details</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-4">
+                                    <div class="Upcoming_Bookings_cards">
+                                        <div class="card booking-card">
+                                            <div class="Upcoming_Bookings_card_body">
+                                                <img src="https://ticketsque.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FMedia.8af2f733.jpeg&w=3840&q=75"
+                                                    alt="Flight Image" class="booking-img">
+                                                <h5 class="Upcoming_Bookings_title">Event</h5>
+                                                <p class="Upcoming_Bookings_cty">Lorem, ipsum dolor.</p>
+                                                <div class="flex_book_date_time">
+                                                    <p class="Upcoming_Bookings_date"><i
+                                                            class="fas fa-calendar-days"></i> Date:
+                                                        01/01/2022</p>
+                                                    <p class="Upcoming_Bookings_time"><i class="fas fa-clock"></i> Time:
+                                                        12:00
+                                                        PM
+                                                    </p>
+                                                </div>
+                                                <button class="book_up_button"> View Details</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-4">
+                                    <div class="Upcoming_Bookings_cards">
+                                        <div class="card booking-card">
+                                            <div class="Upcoming_Bookings_card_body text-center">
+                                                <img src="https://cdn-icons-png.flaticon.com/512/1995/1995539.png"
+                                                    alt="House Cleaning " class="booking-img tasks_market_img">
+                                                <h5 class="Upcoming_Bookings_title">House Cleaning</h5>
+                                                <p class="Upcoming_Bookings_cty">Deep cleaning service for a 2BHK.</p>
+                                                <div class="flex_book_date_time">
+                                                    <p class="Upcoming_Bookings_date"><i
+                                                            class="fas fa-calendar-alt"></i> Date:
+                                                        15/03/2025</p>
+                                                    <p class="Upcoming_Bookings_time"><i class="fas fa-clock"></i>
+                                                        Time: 10:00
+                                                        AM
+                                                    </p>
+                                                </div>
+                                                <button class="book_up_button"> View Details</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-4">
+                                    <div class="Upcoming_Bookings_cards">
+                                        <div class="card booking-card">
+                                            <div class="Upcoming_Bookings_card_body text-center">
+                                                <img src="https://cdn-icons-png.flaticon.com/512/3523/3523421.png"
+                                                    alt="Dog Walking" class="booking-img tasks_market_img">
+                                                <h5 class="Upcoming_Bookings_title">Dog Walking</h5>
+                                                <p class="Upcoming_Bookings_cty">45-minute evening walk for a Labrador.
+                                                </p>
+                                                <div class="flex_book_date_time">
+                                                    <p class="Upcoming_Bookings_date"><i
+                                                            class="fas fa-calendar-alt"></i> Date:
+                                                        16/03/2025</p>
+                                                    <p class="Upcoming_Bookings_time"><i class="fas fa-clock"></i>
+                                                        Time: 6:00 PM
+                                                    </p>
+                                                </div>
+                                                <button class="book_up_button"> View Details</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-4">
+                                    <div class="Upcoming_Bookings_cards">
+                                        <div class="card booking-card">
+                                            <div class="Upcoming_Bookings_card_body text-center">
+                                                <img src="https://cdn-icons-png.flaticon.com/512/2892/2892184.png"
+                                                    alt="Grocery Delivery" class="booking-img tasks_market_img">
+                                                <h5 class="Upcoming_Bookings_title">Grocery Delivery</h5>
+                                                <p class="Upcoming_Bookings_cty">Pick up and deliver groceries to home.
+                                                </p>
+                                                <div class="flex_book_date_time">
+                                                    <p class="Upcoming_Bookings_date"><i
+                                                            class="fas fa-calendar-alt"></i> Date:
+                                                        17/03/2025</p>
+                                                    <p class="Upcoming_Bookings_time"><i class="fas fa-clock"></i>
+                                                        Time: 3:00 PM
+                                                    </p>
+                                                </div>
+                                                <button class="book_up_button"> View Details</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-4">
+                                    <div class="Upcoming_Bookings_cards">
+                                        <div class="card booking-card">
+                                            <div class="Upcoming_Bookings_card_body">
+                                                <img src="https://images.pexels.com/photos/30868732/pexels-photo-30868732/free-photo-of-tourists-observing-beach-in-black-and-white.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                                                    alt="Beach Tour" class="booking-img">
+                                                <h5 class="Upcoming_Bookings_title">Beach Adventure</h5>
+                                                <p class="Upcoming_Bookings_cty">Explore the Maldives</p>
+                                                <div class="flex_book_date_time">
+                                                    <p class="Upcoming_Bookings_date"><i
+                                                            class="fas fa-calendar-days"></i>
+                                                        Available: Year-round</p>
+                                                    <p class="Upcoming_Bookings_time"><i class="fas fa-clock"></i>
+                                                        Duration: 5
+                                                        Days</p>
+                                                </div>
+                                                <button class="book_up_button">View Details</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-4">
+                                    <div class="Upcoming_Bookings_cards">
+                                        <div class="card booking-card">
+                                            <div class="Upcoming_Bookings_card_body">
+                                                <img src="https://images.unsplash.com/photo-1536763225213-b5592b525630"
+                                                    alt="Mountain Trekking" class="booking-img">
+                                                <h5 class="Upcoming_Bookings_title">Mountain Trekking</h5>
+                                                <p class="Upcoming_Bookings_cty">Himalayan Adventure</p>
+                                                <div class="flex_book_date_time">
+                                                    <p class="Upcoming_Bookings_date"><i
+                                                            class="fas fa-calendar-days"></i>
+                                                        Best: April - Sept</p>
+                                                    <p class="Upcoming_Bookings_time"><i class="fas fa-clock"></i>
+                                                        Duration: 7
+                                                        Days</p>
+                                                </div>
+                                                <button class="book_up_button">View Details</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-4">
+                                    <div class="Upcoming_Bookings_cards">
+                                        <div class="card booking-card">
+                                            <div class="Upcoming_Bookings_card_body">
+                                                <img src="https://images.pexels.com/photos/169647/pexels-photo-169647.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                                                    alt="City Tour" class="booking-img">
+                                                <h5 class="Upcoming_Bookings_title">City Lights</h5>
+                                                <p class="Upcoming_Bookings_cty">New York Night Tour</p>
+                                                <div class="flex_book_date_time">
+                                                    <p class="Upcoming_Bookings_date"><i
+                                                            class="fas fa-calendar-days"></i>
+                                                        Available: Daily</p>
+                                                    <p class="Upcoming_Bookings_time"><i class="fas fa-clock"></i>
+                                                        Duration: 3
+                                                        Hours</p>
+                                                </div>
+                                                <button class="book_up_button">View Details</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="floating_map">
+                    <button class="floating_map_button">
+                        📍 Locate Me
+                    </button>
+                    <button class="floating_map_button">
+                        ➕ Add Listing
+                    </button>
+                </div>
+                <div class="page_footer_help">
+                    Need Help? Click Here for FAQs
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <!-- ===== Bootstrap JS ===== -->
+    <script src="./assets/js/index.js"></script>
+    <script src="./assets/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

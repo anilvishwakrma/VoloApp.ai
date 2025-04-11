@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- ===== Font Awesome CDN ===== -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- ============ owl slider ========== -->
+    <link rel="stylesheet" href="./assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="./assets/css/owl.theme.default.min.css">
+
+    <!-- ===== Custom CSS ===== -->
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/header.css">
+    <title>Task Listing -Voloapp</title>
+</head>
+
+<body>
+
+    <div class="ALl_Inner_page">
+        <div class="Inner_flex_site_component">
+            <div class="Ineer_pages_first_box">
+                <div class="custome_site_bare_inner sticky-top">
+                    <h5 class="heading_h4">Summary</h5>
+                    <div class="business_details_section business-overview mb-3" style="padding: 0;">
+                        <div class="task_details_info">
+                            <p><strong>Total Orders:</strong> 100</p>
+                            <p style="color: orange;"><strong>Pending:</strong> 20</p>
+                            <p style="color: orange;"><strong>In Progress:</strong> 30</p>
+                            <p style="color: green;"><strong>Completed:</strong> 40</p>
+                            <p style="color: red;"><strong>Canceled:</strong> 40</p>
+                            <p><strong>Revenue:</strong> &5000</p>
+                        </div>
+                    </div>
+
+                    <h5 class="heading_h5">Filters</h5>
+                    <div class="bookin_input_box">
+                        <label>Filter by Status</label>
+                        <select class="form-select" id="statusFilter">
+                            <option value="">All</option>
+                            <option value="pending">Pending</option>
+                            <option value="completed">Completed</option>
+                            <option value="canceled">Canceled</option>
+                        </select>
+                    </div>
+                    <div class="bookin_input_box">
+                        <label>Filter by Date Range</label>
+                        <input class="mb-2" type="date" id="startDate">
+                        <input type="date" id="endDate">
+                    </div>
+                    <div class="bookin_input_box">
+                        <label>Filter by Payment Status</label>
+                        <select class="form-select" id="paymentFilter">
+                            <option value="">All</option>
+                            <option value="paid">Paid</option>
+                            <option value="pending">Pending</option>
+                            <option value="refunded">Refunded</option>
+                        </select>
+                    </div>
+                    <div class="bookin_input_box">
+                        <label>Search by Order/Booking ID</label>
+                        <input type="text" id="orderIdSearch">
+                    </div>
+
+                    <button class="button_none_radi">Apply Filters</button>
+                </div>
+            </div>
+            <div class="Ineer_pages_second_box">
+                <div class="">
+                    <div class="business_details_header header_other_option_add">
+                        <div class="business_details_header_name_details">
+                            <button title="back" class="back_button" onclick="history.back()"><i
+                                    class="fa-solid fa-arrow-left-long"></i></button>
+                            <h1>Manage Orders & Bookings</h1>
+                        </div>
+                    </div>
+                    <div class="section_content_ineer">
+                        <div class="d-flex justify-content-between align-items-center mb-4">
+                            <h5 class="heading_h5">Active Orders & Bookings</h5>
+                        </div>
+                        <div class="order_booking_table">
+                            <table class="table table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th>Order/Booking ID</th>
+                                        <th>Product/Service</th>
+                                        <th>Buyer Name</th>
+                                        <th>Status</th>
+                                        <th>Payment</th>
+                                        <th>Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="order-id">#12345</td>
+                                        <td>Product A</td>
+                                        <td>John Doe</td>
+                                        <td class="pending" style="background-color: rgba(255, 165, 0, 0.2);">Pending
+                                        </td>
+                                        <td class="pending" style="background-color: rgba(255, 165, 0, 0.2);">Pending
+                                        </td>
+                                        <td class="booking_order_view_cen_up">
+                                            <button class="btn btn-sm btn-primary" data-bs-toggle="tooltip"
+                                                data-bs-placement="top" title="View"><i class="fas fa-eye"></i></button>
+                                            <button class="btn btn-sm btn-warning" data-bs-toggle="tooltip"
+                                                data-bs-placement="top" title="Update"><i
+                                                    class="fas fa-edit"></i></button>
+                                            <button class="btn btn-sm btn-danger" data-bs-toggle="tooltip"
+                                                data-bs-placement="top" title="Cancel"><i
+                                                    class="fas fa-trash-alt"></i></button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="order-id">#12346</td>
+                                        <td>Service B</td>
+                                        <td>Jane Smith</td>
+                                        <td class="completed" style="background-color: rgba(0, 128, 0, 0.2);">Completed
+                                        </td>
+                                        <td class="paid" style="background-color: rgba(0, 128, 0, 0.2);">Paid</td>
+                                        <td class="booking_order_view_cen_up">
+                                            <button class="btn btn-sm btn-primary" data-bs-toggle="tooltip"
+                                                data-bs-placement="top" title="View"><i class="fas fa-eye"></i></button>
+                                            <button class="btn btn-sm btn-warning" data-bs-toggle="tooltip"
+                                                data-bs-placement="top" title="Update"><i
+                                                    class="fas fa-edit"></i></button>
+                                            <button class="btn btn-sm btn-danger" data-bs-toggle="tooltip"
+                                                data-bs-placement="top" title="Cancel"><i
+                                                    class="fas fa-trash-alt"></i></button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="order-id">#12347</td>
+                                        <td>Product C</td>
+                                        <td>David Lee</td>
+                                        <td class="canceled" style="background-color: rgba(255, 0, 0, 0.2);">Canceled
+                                        </td>
+                                        <td class="refunded" style="background-color: rgba(255, 0, 0, 0.2);">Refunded
+                                        </td>
+                                        <td class="booking_order_view_cen_up">
+                                            <button class="btn btn-sm btn-primary" data-bs-toggle="tooltip"
+                                                data-bs-placement="top" title="View"><i class="fas fa-eye"></i></button>
+                                            <button class="btn btn-sm btn-warning" data-bs-toggle="tooltip"
+                                                data-bs-placement="top" title="Update"><i
+                                                    class="fas fa-edit"></i></button>
+                                            <button class="btn btn-sm btn-danger" data-bs-toggle="tooltip"
+                                                data-bs-placement="top" title="Cancel"><i
+                                                    class="fas fa-trash-alt"></i></button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="order-id">#12348</td>
+                                        <td>Service D</td>
+                                        <td>Emily White</td>
+                                        <td class="in-progress" style="background-color: rgba(255, 165, 0, 0.2);">In
+                                            Progress</td>
+                                        <td class="paid" style="background-color: rgba(0, 128, 0, 0.2);">Paid</td>
+                                        <td class="booking_order_view_cen_up">
+                                            <button class="btn btn-sm btn-primary" data-bs-toggle="tooltip"
+                                                data-bs-placement="top" title="View"><i class="fas fa-eye"></i></button>
+                                            <button class="btn btn-sm btn-warning" data-bs-toggle="tooltip"
+                                                data-bs-placement="top" title="Update"><i
+                                                    class="fas fa-edit"></i></button>
+                                            <button class="btn btn-sm btn-danger" data-bs-toggle="tooltip"
+                                                data-bs-placement="top" title="Cancel"><i
+                                                    class="fas fa-trash-alt"></i></button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="business-details_footer Inner_footer">
+                            <button class="button_none_radi"><a href="#">View Details</a></button>
+                            <button class="button_none_radi"><a href="#">Update Status</a></button>
+                            <button class="button_none_radi"><a href="#">Cancel Order/Booking</a></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="Inner_footer">
+                    <div class="business-details_footer">
+                        <button class="button_none_radi"><a href="#">View Order/Booking
+                                History</a></button>
+                        <button class="button_none_radi"><a href="#">"Download Reports</a></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- ===== jq ===== -->
+    <script src="./assets/js/jquery.min.js"></script>
+    <!-- ===== owl slider js ===== -->
+    <script src="./assets/js/owl.carousel.min.js"></script>
+    <!-- ===== Bootstrap JS ===== -->
+    <script src="./assets/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

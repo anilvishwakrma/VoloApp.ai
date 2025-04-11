@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- ===== Font Awesome CDN ===== -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- ============ owl slider ========== -->
+    <link rel="stylesheet" href="./assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="./assets/css/owl.theme.default.min.css">
+
+    <!-- ===== Custom CSS ===== -->
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/header.css">
+
+    <title>Flight Search - VoloApp</title>
+
+
+</head>
+
+<body>
+    <div class="volo_app_flex">
+        <div class="volo_app_site_bar">
+            <div class="sidebar">
+                <div class="side_barofile">
+                    <a class="side_mainLogo_class" href="#"><img src="./assets/images/logo/logo_crop.png" alt=""></a>
+                    <div class="user_profile_site_bar">
+                        <img src="https://cdn-icons-png.flaticon.com/512/21/21104.png" alt="">
+                        <h4>User name</h4>
+                    </div>
+                </div>
+                <div class="nav-item active"><a href="home-dashboard.html"><i class="fas fa-home"></i> Home</a></div>
+                <div class="nav-item"> <a href="flight-booking.html"><i class="fas fa-plane"></i> Bookings </a></div>
+                <div class="nav-item"> <a href="business-dashboard.html"><i class="fas fa-tachometer-alt"></i>
+                        Business Dashboard
+                    </a></div>
+                <div class="nav-item"> <a href="train-search.html"><i class="fas fa-train"></i> Book a Train </a>
+                </div>
+                <div class="nav-item"> <a href="car-rental.html"><i class="fas fa-car"></i> Car Rental </a>
+                </div>
+                <div class="nav-item"> <a href="task-listing.html"><i class="fas fa-tasks"></i> Tasks </a></div>
+                <div class="nav-item"> <a href="marketplace.html"><i class="fas fa-shopping-bag"></i> Marketplace </a>
+                </div>
+                <div class="nav-item"> <a href=""><i class="fas fa-comments"></i> Social </a></div>
+                <div class="nav-item"> <a href="list-service.html"><i class="fa fa-server"></i> List Services </a></div>
+                <div class="nav-item"> <a href=""><i class="fas fa-bell"></i> Notifications </a></div>
+                <div class="nav-item"> <a href="map-view.html"> <i class="fas fa-location-dot"></i> Map</a></div>
+                <div class="nav-item"> <a href=""><i class="fas fa-user"></i> Profile </a></div>
+                <hr>
+                <div class="nav-item"><a href="#"><i class="fas fa-question-circle"></i> Help & Support</a></div>
+                <div class="nav-item"><a href="#"><i class="fas fa-cog"></i> Settings</a></div>
+            </div>
+            <div class="nav-item"><a href="#"><i class="fas fa-cog"></i> Settings</a></div>
+        </div>
+        <div class="main_container">
+            <div class="container">
+                <div class="business-details">
+                    <div class="flight_search_section">
+                        <div class="business_details_header">
+                            <div class="business_details_header_name_details">
+                                <button title="back" class="back_button" onclick="history.back()"><i
+                                        class="fa-solid fa-arrow-left-long"></i></button>
+                                <h1>Find Your Perfect Flight</h1>
+                            </div>
+                            <div class="top_searching">
+                                <input type="text" class="search-input" placeholder="Search bookings, tasks, posts...">
+                                <button class="search-btn"><i class="fa fa-search"></i></button>
+                            </div>
+                        </div>
+
+                        <div class="Flight_typ_type">
+                            <input type="radio" id="oneway" name="tripType" value="oneway" checked>
+                            <label for="oneway">One-Way</label>
+
+                            <input type="radio" id="roundtrip" name="tripType" value="roundtrip">
+                            <label for="roundtrip">Round Trip</label>
+
+                            <input type="radio" id="multicity" name="tripType" value="multicity">
+                            <label for="multicity">Multi-City</label>
+                        </div>
+
+
+
+                        <div class="flight_search_form">
+                            <div class="form-group">
+                                <label>Departure</label>
+                                <i class="fas fa-plane-departure"></i>
+                                <input type="text" placeholder="Enter city or airport">
+                            </div>
+                            <div class="form-group">
+                                <label>Destination</label>
+                                <i class="fas fa-plane-arrival"></i>
+                                <input type="text" placeholder="Enter city or airport">
+                            </div>
+                            <div class="form-group">
+                                <label>Departure Date</label>
+                                <i class="fas fa-calendar"></i>
+                                <input type="date">
+                            </div>
+                            <div class="form-group return-date-group">
+                                <label>Return Date</label>
+                                <i class="fas fa-calendar"></i>
+                                <input type="date">
+                            </div>
+                            <div class="form-group">
+                                <label>Passengers</label>
+                                <i class="fas fa-user"></i>
+                                <select>
+                                    <option>1 Adult</option>
+                                    <option>2 Adults</option>
+                                    <option>1 Adult, 1 Child</option>
+                                    <option>1 Adult, 1 Infant</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label>Travel Class</label>
+                                <i class="fas fa-chair"></i>
+                                <select>
+                                    <option>Economy</option>
+                                    <option>Premium Economy</option>
+                                    <option>Business</option>
+                                    <option>First Class</option>
+                                </select>
+                            </div>
+                        </div>
+
+
+                        <div class="checkbox-group">
+                            <input type="checkbox" id="flexibleDates">
+                            <label for="flexibleDates">Flexible Dates?</label>
+                        </div>
+
+                        <div class="checkbox-group">
+                            <input type="checkbox" id="directFlightsOnly">
+                            <label for="directFlightsOnly">Direct Flights Only</label>
+                        </div>
+
+                        <button class="button_none_radi">Search Flights</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== jq ===== -->
+    <script src="./assets/js/jquery.min.js"></script>
+    <!-- ===== owl slider js ===== -->
+    <script src="./assets/js/owl.carousel.min.js"></script>
+    <!-- ===== Bootstrap JS ===== -->
+    <script src="./assets/js/bootstrap.bundle.min.js"></script>
+    <script>
+        const tripTypeRadios = document.querySelectorAll('[name="tripType"]');
+        const returnDateGroup = document.querySelector('.return-date-group');
+
+        tripTypeRadios.forEach(radio => {
+            radio.addEventListener('change', function () {
+                if (this.value === 'roundtrip') {
+                    returnDateGroup.style.display = 'flex';
+                } else {
+                    returnDateGroup.style.display = 'none';
+                }
+            });
+        });
+    </script>
+
+
+</body>
+
+</html>

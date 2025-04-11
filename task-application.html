@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        crossorigin="anonymous">
+
+    <!-- Owl Carousel -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+        crossorigin="anonymous">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+        crossorigin="anonymous">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/header.css">
+    <title>Task Application - Voloapp</title>
+</head>
+
+<body>
+    <div class="volo_app_flex">
+        <div class="volo_app_site_bar">
+            <div class="sidebar">
+                <div class="side_barofile">
+                    <a class="side_mainLogo_class" href="#"><img src="./assets/images/logo/logo_crop.png" alt=""></a>
+                    <div class="user_profile_site_bar">
+                        <img src="https://cdn-icons-png.flaticon.com/512/21/21104.png" alt="">
+                        <h4>User name</h4>
+                    </div>
+                </div>
+                <div class="nav-item active"><a href="home-dashboard.html"><i class="fas fa-home"></i> Home</a></div>
+                <div class="nav-item"> <a href="flight-booking.html"><i class="fas fa-plane"></i> Bookings </a></div>
+                <div class="nav-item"> <a href="business-dashboard.html"><i class="fas fa-tachometer-alt"></i>
+                        Business Dashboard
+                    </a></div>
+                <div class="nav-item"> <a href="train-search.html"><i class="fas fa-train"></i> Book a Train </a>
+                </div>
+                <div class="nav-item"> <a href="car-rental.html"><i class="fas fa-car"></i> Car Rental </a>
+                </div>
+                <div class="nav-item"> <a href="task-listing.html"><i class="fas fa-tasks"></i> Tasks </a></div>
+                <div class="nav-item"> <a href="marketplace.html"><i class="fas fa-shopping-bag"></i> Marketplace </a>
+                </div>
+                <div class="nav-item"> <a href=""><i class="fas fa-comments"></i> Social </a></div>
+                <div class="nav-item"> <a href="list-service.html"><i class="fa fa-server"></i> List Services </a></div>
+                <div class="nav-item"> <a href=""><i class="fas fa-bell"></i> Notifications </a></div>
+                <div class="nav-item"> <a href="map-view.html"> <i class="fas fa-location-dot"></i> Map</a></div>
+                <div class="nav-item"> <a href=""><i class="fas fa-user"></i> Profile </a></div>
+                <hr>
+                <div class="nav-item"><a href="#"><i class="fas fa-question-circle"></i> Help & Support</a></div>
+                <div class="nav-item"><a href="#"><i class="fas fa-cog"></i> Settings</a></div>
+            </div>
+            <div class="nav-item"><a href="#"><i class="fas fa-cog"></i> Settings</a></div>
+        </div>
+
+        <div class="main_container">
+            <div class="container">
+                <div class="business_details_header">
+                    <div class="business_details_header_name_details">
+                        <button title="back" class="back_button" onclick="history.back()"><i
+                                class="fa-solid fa-arrow-left-long"></i></button>
+                        <h1>Apply for Task</h1>
+                    </div>
+                </div>
+                <div class="business-details">
+                    <div class="business_details_first_col">
+                        <div class="business_details_section business-overview" style="padding: 0;">
+                            <div class="task_details_info">
+                                <span class="task_status_show">Open</span>
+                                <h3 class="icon-label">Help Moving Furniture in Manhattan</h3>
+                                <div class="task-poster">
+                                    <div class="poster-avatar">
+                                        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Sarah Johnson">
+                                    </div>
+                                    <div class="poster-info">
+                                        <h5>Sarah Johnson</h5>
+                                    </div>
+                                </div>
+                                <p><strong>Task Payment</strong> $50</p>
+                                <p><strong>Task Deadline:</strong> Tomorrow, 2:00 PM</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="business_details_second_col">
+                        <div class="task_application_from">
+                            <h4 class="heading_h4">User Application Form</h4>
+                            <div class="application-form">
+                                <form class="booking_form">
+                                    <div class="bookin_input_box">
+                                        <label for="completionTime">Expected Completion Time </label>
+                                        <input type="text" id="completionTime" name="completionTime" required>
+                                    </div>
+                                    <div class="bookin_input_box">
+                                        <label for="bid">Proposed Bid (Optional)</label>
+                                        <input type="number" id="bid" name="bid">
+                                    </div>
+                                    <div class="bookin_input_box">
+                                        <label for="comments">Additional Comments</label>
+                                        <textarea id="comments" name="comments" rows="3"></textarea>
+                                    </div>
+                                    <div class="bookin_input_box">
+                                        <label for="attachments">Attachments <i class="fas fa-paperclip"></i></label>
+                                        <input type="file" id="attachments" name="attachments" multiple>
+                                    </div>
+                                </form>
+                                <h4 class="heading_h4">Agreement & Confirmation</h4>
+                                <div class="check_box_from_vaild">
+                                    <div class="checkbox-group">
+                                        <input type="checkbox" id="terms-conditions">
+                                        <label for="terms-conditions">I understand the task requirements and agree to
+                                            complete it as described.</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="business-details_footer">
+                                <button class="button_none_radi"><a href="">Submit
+                                        Application</a></button>
+                                <button class="button_none_radi"><a href="">Chat with
+                                        Poster</a></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== jq ===== -->
+    <script src="./assets/js/jquery.min.js"></script>
+    <!-- ===== owl slider js ===== -->
+    <script src="./assets/js/owl.carousel.min.js"></script>
+    <!-- ===== Bootstrap JS ===== -->
+    <script src="./assets/js/bootstrap.bundle.min.js"></script>
+
+
+</body>
+
+</html>

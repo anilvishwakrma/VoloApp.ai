@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- ===== Font Awesome CDN ===== -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- ============ owl slider ========== -->
+    <link rel="stylesheet" href="./assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="./assets/css/owl.theme.default.min.css">
+
+    <!-- ===== Custom CSS ===== -->
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/header.css">
+    <title>Hotel Booking</title>
+
+</head>
+
+<body>
+
+    <div class="volo_app_flex">
+        <div class="volo_app_site_bar">
+            <div class="sidebar">
+                <div class="side_barofile">
+                    <a class="side_mainLogo_class" href="#"><img src="./assets/images/logo/logo_crop.png" alt=""></a>
+                    <div class="user_profile_site_bar">
+                        <img src="https://cdn-icons-png.flaticon.com/512/21/21104.png" alt="">
+                        <h4>User name</h4>
+                    </div>
+                </div>
+                <div class="nav-item active"><a href="home-dashboard.html"><i class="fas fa-home"></i> Home</a></div>
+                <div class="nav-item"> <a href="flight-booking.html"><i class="fas fa-plane"></i> Bookings </a></div>
+                <div class="nav-item"> <a href="business-dashboard.html"><i class="fas fa-tachometer-alt"></i>
+                        Business Dashboard
+                    </a></div>
+                <div class="nav-item"> <a href="train-search.html"><i class="fas fa-train"></i> Book a Train </a>
+                </div>
+                <div class="nav-item"> <a href="car-rental.html"><i class="fas fa-car"></i> Car Rental </a>
+                </div>
+                <div class="nav-item"> <a href="task-listing.html"><i class="fas fa-tasks"></i> Tasks </a></div>
+                <div class="nav-item"> <a href="marketplace.html"><i class="fas fa-shopping-bag"></i> Marketplace </a>
+                </div>
+                <div class="nav-item"> <a href=""><i class="fas fa-comments"></i> Social </a></div>
+                <div class="nav-item"> <a href="list-service.html"><i class="fa fa-server"></i> List Services </a></div>
+                <div class="nav-item"> <a href=""><i class="fas fa-bell"></i> Notifications </a></div>
+                <div class="nav-item"> <a href="map-view.html"> <i class="fas fa-location-dot"></i> Map</a></div>
+                <div class="nav-item"> <a href=""><i class="fas fa-user"></i> Profile </a></div>
+                <hr>
+                <div class="nav-item"><a href="#"><i class="fas fa-question-circle"></i> Help & Support</a></div>
+                <div class="nav-item"><a href="#"><i class="fas fa-cog"></i> Settings</a></div>
+            </div>
+            <div class="nav-item"><a href="#"><i class="fas fa-cog"></i> Settings</a></div>
+        </div>
+        <div class="main_container">
+            <div class="container">
+                <div class="business_details_header">
+                    <div class="business_details_header_name_details">
+                        <button title="back" class="back_button" onclick="history.back()">
+                            <i class="fa-solid fa-arrow-left-long"></i>
+                        </button>
+                        <h1>Book Your Personalized Tour</h1>
+                    </div>
+                </div>
+                <div class="business-details">
+                    <div class="business_details_first_col">
+                        <div class="business_details_section business-overview" style="padding: 0;">
+                            <h3 class="icon-label">Tour Guide Details</h3>
+                            <p><strong>Guide’s Name:</strong> John Doe</p>
+                            <p><strong>Profile Photo:</strong>
+                                <img class="guide_img_logo" src="guide-profile.jpg" alt="Guide Photo">
+                            </p>
+                            <p><strong>Languages Spoken:</strong> English, Spanish, French</p>
+                            <p><strong>Rating & Reviews:</strong> ⭐ 4.9/5 from 150 travelers</p>
+                            <p><strong>Tour Type:</strong> Walking, Cultural, Adventure, Custom</p>
+                        </div>
+                        <form class="booking_form">
+                            <h4>Date & Time Selection</h4>
+                            <div class="bookin_input_box">
+                                <label>Select Date</label>
+                                <input type="date">
+                            </div>
+                            <div class="bookin_input_box">
+                                <label>Select Time Slot</label>
+                                <select>
+                                    <option value="morning">Morning</option>
+                                    <option value="afternoon">Afternoon</option>
+                                    <option value="evening">Evening</option>
+                                </select>
+                            </div>
+
+                            <h4 style="margin-top: 15px;">Group Size & Preferences</h4>
+                            <div class="bookin_input_box">
+                                <label>Number of Participants</label>
+                                <input type="number" min="1" max="20">
+                            </div>
+                            <div class="bookin_input_box">
+                                <label>Preferred Language</label>
+                                <select>
+                                    <option>English</option>
+                                    <option>Spanish</option>
+                                    <option>French</option>
+                                </select>
+                            </div>
+                            <div class="bookin_input_box">
+                                <label>Special Requests:</label>
+                                <textarea placeholder="Dietary needs, accessibility, etc."></textarea>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="business_details_second_col">
+                        <div class="service_booking_sonce">
+                            <div class="price-breakdown">
+                                <h4>Pricing Breakdown</h4>
+                                <p>Base Price per Person: <span>$50</span></p>
+                                <p>Discounts: <span>$10 (if applicable)</span></p>
+                                <p>Additional Fees: <span>$5 (e.g., transportation)</span></p>
+                                <p class="total-cost">Total Cost: <span>$45</span></p>
+                            </div>
+                            <div class="Payment_main_box">
+                                <div class="event_booking_call_cont">
+                                    <label>Payment Method</label>
+                                    <select>
+                                        <option>Credit Card</option>
+                                        <option>PayPal</option>
+                                        <option>Wallet</option>
+                                        <option>Pay at Meeting Point</option>
+                                    </select>
+                                </div>
+                                <div class="event_booking_call_cont">
+                                    <label>Promo Code</label>
+                                    <div class="promo_code_payment_option">
+                                        <input type="text" placeholder="Apply Promo Code">
+                                        <button class="apply_promo_succes">Apply</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="business-details_footer">
+                                <button class="button_none_radi"><a href="booking-confirmation.html">Confirm
+                                        Booking</a></button>
+                                <button class="button_none_radi"><a href="#">Chat with Guide</a></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+    <!-- ===== jq ===== -->
+    <script src="./assets/js/jquery.min.js"></script>
+    <!-- ===== owl slider js ===== -->
+    <script src="./assets/js/owl.carousel.min.js"></script>
+    <!-- ===== Bootstrap JS ===== -->
+    <script src="./assets/js/bootstrap.bundle.min.js"></script>
+
+
+</body>
+
+</html>

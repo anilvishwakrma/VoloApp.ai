@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- ===== Font Awesome CDN ===== -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- ============ owl slider ========== -->
+    <link rel="stylesheet" href="./assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="./assets/css/owl.theme.default.min.css">
+
+    <!-- ===== Custom CSS ===== -->
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/header.css">
+    <link rel="stylesheet" href="./assets/css/style_pm.css">
+    <title>Manage Advertisements - Voloapp</title>
+</head>
+
+
+
+<body>
+
+    <div class="ALl_Inner_page">
+        <div class="Inner_flex_site_component Inner_width_Product">
+            <div class="Ineer_pages_second_box ">
+                <!-- ======== Header ======== -->
+                <div class="business_details_header header_other_option_add">
+                    <div class="business_details_header_name_details">
+                        <button title="back" class="back_button" onclick="history.back()"><i
+                                class="fa-solid fa-arrow-left-long"></i></button>
+                        <h1>Partner Management Dashboard</h1>
+                    </div>
+                    <button class="header_button_items">
+                        <a href=""><i class="fa-solid fa-plus me-2"></i> Add New Partner</a>
+                    </button>
+                </div>
+                <!-- Product Summary -->
+                <div class="section_content_ineer">
+                    <!-- Partner Overview & Statistics -->
+                    <h5 class="heading_h5">Partner Overview</h5>
+                    <div class="row ">
+                        <div class="col-md-4">
+                            <div class="metric_card_partner">
+                                <div class="d-flex align-items-center">
+                                    <i class="fas fa-users fa-2x me-3"></i>
+                                    <div>
+                                        <div class="h4 mb-0">142</div>
+                                        <small>Active Partners</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="metric_card_partner">
+                                <div class="d-flex align-items-center">
+                                    <i class="fas fa-chart-line fa-2x me-3"></i>
+                                    <div>
+                                        <div class="h4 mb-0">$523K</div>
+                                        <small>Total Revenue</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="metric_card_partner">
+                                <div class="d-flex align-items-center">
+                                    <i class="fas fa-handshake fa-2x me-3"></i>
+                                    <div>
+                                        <div class="h4 mb-0">$89K</div>
+                                        <small>Commissions Paid</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Partner List & Status -->
+
+                    <!-- Partner Item -->
+                    <div class="Partner_List_main">
+                        <div class="partner_list_table">
+                            <h5 class="heading_h5">Partner List & Status</h5>
+                            <table class="border border-collapse">
+                                <thead>
+                                    <tr>
+                                        <th>Partner Name & Business Type</th>
+                                        <th>Location & Region Managed</th>
+                                        <th>Status</th>
+                                        <th>Last Activity Date & Total Transactions</th>
+                                        <th>Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Acme Corp <br> Retail</td>
+                                        <td>New York, USA <br> North America</td>
+                                        <td class="active">Active</td>
+                                        <td>2023-11-15 <br> 1250</td>
+                                        <td class="Manage_Advertisement_table_button">
+                                            <button class="button_none_radi " title="View Profile"> <a
+                                                    href="user-profile.html">View</a></button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Global Services Ltd <br> Service</td>
+                                        <td>London, UK <br> Europe</td>
+                                        <td class="pending">Pending Verification</td>
+                                        <td>2023-11-10 <br> 10</td>
+                                        <td class="Manage_Advertisement_table_button">
+                                            <button class="button_none_radi " title="View Profile"> <a
+                                                    href="user-profile.html">View</a></button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Local Goods Inc. <br> Wholesale</td>
+                                        <td>Sydney, AUS <br> Oceania</td>
+                                        <td class="suspended">Suspended</td>
+                                        <td>2023-10-20 <br> 500</td>
+                                        <td class="Manage_Advertisement_table_button">
+                                            <button class="button_none_radi " title="View Profile"> <a
+                                                    href="user-profile.html">View</a></button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div class="Revenue_Sharing_Earnings">
+                        <h5 class="heading_h5">Revenue Sharing & Earnings</h5>
+                        <div class="Revenue_Sharing_Earnings_earnings_summary">
+                            <p><strong>Total Commission Earned:</strong> $15,750.00</p>
+                            <p><strong>Pending Payouts:</strong> $2,500.00</p>
+                        </div>
+                        <div class="Revenue_Sharing_Earnings_payment_history">
+                            <h4 class="heading_h4">Payment History</h4>
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Date</th>
+                                        <th>Partner</th>
+                                        <th>Amount</th>
+                                        <th>Status</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>2023-11-15</td>
+                                        <td>Acme Corp</td>
+                                        <td>$1,200.00</td>
+                                        <td class="paid">Paid</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2023-11-10</td>
+                                        <td>Global Services Ltd</td>
+                                        <td>$800.00</td>
+                                        <td class="paid">Paid</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2023-11-05</td>
+                                        <td>Local Goods Inc.</td>
+                                        <td>$500.00</td>
+                                        <td class="pending">Pending</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="business-details_footer mt-3">
+                            <button class="button_none_radi">Process Payouts</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="Ineer_pages_first_box">
+                <div class="Partner_Reports_section">
+                    <div class="Partner_Reports_section_reportarea">
+                        <h5 class="heading_h5">Partner Reports & Complaints</h5>
+                        <div class="Partner_Reports_report_item">
+                            <div class="Partner_Reports_item_name">
+                                <span class="report_partner_text">Acme Corp</span>
+                                <span class="report-issue">Delayed payments</span>
+                            </div>
+                            <span class="report-date">2023-11-18</span>
+                        </div>
+                        <div class="Partner_Reports_report_item">
+                            <div class="Partner_Reports_item_name">
+                                <span class="report_partner_text">Acme Corp</span>
+                                <span class="report-issue">Delayed payments</span>
+                            </div>
+                            <span class="report-date">2023-11-18</span>
+                        </div>
+                        <div class="Partner_Reports_report_item">
+                            <div class="Partner_Reports_item_name">
+                                <span class="report_partner_text">Acme Corp</span>
+                                <span class="report-issue">Delayed payments</span>
+                            </div>
+                            <span class="report-date">2023-11-18</span>
+                        </div>
+                    </div>
+                    <div class="mt-2">
+                        <h5 class="heading_h5">Performance Warnings & Compliance Notices</h5>
+                        <div class="Partner_Reports_report_item">
+                            <div class="notice_item_tetx">
+                                <span class="report_partner_text">Acme Corp</span>
+                                <span class="report-issue">Delayed payments</span>
+                            </div>
+                            <div class="notice_item_tetx notice_item_rig_aee">
+                                <span class="report_partner_text">2023-11-16</span>
+                                <span class="notice-status pending">Pending Review</span>
+                            </div>
+                        </div>
+                        <div class="Partner_Reports_report_item">
+                            <div class="notice_item_tetx">
+                                <span class="report_partner_text">Acme Corp</span>
+                                <span class="report-issue">Delayed payments</span>
+                            </div>
+                            <div class="notice_item_tetx notice_item_rig_aee">
+                                <span class="report_partner_text">2023-11-16</span>
+                                <span class="notice-status pending">Pending Review</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="action-area">
+                    <button class="resolve-button">Resolve Issues</button>
+                </div>
+
+                <style>
+                    .Partner_Reports_section {
+                        font-size: 14px;
+                    }
+
+                    .notice_item_rig_aee {
+                        text-align: right;
+                    }
+
+                    .Partner_Reports_item_name {
+                        display: block;
+                        width: 75%;
+                    }
+
+                    .notice_item_tetx {
+                        width: 50%;
+                    }
+
+                    .report_partner_text {
+                        font-weight: 600;
+                        display: block;
+                    }
+
+                    .Partner_Reports_report_item,
+                    .notice-item {
+                        display: flex;
+                        justify-content: space-around;
+                        margin-bottom: 5px;
+                        padding: 5px;
+                        border-bottom: 1px solid #f0f0f0;
+                        align-items: center;
+                    }
+
+                    .Partner_Reports_report_item span,
+                    .notice-item span {
+                        flex: 1;
+                    }
+
+                    .pending {
+                        color: orange;
+                    }
+
+                    .resolved {
+                        color: green;
+                    }
+
+                    .resolve-button {
+                        background-color: #f44336;
+                        border: none;
+                        color: white;
+                        padding: 10px 20px;
+                        text-align: center;
+                        text-decoration: none;
+                        display: inline-block;
+                        font-size: 16px;
+                        cursor: pointer;
+                        border-radius: 4px;
+                        margin-top: 20px;
+                    }
+
+                    .action-area {
+                        grid-column: 1 / 3;
+                        text-align: center;
+                    }
+
+                    @media (max-width: 600px) {
+                        .compliance-grid {
+                            grid-template-columns: 1fr;
+                            /* Single column on smaller screens */
+                        }
+
+                        .action-area {
+                            grid-column: 1 / 2;
+                        }
+                    }
+                </style>
+
+                <!-- Performance Metrics -->
+                <div class="Performance_Metrics mt-3">
+                    <h4 class="heading_h4">Performance Metrics</h4>
+                    <div class="Performance_Metrics_graf">
+                        <img src="https://cdn.ablebits.com/_img-blog/line-graph/line-graph-excel.png" alt="">
+                    </div>
+                    <div class="row text-center mt-3">
+                        <div class="col-4">
+                            <div class="h5"><b>850</b></div>
+                            <small class="text-muted">Bookings</small>
+                        </div>
+                        <div class="col-4">
+                            <div class="h5"><b>$523K</b></div>
+                            <small class="text-muted">Sales</small>
+                        </div>
+                        <div class="col-4">
+                            <div class="h5"><b>4.8★</b></div>
+                            <small class="text-muted">Rating</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="Inner_footer">
+            <div class="business-details_footer">
+                <button class="button_none_radi"><a href="">View Partner Reports</a></button>
+                <button class="button_none_radi"><a href="">Partner Onboarding Guide</a></button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== jq ===== -->
+    <script src="./assets/js/jquery.min.js"></script>
+    <!-- ===== owl slider js ===== -->
+    <script src="./assets/js/owl.carousel.min.js"></script>
+    <!-- ===== Bootstrap JS ===== -->
+    <script src="./assets/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

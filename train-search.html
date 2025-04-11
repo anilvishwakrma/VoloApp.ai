@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- ===== Font Awesome CDN ===== -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- ============ owl slider ========== -->
+    <link rel="stylesheet" href="./assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="./assets/css/owl.theme.default.min.css">
+
+    <!-- ===== Custom CSS ===== -->
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/header.css">
+    <title> Train Search - Voloapp</title>
+
+</head>
+
+<body>
+    <div class="volo_app_flex">
+        <div class="volo_app_site_bar">
+            <div class="sidebar">
+                <div class="side_barofile">
+                    <a class="side_mainLogo_class" href="#"><img src="./assets/images/logo/logo_crop.png" alt=""></a>
+                    <div class="user_profile_site_bar">
+                        <img src="https://cdn-icons-png.flaticon.com/512/21/21104.png" alt="">
+                        <h4>User name</h4>
+                    </div>
+                </div>
+                <div class="nav-item active"><a href="home-dashboard.html"><i class="fas fa-home"></i> Home</a></div>
+                <div class="nav-item"> <a href="flight-booking.html"><i class="fas fa-plane"></i> Bookings </a></div>
+                <div class="nav-item"> <a href="business-dashboard.html"><i class="fas fa-tachometer-alt"></i>
+                        Business Dashboard
+                    </a></div>
+                <div class="nav-item"> <a href="train-search.html"><i class="fas fa-train"></i> Book a Train </a>
+                </div>
+                <div class="nav-item"> <a href="car-rental.html"><i class="fas fa-car"></i> Car Rental </a>
+                </div>
+                <div class="nav-item"> <a href="task-listing.html"><i class="fas fa-tasks"></i> Tasks </a></div>
+                <div class="nav-item"> <a href="marketplace.html"><i class="fas fa-shopping-bag"></i> Marketplace </a>
+                </div>
+                <div class="nav-item"> <a href=""><i class="fas fa-comments"></i> Social </a></div>
+                <div class="nav-item"> <a href="list-service.html"><i class="fa fa-server"></i> List Services </a></div>
+                <div class="nav-item"> <a href=""><i class="fas fa-bell"></i> Notifications </a></div>
+                <div class="nav-item"> <a href="map-view.html"> <i class="fas fa-location-dot"></i> Map</a></div>
+                <div class="nav-item"> <a href=""><i class="fas fa-user"></i> Profile </a></div>
+                <hr>
+                <div class="nav-item"><a href="#"><i class="fas fa-question-circle"></i> Help & Support</a></div>
+                <div class="nav-item"><a href="#"><i class="fas fa-cog"></i> Settings</a></div>
+            </div>
+            <div class="nav-item"><a href="#"><i class="fas fa-cog"></i> Settings</a></div>
+        </div>
+        <div class="main_container">
+            <div class="container">
+                <div class="business_details_header">
+                    <div class="business_details_header_name_details">
+                        <button title="back" class="back_button" onclick="history.back()"><i
+                                class="fa-solid fa-arrow-left-long"></i></button>
+                        <h1>Find Your Train Journey</h1>
+                    </div>
+                    <div class="top_searching">
+                        <input type="text" class="search-input" placeholder="Search bookings, tasks, posts...">
+                        <button class="search-btn"><i class="fa fa-search"></i></button>
+                    </div>
+                </div>
+                <div class="business-details">
+                    <div class="business_details_first_col" style="padding-top: 0;">
+                        <form class="booking_form">
+                            <div class="bookin_input_box">
+                                <label>Departure Station</label>
+                                <input type="text" placeholder="Enter station name">
+                            </div>
+                            <div class="bookin_input_box">
+                                <label>Destination Station</label>
+                                <input type="text" placeholder="Enter station name">
+                            </div>
+                            <div class="bookin_input_box">
+                                <label>Departure Date</label>
+                                <input type="date">
+                            </div>
+                            <div class="bookin_input_box">
+                                <label>Return Date (Optional)</label>
+                                <input type="date">
+                            </div>
+                            <div class="bookin_input_box">
+                                <label>Passengers</label>
+                                <select>
+                                    <option>1 Adult</option>
+                                    <option>2 Adults</option>
+                                    <option>1 Adult, 1 Child</option>
+                                </select>
+                            </div>
+                            <div class="bookin_input_box">
+                                <label>Travel Class</label>
+                                <select>
+                                    <option>Economy</option>
+                                    <option>Business</option>
+                                    <option>First Class</option>
+                                    <option>Sleeper</option>
+                                </select>
+                            </div>
+                        </form>
+                        <div class="reating_box_main">
+                            <h4 class="heading_h4">Filters & Sorting</h4>
+                            <div class="priceing_slider">
+                                <label for="priceRange">Price Range: <span id="priceValue">$50 - $500</span></label>
+                                <input type="range" id="priceRange" min="50" max="500" value="250" step="10">
+                            </div>
+                            <div class="Add_Ons_main">
+                                <h4 class="heading_h4">Train Type</h4>
+                                <div class="service-option">
+                                    <input type="checkbox" id="express">
+                                    <label for="express">Express</label>
+                                </div>
+                                <div class="service-option">
+                                    <input type="checkbox" id="local">
+                                    <label for="local">Local</label>
+                                </div>
+                                <div class="service-option">
+                                    <input type="checkbox" id="high-speed">
+                                    <label for="high-speed">High-Speed</label>
+                                </div>
+                            </div>
+                            <div class="booking_form select">
+                                <h4 class="heading_h4">Sort By</h4>
+                                <select>
+                                    <option>Cheapest</option>
+                                    <option>Fastest</option>
+                                    <option>Earliest Departure</option>
+                                </select>
+                            </div>
+                            <div class="check_box_from_vaild">
+                                <div class="checkbox-group">
+                                    <input type="checkbox" id="flexible-dates">
+                                    <label for="flexible-dates">Flexible Dates?</label>
+                                </div>
+                                <div class="checkbox-group">
+                                    <input type="checkbox" id="available-seats">
+                                    <label for="available-seats">Show only available seats</label>
+                                </div>
+                            </div>
+                            <button class="button_none_radi">Apply Filters</button>
+                        </div>
+                    </div>
+                    <div class="business_details_second_col">
+                        <h4 class="heading_h4">Featured Routes</h4>
+                        <div class="hotel_search_cart">
+                            <div class="hotel_search_box_cart">
+                                <img src="https://images.pexels.com/photos/29719504/pexels-photo-29719504/free-photo-of-black-and-white-photo-of-japanese-bullet-train-station.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                                    alt="Bullet Train">
+                                <div class="hotel-info">
+                                    <h4>Bullet Express</h4>
+                                    <p>Fastest route from New York to Washington</p>
+                                    <p class="price">$120 / ticket</p>
+                                </div>
+                            </div>
+                            <div class="hotel_search_box_cart">
+                                <img src="https://images.pexels.com/photos/730981/pexels-photo-730981.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                                    alt="Mountain Train">
+                                <div class="hotel-info">
+                                    <h4>Mountain View Express</h4>
+                                    <p>Scenic route from Denver to Aspen</p>
+                                    <p class="price">$95 / ticket</p>
+                                </div>
+                            </div>
+                            <div class="hotel_search_box_cart">
+                                <img src="https://www.shutterstock.com/image-photo/steam-locomotive-north-norfolkman-standard-260nw-1050163709.jpg"
+                                    alt="Classic Train">
+                                <div class="hotel-info">
+                                    <h4>Heritage Rail</h4>
+                                    <p>Historical route from London to Edinburgh</p>
+                                    <p class="price">$110 / ticket</p>
+                                </div>
+                            </div>
+                            <div class="hotel_search_box_cart">
+                                <img src="https://images.pexels.com/photos/210183/pexels-photo-210183.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                                    alt="Night Train">
+                                <div class="hotel-info">
+                                    <h4>Midnight Express</h4>
+                                    <p>Overnight journey from Paris to Berlin</p>
+                                    <p class="price">$130 / ticket</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="business-details_footer">
+                            <button class="button_none_radi"><a href="train-booking.html">Search Trains</a></button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== jq ===== -->
+    <script src="./assets/js/jquery.min.js"></script>
+    <!-- ===== owl slider js ===== -->
+    <script src="./assets/js/owl.carousel.min.js"></script>
+    <!-- ===== Bootstrap JS ===== -->
+    <script src="./assets/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        const priceRange = document.getElementById("priceRange");
+        const priceValue = document.getElementById("priceValue");
+        priceRange.addEventListener("input", function () {
+            priceValue.textContent = `$${this.value}`;
+        });
+    </script>
+</body>
+
+</html>

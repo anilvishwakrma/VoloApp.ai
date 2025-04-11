@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- ===== Font Awesome CDN ===== -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- ============ owl slider ========== -->
+    <link rel="stylesheet" href="./assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="./assets/css/owl.theme.default.min.css">
+
+    <!-- ===== Custom CSS ===== -->
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/header.css">
+    <link rel="stylesheet" href="./assets/css/style_pm.css">
+    <title>Transaction & Payment Management - Voloapp</title>
+</head>
+
+
+
+<body>
+
+    <div class="ALl_Inner_page">
+        <div class="Inner_flex_site_component Inner_width_Product">
+            <div class="Ineer_pages_second_box ">
+                <!-- ======== Header ======== -->
+                <div class="business_details_header header_other_option_add">
+                    <div class="business_details_header_name_details">
+                        <button title="back" class="back_button" onclick="history.back()"><i
+                                class="fa-solid fa-arrow-left-long"></i></button>
+                        <h1>Transaction & Payment Management</h1>
+                    </div>
+                    <button class="header_button_items">
+                        <a href=""><i class="fa-solid fa-plus me-2"></i> Pending Approvals</a>
+                    </button>
+                </div>
+                <div class="section_content_ineer">
+                    <div class="">
+                        <div class="reports-overview">
+                            <h5 class="heading_h5">Financial Overview & Statistics</h5>
+                            <div class="business_details_section business-overview" style="padding: 0;">
+                                <p><strong>Total Revenue Processed : </strong> 10</p>
+                                <p><strong>Pending Payouts : </strong>30</p>
+                                <p><strong>Refund Requests : </strong>15</p>
+                                <p><strong>Platform Earnings After Commission : </strong> 2</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="user_repsot_Comreports_list">
+                        <div class="user_repost_fillter_flex d-flex justify-content-between align-items-center">
+                            <h5 class="heading_h5">List of Transactions & Filtering </h5>
+                            <div class="user_repost_filters d-flex ">
+                                <div class="bookin_input_box">
+                                    <select>
+                                        <option value="">Filter by Transaction Type</option>
+                                        <option value="Purchase">Purchase</option>
+                                        <option value="Subscription">Subscription</option>
+                                        <option value="Payout">Payout</option>
+                                    </select>
+                                </div>
+                                <div class="bookin_input_box">
+                                    <select>
+                                        <option value="">Filter by Status</option>
+                                        <option value="Pending">Pending</option>
+                                        <option value="Completed">Completed</option>
+                                        <option value="Refunded">Refunded</option>
+                                        <option value="Failed">Failed</option>
+                                    </select>
+                                </div>
+                                <div class="bookin_input_box">
+                                    <select>
+                                        <option value="">Sort By</option>
+                                        <option value="date">Date</option>
+                                        <option value="amount">Amount</option>
+                                        <option value="paymentMethod">Payment Method</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="Manage_Advertisement_table">
+                            <table class="table table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th>Transaction ID & Date</th>
+                                        <th>User/Business Involved</th>
+                                        <th>Amount & Payment Method</th>
+                                        <th>Status</th>
+                                        <th>Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>#TRANS1234 - 2025-04-02</td>
+                                        <td>User Alice</td>
+                                        <td>$29.99 - Credit Card</td>
+                                        <td><span class="badge badge-success">Completed</span></td>
+                                        <td class="Manage_Advertisement_table_button">
+                                            <button data-toggle="tooltip" data-placement="top" title="View Details">
+                                                <i class="fas fa-eye"></i>
+                                            </button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>#TRANS5678 - 2025-04-01</td>
+                                        <td>Business Beta</td>
+                                        <td>$100.00 - Bank Transfer</td>
+                                        <td><span class="badge badge-warning">Pending</span></td>
+                                        <td class="Manage_Advertisement_table_button">
+                                            <button data-toggle="tooltip" data-placement="top" title="View Details">
+                                                <i class="fas fa-eye"></i>
+                                            </button>
+                                            <button data-toggle="tooltip" data-placement="top" title="Process Payment">
+                                                <i class="fas fa-dollar-sign"></i>
+                                            </button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>#REFUND9012 - 2025-03-30</td>
+                                        <td>User Charlie</td>
+                                        <td>$15.00 - PayPal</td>
+                                        <td><span class="badge badge-info">Refunded</span></td>
+                                        <td class="Manage_Advertisement_table_button">
+                                            <button data-toggle="tooltip" data-placement="top" title="View Details">
+                                                <i class="fas fa-eye"></i>
+                                            </button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>#FAIL2345 - 2025-03-28</td>
+                                        <td>New User</td>
+                                        <td>$9.99 - Credit Card</td>
+                                        <td><span class="badge badge-danger">Failed</span></td>
+                                        <td class="Manage_Advertisement_table_button">
+                                            <button data-toggle="tooltip" data-placement="top" title="View Details">
+                                                <i class="fas fa-eye"></i>
+                                            </button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>#TRANS7890 - 2025-03-25</td>
+                                        <td>Partner Gamma</td>
+                                        <td>$50.00 - Wallet</td>
+                                        <td><span class="badge badge-success">Completed</span></td>
+                                        <td class="Manage_Advertisement_table_button">
+                                            <button data-toggle="tooltip" data-placement="top" title="View Details">
+                                                <i class="fas fa-eye"></i>
+                                            </button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="Inner_footer">
+                    <div class="business-details_footer">
+                        <button class="button_none_radi"><a href="#"><i class="fas fa-history me-2"></i> View Full
+                                Transaction
+                                History</a></button>
+                        <button class="button_none_radi"><a href="#"><i class="fas fa-cog me-3"></i> Configure Payment
+                                Methods</a></button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="Ineer_pages_first_box">
+                <div class="">
+                    <div class="report-details border_button_one_px">
+                        <h4 class="heading_h5">Payout & Refund Management</h4>
+                        <ul class="Action_user_section">
+                            <li><a href="#"><i class="fas fa-money-bill-wave me-2"></i> Process Withdrawals</a></li>
+                            <li><a href="#"><i class="fas fa-undo-alt me-2"></i> Approve or Reject Refunds</a></li>
+                            <li><a href="#"><i class="fas fa-exclamation-triangle me-2"></i> Review Payment Issues</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    </div>
+
+    <!-- ===== jq ===== -->
+    <script src="./assets/js/jquery.min.js"></script>
+    <!-- ===== owl slider js ===== -->
+    <script src="./assets/js/owl.carousel.min.js"></script>
+    <!-- ===== Bootstrap JS ===== -->
+    <script src="./assets/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip()
+        })
+    </script>
+
+    <style>
+        .custom-tooltip-bg .tooltip-inner {
+            background-color: #007bff;
+            /* Example blue color */
+            color: #fff;
+        }
+    </style>
+
+</body>
+
+</html>

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- ===== Font Awesome CDN ===== -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- ============ owl slider ========== -->
+    <link rel="stylesheet" href="./assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="./assets/css/owl.theme.default.min.css">
+
+    <!-- ===== Custom CSS ===== -->
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/header.css">
+    <title>Commission & Earnings</title>
+
+</head>
+
+<body>
+
+    <div class="volo_app_flex">
+        <div class="volo_app_site_bar">
+            <div class="sidebar">
+                <div class="side_barofile">
+                    <a class="side_mainLogo_class" href="#"><img src="./assets/images/logo/logo_crop.png" alt=""></a>
+                    <div class="user_profile_site_bar">
+                        <img src="https://cdn-icons-png.flaticon.com/512/21/21104.png" alt="">
+                        <h4>User name</h4>
+                    </div>
+                </div>
+                <div class="nav-item active"><a href="home-dashboard.html"><i class="fas fa-home"></i> Home</a></div>
+                <div class="nav-item"> <a href="flight-booking.html"><i class="fas fa-plane"></i> Bookings </a></div>
+                <div class="nav-item"> <a href="business-dashboard.html"><i class="fas fa-tachometer-alt"></i>
+                        Business Dashboard
+                    </a></div>
+                <div class="nav-item"> <a href="train-search.html"><i class="fas fa-train"></i> Book a Train </a>
+                </div>
+                <div class="nav-item"> <a href="car-rental.html"><i class="fas fa-car"></i> Car Rental </a>
+                </div>
+                <div class="nav-item"> <a href="task-listing.html"><i class="fas fa-tasks"></i> Tasks </a></div>
+                <div class="nav-item"> <a href="marketplace.html"><i class="fas fa-shopping-bag"></i> Marketplace </a>
+                </div>
+                <div class="nav-item"> <a href=""><i class="fas fa-comments"></i> Social </a></div>
+                <div class="nav-item"> <a href="list-service.html"><i class="fa fa-server"></i> List Services </a></div>
+                <div class="nav-item"> <a href=""><i class="fas fa-bell"></i> Notifications </a></div>
+                <div class="nav-item"> <a href="map-view.html"> <i class="fas fa-location-dot"></i> Map</a></div>
+                <div class="nav-item"> <a href=""><i class="fas fa-user"></i> Profile </a></div>
+                <hr>
+                <div class="nav-item"><a href="#"><i class="fas fa-question-circle"></i> Help & Support</a></div>
+                <div class="nav-item"><a href="#"><i class="fas fa-cog"></i> Settings</a></div>
+            </div>
+            <div class="nav-item"><a href="#"><i class="fas fa-cog"></i> Settings</a></div>
+        </div>
+        <div class="main_container">
+            <div class="container">
+                <div class="business_details_header header_other_option_add">
+                    <div class="business_details_header_name_details">
+                        <button title="back" class="back_button" onclick="history.back()"><i
+                                class="fa-solid fa-arrow-left-long"></i></button>
+                        <h1>Commission & Earnings</h1>
+                    </div>
+                    <button class="header_button_items">
+                        <a href="">Request Withdrawal</a>
+                    </button>
+                </div>
+                <div class="business-details ">
+                    <div class="business_details_first_col">
+                        <div class="business_details_section business-overview" style="padding: 0;">
+                            <h5 class="heading_h5">Earnings Overview</h5>
+                            <p><strong>Total Earnings:</strong> $5,000</p>
+                            <p><strong>Date :</strong> DD/MM/YY</p>
+                            <p><strong>Available Balance:</strong> $2,500</p>
+                            <p><strong>Pending Earnings:</strong> $1,000</p>
+                        </div>
+
+
+                    </div>
+                    <div class="business_details_second_col">
+                        <div class="service_booking_sonce">
+
+                            <div class=" price-breakdown">
+                                <h5 class="heading_h5">Commission Breakdown</h5>
+                                <p>Platform Fees: <span> $200</span></p>
+                                <p>Referral Earnings: <span>$300</span></p>
+                                <p>Tax Deductions: <span id="addons-total btn-danger">$100</span></p>
+                            </div>
+                            <div class="Manage_Advertisement_table">
+                                <h5 class="heading_h5">Recent Transactions </h5>
+                                <table class="table table-bordered">
+                                    <thead>
+                                        <tr>
+                                            <th>ID</th>
+                                            <th>Type</th>
+                                            <th>Earnings</th>
+                                            <th>Status</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>#1001</td>
+                                            <td>Sale</td>
+                                            <td>$500</td>
+                                            <td class="completed">Completed</td>
+                                        </tr>
+                                        <tr>
+                                            <td>#1002</td>
+                                            <td>Service</td>
+                                            <td>$300</td>
+                                            <td class="pending-earnings">Pending</td>
+                                        </tr>
+                                        <tr>
+                                            <td>#1003</td>
+                                            <td>Refund</td>
+                                            <td><span class="refunded">-$100</span></td>
+                                            <td class="refunded">Refunded</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="Payment_main_box">
+                                <div class="event_booking_call_cont">
+                                    <h5 class="heading_h5"> Withdrawal Management</h5>
+                                    <select>
+                                        <option>Bank </option>
+                                        <option>Transfer</option>
+                                        <option>PayPal</option>
+                                        <option>Platform Wallet</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="Inner_footer">
+                <div class="business-details_footer">
+                    <button class="button_none_radi"><a href="">View Full Transaction History</a></button>
+                    <button class="button_none_radi"><a href="">Commission Structure & Fees</a></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- ===== jq ===== -->
+    <script src="./assets/js/jquery.min.js"></script>
+    <!-- ===== owl slider js ===== -->
+    <script src="./assets/js/owl.carousel.min.js"></script>
+    <!-- ===== Bootstrap JS ===== -->
+    <script src="./assets/js/bootstrap.bundle.min.js"></script>
+
+
+</body>
+
+</html>

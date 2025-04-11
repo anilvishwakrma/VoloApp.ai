@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        crossorigin="anonymous">
+
+    <!-- Owl Carousel -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+        crossorigin="anonymous">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+        crossorigin="anonymous">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/header.css">
+    <title>Notification Preferences - Voloapp</title>
+</head>
+
+<body>
+    <div class="volo_app_flex">
+        <div class="volo_app_site_bar">
+            <div class="sidebar">
+                <div class="side_barofile">
+                    <a class="side_mainLogo_class" href="#"><img src="./assets/images/logo/logo_crop.png" alt=""></a>
+                    <div class="user_profile_site_bar">
+                        <img src="https://cdn-icons-png.flaticon.com/512/21/21104.png" alt="">
+                        <h4>User name</h4>
+                    </div>
+                </div>
+                <div class="nav-item active"><a href="home-dashboard.html"><i class="fas fa-home"></i> Home</a></div>
+                <div class="nav-item"> <a href="flight-booking.html"><i class="fas fa-plane"></i> Bookings </a></div>
+                <div class="nav-item"> <a href="business-dashboard.html"><i class="fas fa-tachometer-alt"></i>
+                        Business Dashboard
+                    </a></div>
+                <div class="nav-item"> <a href="train-search.html"><i class="fas fa-train"></i> Book a Train </a>
+                </div>
+                <div class="nav-item"> <a href="car-rental.html"><i class="fas fa-car"></i> Car Rental </a>
+                </div>
+                <div class="nav-item"> <a href="task-listing.html"><i class="fas fa-tasks"></i> Tasks </a></div>
+                <div class="nav-item"> <a href="marketplace.html"><i class="fas fa-shopping-bag"></i> Marketplace </a>
+                </div>
+                <div class="nav-item"> <a href=""><i class="fas fa-comments"></i> Social </a></div>
+                <div class="nav-item"> <a href="list-service.html"><i class="fa fa-server"></i> List Services </a></div>
+                <div class="nav-item"> <a href=""><i class="fas fa-bell"></i> Notifications </a></div>
+                <div class="nav-item"> <a href="map-view.html"> <i class="fas fa-location-dot"></i> Map</a></div>
+                <div class="nav-item"> <a href=""><i class="fas fa-user"></i> Profile </a></div>
+                <hr>
+                <div class="nav-item"><a href="#"><i class="fas fa-question-circle"></i> Help & Support</a></div>
+                <div class="nav-item"><a href="#"><i class="fas fa-cog"></i> Settings</a></div>
+            </div>
+            <div class="nav-item"><a href="#"><i class="fas fa-cog"></i> Settings</a></div>
+        </div>
+
+        <div class="main_container">
+            <div class="container">
+                <div class="business_details_header">
+                    <div class="business_details_header_name_details">
+                        <button title="back" class="back_button" onclick="history.back()"><i
+                                class="fa-solid fa-arrow-left-long"></i></button>
+                        <h1>Notification Preferences 🔔</h1>
+                    </div>
+                </div>
+                <div class="business-details Width_control">
+                    <div class="business_details_first_col">
+                        <div class="left-column">
+                            <div class="preference-group" style="--index: 1;">
+                                <h5 class="heading_h5">⚙️ General Notification Settings</h5>
+                                <div class="preference-item">
+                                    <span>✉️ Email Notifications</span>
+                                    <div class="form-check form-switch">
+                                        <input class="form-check-input" type="checkbox" id="emailNotifications" checked>
+                                        <label class="form-check-label" for="emailNotifications"></label>
+                                    </div>
+                                </div>
+                                <div class="preference-item">
+                                    <span>💬 SMS Alerts</span>
+                                    <div class="form-check form-switch">
+                                        <input class="form-check-input" type="checkbox" id="smsAlerts">
+                                        <label class="form-check-label" for="smsAlerts"></label>
+                                    </div>
+                                </div>
+                                <div class="preference-item">
+                                    <span>📱 Push Notifications</span>
+                                    <div class="form-check form-switch">
+                                        <input class="form-check-input" type="checkbox" id="pushNotifications" checked>
+                                        <label class="form-check-label" for="pushNotifications"></label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="preference-group" style="--index: 2;">
+                                <h5 class="heading_h5">🛡️ Activity & Account Alerts</h5>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="loginAlerts">
+                                    <label class="form-check-label" for="loginAlerts">🔑 Login Attempts & Security
+                                        Alerts</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="paymentAlerts">
+                                    <label class="form-check-label" for="paymentAlerts">💳 Payment Confirmations &
+                                        Failed
+                                        Transactions</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="bookingAlerts">
+                                    <label class="form-check-label" for="bookingAlerts">🗓️ Booking Confirmations &
+                                        Updates</label>
+                                </div>
+                                <div class="mt-2">
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="activityAlertOption"
+                                            id="enableAll" value="enableAll" checked>
+                                        <label class="form-check-label" for="enableAll">✅ Enable All</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="activityAlertOption"
+                                            id="customizeActivity" value="customizeActivity">
+                                        <label class="form-check-label" for="customizeActivity">⚙️ Customize Per
+                                            Activity</label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="preference-group" style="--index: 3;">
+                                <h5 class="heading_h5">💬 Messages & Chat Alerts</h5>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="directMessages">
+                                    <label class="form-check-label" for="directMessages">✉️ Direct Messages from Users
+                                        or
+                                        Businesses</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="replyAlerts">
+                                    <label class="form-check-label" for="replyAlerts">↩️ Replies to Posts &
+                                        Comments</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="callAlerts">
+                                    <label class="form-check-label" for="callAlerts">📞 Call & Video Chat
+                                        Requests</label>
+                                </div>
+                            </div>
+
+                            <div class="preference-group" style="--index: 4;">
+                                <h5 class="heading_h5">📢 Promotions & Offers</h5>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="specialDeals">
+                                    <label class="form-check-label" for="specialDeals">🏷️ Special Deals &
+                                        Discounts</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="expiryReminders">
+                                    <label class="form-check-label" for="expiryReminders">🗓️ Subscription Expiry &
+                                        Renewal
+                                        Reminders</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="platformAnnouncements">
+                                    <label class="form-check-label" for="platformAnnouncements">📰 New Features &
+                                        Platform
+                                        Announcements</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <style>
+                        .preference-group {
+                            margin-bottom: 20px;
+                            padding: 15px;
+                            border: 1px solid #dee2e6;
+                            border-radius: 5px;
+                            opacity: 0;
+                            /* Initial opacity for fade-in */
+                            animation: fadeIn 0.5s ease-out forwards;
+                            animation-delay: calc(0.1s * var(--index));
+                            /* Staggered fade-in */
+                        }
+
+                        @keyframes fadeIn {
+                            from {
+                                opacity: 0;
+                                transform: translateY(-10px);
+                            }
+
+                            to {
+                                opacity: 1;
+                                transform: translateY(0);
+                            }
+                        }
+
+                        .preference-item {
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+                            margin-bottom: 10px;
+                        }
+
+                        .preference-item:last-child {
+                            margin-bottom: 0;
+                        }
+
+                        .form-check-label {
+                            margin-left: 0.5em;
+                        }
+
+                        .preference-group h5 i,
+                        .preference-group h5 span {
+                            margin-right: 0.5em;
+                        }
+
+                        .preference-item>span i,
+                        .preference-item>span span {
+                            margin-right: 0.75em;
+                        }
+
+                        /* Toggle Switch Styling */
+                        .form-switch .form-check-input {
+                            width: 2.5rem;
+                            height: 1.5rem;
+                            background-color: #ccc;
+                            border-radius: 1.5rem;
+                            position: relative;
+                            cursor: pointer;
+                            transition: background-color 0.3s ease;
+                            -webkit-appearance: none;
+                            -moz-appearance: none;
+                            appearance: none;
+                        }
+
+                        .form-switch .form-check-input::before {
+                            content: "";
+                            position: absolute;
+                            width: 1rem;
+                            height: 1rem;
+                            background-color: white;
+                            border-radius: 50%;
+                            top: 50%;
+                            left: 0.25rem;
+                            transform: translateY(-50%);
+                            transition: transform 0.3s ease;
+                        }
+
+                        .form-switch .form-check-input:checked {
+                            background-color: #28a745;
+                            /* Green for enabled */
+                        }
+
+                        .form-switch .form-check-input:checked::before {
+                            transform: translateX(1rem) translateY(-50%);
+                        }
+
+                        .form-check-input:focus {
+                            border-color: #80bdff;
+                            outline: 0;
+                            box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+                        }
+
+                        /* Disabled State */
+                        .form-check-input:disabled+.form-check-label {
+                            color: #6c757d;
+                            /* Gray for disabled label */
+                        }
+
+                        .form-check-input:disabled {
+                            background-color: #6c757d;
+                            /* Gray for disabled toggle background */
+                            cursor: not-allowed;
+                        }
+
+                        .form-check-input:disabled::before {
+                            background-color: #f8f9fa;
+                            /* Lighter gray for disabled toggle knob */
+                        }
+
+                        /* Do Not Disturb Mode */
+                        #doNotDisturb:checked~#dndOptions {
+                            /* No specific color change on the toggle itself, but the section can be highlighted */
+                        }
+
+                        .preference-group:has(#doNotDisturb:checked) {
+                            border-color: #fd7e14;
+                            /* Orange border for DND section */
+                            background-color: #fff3e0;
+                            /* Light orange background for DND section */
+                        }
+
+                        /* Desktop Layout */
+                        @media (min-width: 768px) {
+                            .desktop-layout {
+                                display: grid;
+                                grid-template-columns: 1fr 300px;
+                                /* Adjust width as needed */
+                                grid-gap: 20px;
+                            }
+
+                            .left-column>.preference-group:last-child {
+                                margin-bottom: 0;
+                                /* Remove extra margin on mobile */
+                            }
+
+                            .right-column {
+                                position: sticky;
+                                /* Make the right column sticky on scroll */
+                                top: 20px;
+                                /* Adjust top spacing as needed */
+                            }
+                        }
+                    </style>
+                    <div class="business_details_second_col">
+                        <div class="right-column">
+                            <div class="preference-group" style="--index: 5;">
+                                <h5 class="heading_h5">🌙 Do Not Disturb Mode</h5>
+                                <div class="preference-item">
+                                    <span><i class="fas fa-power-off"></i> Silence Notifications</span>
+                                    <div class="form-check form-switch">
+                                        <input class="form-check-input" type="checkbox" id="doNotDisturb">
+                                        <label class="form-check-label" for="doNotDisturb"></label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="report-details border_button_one_px mt-3">
+                                <h5 class="heading_h5"><i class="fas fa-sliders-h"></i> Advanced Settings</h5>
+                                <ul class="Action_user_section">
+                                    <li><a href="#"> Advanced Settings/a>
+                                    </li>
+                                    <li><a href="#"> Notification Sound</a>
+                                    </li>
+                                    <li><a href="">Vibration Patterns</a></li>
+                                </ul>
+                            </div>
+
+
+
+                            <div class="business-details_footer">
+                                <button class="button_none_radi"><i class="fas fa-history me-2"></i> View Notification
+                                    History</button>
+                                <button class="button_none_radi"><i class="fas fa-cog me-2"></i> Manage Device & App
+                                    Notifications</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== jq ===== -->
+    <script src="./assets/js/jquery.min.js"></script>
+    <!-- ===== owl slider js ===== -->
+    <script src="./assets/js/owl.carousel.min.js"></script>
+    <!-- ===== Bootstrap JS ===== -->
+    <script src="./assets/js/bootstrap.bundle.min.js"></script>
+
+
+    <script>
+        function showSeats(classType) {
+            document.querySelectorAll('.seat-grid').forEach(div => div.classList.remove('active'));
+            document.getElementById(classType).classList.add('active');
+            document.querySelectorAll('.seat-tabs button').forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+        }
+    </script>
+</body>
+
+</html>

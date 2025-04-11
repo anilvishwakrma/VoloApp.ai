@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- ===== Font Awesome CDN ===== -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- ============ owl slider ========== -->
+    <link rel="stylesheet" href="./assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="./assets/css/owl.theme.default.min.css">
+
+    <!-- ===== Custom CSS ===== -->
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/header.css">
+    <title> Add Product - Voloapp</title>
+
+</head>
+
+<body>
+    <div class="volo_app_flex">
+        <div class="volo_app_site_bar">
+            <div class="sidebar">
+                <div class="side_barofile">
+                    <a class="side_mainLogo_class" href="#"><img src="./assets/images/logo/logo_crop.png" alt=""></a>
+                    <div class="user_profile_site_bar">
+                        <img src="https://cdn-icons-png.flaticon.com/512/21/21104.png" alt="">
+                        <h4>User name</h4>
+                    </div>
+                </div>
+                <div class="nav-item active"><a href="home-dashboard.html"><i class="fas fa-home"></i> Home</a></div>
+                <div class="nav-item"> <a href="flight-booking.html"><i class="fas fa-plane"></i> Bookings </a></div>
+                <div class="nav-item"> <a href="business-dashboard.html"><i class="fas fa-tachometer-alt"></i>
+                        Business Dashboard
+                    </a></div>
+                <div class="nav-item"> <a href="train-search.html"><i class="fas fa-train"></i> Book a Train </a>
+                </div>
+                <div class="nav-item"> <a href="car-rental.html"><i class="fas fa-car"></i> Car Rental </a>
+                </div>
+                <div class="nav-item"> <a href="task-listing.html"><i class="fas fa-tasks"></i> Tasks </a></div>
+                <div class="nav-item"> <a href="marketplace.html"><i class="fas fa-shopping-bag"></i> Marketplace </a>
+                </div>
+                <div class="nav-item"> <a href=""><i class="fas fa-comments"></i> So cial </a></div>
+                <div class="nav-item"> <a href="list-service.html"><i class="fa fa-server"></i> List Services </a></div>
+                iv>
+                <div class="nav-item"> <a href=""><i class="fas fa-bell"></i> Notifications </a></div>
+                <div class="nav-item"> <a href="map-view.html"> <i class="fas fa-location-dot"></i> Map</a></div>
+                <div class="nav-item"> <a href=""><i class="fas fa-user"></i> Profile </a></div>
+                <hr>
+                <div class="nav-item"><a href="#"><i class="fas fa-question-circle"></i> Help & Support</a></div>
+                <div class="nav-item"><a href="#"><i class="fas fa-cog"></i> Settings</a></div>
+            </div>
+            <div class="nav-item"><a href="#"><i class="fas fa-cog"></i> Settings</a></div>
+        </div>
+        <div class="main_container">
+            <div class="container">
+                <div class="business_details_header header_other_option_add">
+                    <div class="business_details_header_name_details">
+                        <button title="back" class="back_button" onclick="history.back()"><i
+                                class="fa-solid fa-arrow-left-long"></i></button>
+                        <h1>Post a New Task</h1>
+                    </div>
+                </div>
+                <div class="business-details Width_control">
+                    <div class="business_details_first_col" style="padding-top: 0;">
+                        <form class="booking_form">
+                            <h2 class="heading_h4">Product Information</h2>
+
+                            <div class="bookin_input_box">
+                                <label for="productTitle">Product Title</label>
+                                <input type="text" id="productTitle"
+                                    placeholder="Enter a short name for your item (e.g., 'iPhone 13 Pro')">
+                            </div>
+
+                            <div class="bookin_input_box">
+                                <label for="productCategory">Category</label>
+                                <select id="productCategory">
+                                    <option selected disabled>Select a category</option>
+                                    <option>Electronics</option>
+                                    <option>Fashion</option>
+                                    <option>Home & Garden</option>
+                                    <option>Vehicles</option>
+                                    <option>Sports</option>
+                                    <option>Collectibles</option>
+                                    <option>Other</option>
+                                </select>
+                            </div>
+
+                            <div class="bookin_input_box">
+                                <label for="productDescription" class="form-label">Description</label>
+                                <textarea class="form-control" id="productDescription" rows="5"
+                                    placeholder="Describe the product's features, condition, and any accessories included"></textarea>
+                            </div>
+
+
+                            <div class="bookin_input_box">
+                                <label>Condition</label>
+                                <div>
+                                    <div class="redio_button_box">
+                                        <input class="form-check-input" type="radio" id="oneTime" name="taskType"
+                                            value="oneTime">
+                                        <label class="form-check-label" for="oneTime">New</label>
+                                    </div>
+                                    <div class="redio_button_box">
+                                        <input class="form-check-input" type="radio" id="recurring" name="taskType"
+                                            value="recurring">
+                                        <label class="form-check-label" for="recurring">Used</label>
+                                    </div>
+                                    <div class="redio_button_box">
+                                        <input class="form-check-input" type="radio" id="remote" name="taskLocation"
+                                            value="remote">
+                                        <label class="form-check-label" for="remote">Refurbished</label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <h4 class="heading_h4">Product Images</h4>
+                            <div class="">
+                                <div class="mb-3">
+                                    <input class="form-control" type="file" id="attachments" multiple>
+                                </div>
+                            </div>
+
+
+
+                        </form>
+
+                    </div>
+                    <div class="business_details_second_col sticky-top">
+                        <h2 class="heading_h4">Pricing & Payment</h2>
+                        <div class="bookin_input_box">
+                            <label for="productPrice" class="form-label">Price</label>
+                            <div class="input-group">
+                                <span class="input-group-text">$</span>
+                                <input type="number" class="form-control" id="productPrice"
+                                    placeholder="Enter the selling price (e.g., 500)">
+                            </div>
+                        </div>
+
+                        <div class="bookin_input_box">
+                            <label class="price-type-label">Price Type</label>
+                            <div class="custom_check_box">
+                                <div class="check_block">
+                                    <input data-index="0" id="freePaidToggle" type="checkbox" />
+                                    <label for="freePaidToggle" class="check_label"></label>
+                                </div>
+                                <label class="check_box_label" for="freePaidToggle">Negotiable Price</label>
+                            </div>
+                            <div class="custom_check_box">
+                                <div class="check_block">
+                                    <input data-index="0" id="Fixed" type="checkbox" />
+                                    <label for="Fixed" class="check_label"></label>
+                                </div>
+                                <label class="check_box_label" for="Fixed">Fixed Price</label>
+                            </div>
+                            <span class="price-type-fixed"></span>
+                        </div>
+
+                        <div class="bookin_input_box">
+                            <label for="insurance">Insurance Coverage</label>
+                            <select id="insurance">
+                                <option selected>Cash</option>
+                                <option selected>Bank Transfer</option>
+                                <option selected>PayPal</option>
+                                <option>Credit Card</option>
+                                <option>Crypto</option>
+                            </select>
+                        </div>
+
+                        <div class="check_box_from_vaild">
+                            <div class="checkbox-group">
+                                <input type="checkbox" id="terms-conditions">
+                                <label for="terms-conditions">Allow offers from buyers</label>
+                            </div>
+                        </div>
+
+                        <div class="bookin_input_box">
+                            <label>Delivery Options</label>
+                            <div>
+                                <div class="redio_button_box">
+                                    <input class="form-check-input" type="radio" id="Pickup" name="taskType"
+                                        value="Pickup">
+                                    <label class="form-check-label" for="Pickup">Pickup</label>
+                                </div>
+                                <div class="redio_button_box">
+                                    <input class="form-check-input" type="radio" id="Local Delivery" name="taskType"
+                                        value="Local Delivery">
+                                    <label class="form-check-label" for="Local Delivery">Local Delivery</label>
+                                </div>
+                                <div class="redio_button_box">
+                                    <input class="form-check-input" type="radio" id="Shipping" name="taskType"
+                                        value="Shipping">
+                                    <label class="form-check-label" for="Shipping">Shipping</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bookin_input_box">
+                            <label for="shippingCost">Shipping Cost (If
+                                applicable)</label>
+                            <div class="shipping-cost-input-group input-group">
+                                <span class="shipping-cost-currency input-group-text">$</span>
+                                <input type="number" class="shipping-cost-input form-control" id="shippingCost"
+                                    placeholder="0.00">
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="Inner_footer">
+                    <div class="business-details_footer">
+                        <button class="button_none_radi"><a href="">Publish Listing</a></button>
+                        <button class="button_none_radi"><a href="">Preview Product</a></button>
+                        <button class="button_none_radi"><a href="">Save as Draft</a></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== jq ===== -->
+    <script src="./assets/js/jquery.min.js"></script>
+    <!-- ===== owl slider js ===== -->
+    <script src="./assets/js/owl.carousel.min.js"></script>
+    <!-- ===== Bootstrap JS ===== -->
+    <script src="./assets/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        const priceRange = document.getElementById("priceRange");
+        const priceValue = document.getElementById("priceValue");
+        priceRange.addEventListener("input", function () {
+            priceValue.textContent = `$${this.value}`;
+        });
+    </script>
+</body>
+
+</html>

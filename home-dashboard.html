@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking Dashboard - VoloApp</title>
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+
+    <!-- ===== Font Awesome CDN ===== -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- ===== Custom CSS ===== -->
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/header.css">
+
+</head>
+
+
+<body>
+    <div class="volo_app_flex">
+        <div class="volo_app_site_bar">
+            <div class="sidebar">
+                <div class="side_barofile">
+                    <a class="side_mainLogo_class" href="#"><img src="./assets/images/logo/logo_crop.png" alt=""></a>
+                    <div class="user_profile_site_bar">
+                        <img src="https://cdn-icons-png.flaticon.com/512/21/21104.png" alt="">
+                        <h4>User name</h4>
+                    </div>
+                </div>
+                <div class="nav-item active"><a href="home-dashboard.html"><i class="fas fa-home"></i> Home</a></div>
+                <div class="nav-item"> <a href="flight-booking.html"><i class="fas fa-plane"></i> Bookings </a></div>
+                <div class="nav-item"> <a href="business-dashboard.html"><i class="fas fa-tachometer-alt"></i>
+                        Business Dashboard
+                    </a></div>
+                <div class="nav-item"> <a href="train-search.html"><i class="fas fa-train"></i> Book a Train </a>
+                </div>
+                <div class="nav-item"> <a href="car-rental.html"><i class="fas fa-car"></i> Car Rental </a>
+                </div>
+                <div class="nav-item"> <a href="task-listing.html"><i class="fas fa-tasks"></i> Tasks </a></div>
+                <div class="nav-item"> <a href="marketplace.html"><i class="fas fa-shopping-bag"></i> Marketplace </a>
+                </div>
+                <div class="nav-item"> <a href=""><i class="fas fa-comments"></i> Social </a></div>
+                <div class="nav-item"> <a href="list-service.html"><i class="fa fa-server"></i> List Services </a></div>
+                <div class="nav-item"> <a href=""><i class="fas fa-bell"></i> Notifications </a></div>
+                <div class="nav-item"> <a href="map-view.html"> <i class="fas fa-location-dot"></i> Map</a></div>
+                <div class="nav-item"> <a href=""><i class="fas fa-user"></i> Profile </a></div>
+                <hr>
+                <div class="nav-item"><a href="#"><i class="fas fa-question-circle"></i> Help & Support</a></div>
+                <div class="nav-item"><a href="#"><i class="fas fa-cog"></i> Settings</a></div>
+            </div>
+            <div class="nav-item"><a href="#"><i class="fas fa-cog"></i> Settings</a></div>
+        </div>
+        <div class="main_container">
+            <div class="container">
+                <header>
+                    <div class="top_header">
+                        <div class="container">
+                            <div class="top_header_top">
+                                <div class="welcome_name_user">
+                                    <p>Welcome to <span class="welcome_name_user_animated">VoloApp.io! </span></p>
+                                </div>
+                                <div class="top_searching">
+                                    <input type="text" class="search-input"
+                                        placeholder="Search bookings, tasks, posts...">
+                                    <button class="search-btn"><i class="fa fa-search"></i></button>
+                                </div>
+                                <div class="top_Notification_ball">
+                                    <div class="Notification_ball">
+                                        <i class="fa-solid fa-bell"></i>
+                                        <span class="notification-badge"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </header>
+                <div class="Quick_Actions_home">
+                    <ul class="nav nav-pills mb-3 Quick_Actions_Tabs_all " id="myTabs">
+                        <li class="nav-item">
+                            <a class="nav-link active" data-bs-toggle="tab" href="#book-flight">✈️ Book a Flight</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-bs-toggle="tab" href="#find-activity">🎭 Find an Activity</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-bs-toggle="tab" href="#post-task">📋 Post a Task</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-bs-toggle="tab" href="#view-marketplace">🛒 View Marketplace</a>
+                        </li>
+                    </ul>
+
+                    <div class="tab-content Quick_Actions_table ">
+                        <div class="tab-pane fade show active" id="book-flight">
+                            <h3>Book a Flight</h3>
+                            <table class="table table-bordered book_table_clas">
+                                <thead>
+                                    <tr>
+                                        <th>Flight</th>
+                                        <th>Departure</th>
+                                        <th>Arrival</th>
+                                        <th>Price</th>
+                                        <th>Book</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Flight 1</td>
+                                        <td>City A</td>
+                                        <td>City B</td>
+                                        <td>$100</td>
+                                        <td><button><a href="flight-search.html">Book</a></button></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Flight 2</td>
+                                        <td>City C</td>
+                                        <td>City D</td>
+                                        <td>$200</td>
+                                        <td><button><a href="flight-search.html">Book</a></button></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Flight 3</td>
+                                        <td>City E</td>
+                                        <td>City F</td>
+                                        <td>$300</td>
+                                        <td><button><a href="flight-search.html">Book</a></button></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="tab-pane fade" id="find-activity">
+                            <h3>Find an Activity</h3>
+                            <table class="table table-bordered book_table_clas">
+                                <thead>
+                                    <tr>
+                                        <th>Activity</th>
+                                        <th>Location</th>
+                                        <th>Price</th>
+                                        <th>Book</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Activity 1</td>
+                                        <td>Location A</td>
+                                        <td>$100</td>
+                                        <td><button class="btn btn-primary">Book</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Activity 2</td>
+                                        <td>Location B</td>
+                                        <td>$200</td>
+                                        <td><button class="btn btn-primary">Book</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Activity 3</td>
+                                        <td>Location C</td>
+                                        <td>$300</td>
+                                        <td><button class="btn btn-primary">Book</button></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="tab-pane fade" id="post-task">
+                            <h3>Post A Task</h3>
+                            <table class="table table-bordered book_table_clas">
+                                <thead>
+                                    <tr>
+                                        <th>Task</th>
+                                        <th>Location</th>
+                                        <th>Price</th>
+                                        <th>Post</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Task 1</td>
+                                        <td>Location A</td>
+                                        <td>$100</td>
+                                        <td><button class="btn btn-primary">Post</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Task 2</td>
+                                        <td>Location B</td>
+                                        <td>$200</td>
+                                        <td><button class="btn btn-primary">Post</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Task 3</td>
+                                        <td>Location C</td>
+                                        <td>$300</td>
+                                        <td><button class="btn btn-primary">Post</button></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="tab-pane fade" id="view-marketplace">
+                            <h3>View Marketplace</h3>
+                            <table class="table table-bordered book_table_clas">
+                                <thead>
+                                    <tr>
+                                        <th>Product</th>
+                                        <th>Price</th>
+                                        <th>Buy</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Product 1</td>
+                                        <td>$100</td>
+                                        <td><button class="btn btn-primary">Buy</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Product 2</td>
+                                        <td>$200</td>
+                                        <td><button class="btn btn-primary">Buy</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Product 3</td>
+                                        <td>$300</td>
+                                        <td><button class="btn btn-primary">Buy</button></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ================ Upcoming_Bookings============ -->
+                <div class="Upcoming_Bookings_home">
+                    <div class="Upcoming_Bookings_heading">
+                        <h3>Upcoming Bookings</h3>
+                        <a href="#">View All Bookings <i class="fa-solid fa-angle-right"></i></a>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <div class="Upcoming_Bookings_cards">
+                                <div class="card booking-card">
+                                    <div class="Upcoming_Bookings_card_body">
+                                        <img src="https://t4.ftcdn.net/jpg/10/39/47/43/360_F_1039474365_CKMm3ynxVsFQ9e3prQutwLx5V8OsDASq.jpg"
+                                            alt="Flight Image" class="booking-img">
+                                        <h5 class="Upcoming_Bookings_title">Flight</h5>
+                                        <p class="Upcoming_Bookings_cty">City A to City B</p>
+                                        <div class="flex_book_date_time">
+                                            <p class="Upcoming_Bookings_date"><i class="fas fa-calendar-days"></i> Date:
+                                                01/01/2022</p>
+                                            <p class="Upcoming_Bookings_time"><i class="fas fa-clock"></i> Time: 12:00
+                                                PM
+                                            </p>
+                                        </div>
+                                        <button class="book_up_button"> <a href="business-and-service-details.html">View
+                                                Details</a></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="Upcoming_Bookings_cards">
+                                <div class="card booking-card">
+                                    <div class="Upcoming_Bookings_card_body">
+                                        <img src="https://promos.makemytrip.com/Hotels_product/Luxe/brands.png"
+                                            alt="Flight Image" class="booking-img">
+                                        <h5 class="Upcoming_Bookings_title">Hotel</h5>
+                                        <p class="Upcoming_Bookings_cty">Lorem, ipsum dolor.</p>
+                                        <div class="flex_book_date_time">
+                                            <p class="Upcoming_Bookings_date"><i class="fas fa-calendar-days"></i> Date:
+                                                01/01/2022</p>
+                                            <p class="Upcoming_Bookings_time"><i class="fas fa-clock"></i> Time: 12:00
+                                                PM
+                                            </p>
+                                        </div>
+                                        <button class="book_up_button"> <a href="business-and-service-details.html">View
+                                                Details</a></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="Upcoming_Bookings_cards">
+                                <div class="card booking-card">
+                                    <div class="Upcoming_Bookings_card_body">
+                                        <img src="https://ticketsque.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FMedia.8af2f733.jpeg&w=3840&q=75"
+                                            alt="Flight Image" class="booking-img">
+                                        <h5 class="Upcoming_Bookings_title">Event</h5>
+                                        <p class="Upcoming_Bookings_cty">Lorem, ipsum dolor.</p>
+                                        <div class="flex_book_date_time">
+                                            <p class="Upcoming_Bookings_date"><i class="fas fa-calendar-days"></i> Date:
+                                                01/01/2022</p>
+                                            <p class="Upcoming_Bookings_time"><i class="fas fa-clock"></i> Time: 12:00
+                                                PM
+                                            </p>
+                                        </div>
+                                        <button class="book_up_button"> <a href="business-and-service-details.html">View
+                                                Details</a></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ============ Task Marketplac ========== -->
+                <div class="Upcoming_Bookings_home">
+                    <div class="Upcoming_Bookings_heading d-flex justify-content-between align-items-center">
+                        <h3>Task Marketplace </h3>
+                        <a href="#">View All Tasks <i class="fa-solid fa-angle-right"></i></a>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <div class="Upcoming_Bookings_cards">
+                                <div class="card booking-card">
+                                    <div class="Upcoming_Bookings_card_body text-center">
+                                        <img src="https://cdn-icons-png.flaticon.com/512/1995/1995539.png"
+                                            alt="House Cleaning " class="booking-img tasks_market_img">
+                                        <h5 class="Upcoming_Bookings_title">House Cleaning</h5>
+                                        <p class="Upcoming_Bookings_cty">Deep cleaning service for a 2BHK.</p>
+                                        <div class="flex_book_date_time">
+                                            <p class="Upcoming_Bookings_date"><i class="fas fa-calendar-alt"></i> Date:
+                                                15/03/2025</p>
+                                            <p class="Upcoming_Bookings_time"><i class="fas fa-clock"></i> Time: 10:00
+                                                AM
+                                            </p>
+                                        </div>
+                                        <button class="book_up_button"><a href="event-booking.html"> View
+                                                Details</a></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="Upcoming_Bookings_cards">
+                                <div class="card booking-card">
+                                    <div class="Upcoming_Bookings_card_body text-center">
+                                        <img src="https://cdn-icons-png.flaticon.com/512/3523/3523421.png"
+                                            alt="Dog Walking" class="booking-img tasks_market_img">
+                                        <h5 class="Upcoming_Bookings_title">Dog Walking</h5>
+                                        <p class="Upcoming_Bookings_cty">45-minute evening walk for a Labrador.</p>
+                                        <div class="flex_book_date_time">
+                                            <p class="Upcoming_Bookings_date"><i class="fas fa-calendar-alt"></i> Date:
+                                                16/03/2025</p>
+                                            <p class="Upcoming_Bookings_time"><i class="fas fa-clock"></i> Time: 6:00 PM
+                                            </p>
+                                        </div>
+                                        <button class="book_up_button"><a href="event-booking.html"> View
+                                                Details</a></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="Upcoming_Bookings_cards">
+                                <div class="card booking-card">
+                                    <div class="Upcoming_Bookings_card_body text-center">
+                                        <img src="https://cdn-icons-png.flaticon.com/512/2892/2892184.png"
+                                            alt="Grocery Delivery" class="booking-img tasks_market_img">
+                                        <h5 class="Upcoming_Bookings_title">Grocery Delivery</h5>
+                                        <p class="Upcoming_Bookings_cty">Pick up and deliver groceries to home.</p>
+                                        <div class="flex_book_date_time">
+                                            <p class="Upcoming_Bookings_date"><i class="fas fa-calendar-alt"></i> Date:
+                                                17/03/2025</p>
+                                            <p class="Upcoming_Bookings_time"><i class="fas fa-clock"></i> Time: 3:00 PM
+                                            </p>
+                                        </div>
+                                        <button class="book_up_button"><a href="event-booking.html"> View
+                                                Details</a></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ============ Social Feed ========== -->
+                <div class="Upcoming_Bookings_home">
+                    <div class="Upcoming_Bookings_heading d-flex justify-content-between align-items-center">
+                        <h3>Social Feed</h3>
+                        <a href="#">View All <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <div class="Upcoming_Bookings_cards">
+                                <div class="card social_card">
+                                    <div class="Upcoming_Bookings_card_body">
+                                        <div class="social_card_header d-flex align-items-center">
+                                            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="User"
+                                                class="user_avatar">
+                                            <div>
+                                                <h5 class="user_name">John Doe</h5>
+                                                <p class="post_time"><i class="fas fa-clock"></i> 2 hours ago</p>
+                                            </div>
+                                        </div>
+                                        <p class="post_content">Just visited this amazing place! ✨</p>
+
+                                        <div class="post_actions">
+                                            <i class="far fa-thumbs-up"></i>
+                                            <i class="far fa-comment"></i>
+                                            <i class="fas fa-share"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="Upcoming_Bookings_cards">
+                                <div class="card social_card">
+                                    <div class="Upcoming_Bookings_card_body">
+                                        <div class="social_card_header d-flex align-items-center">
+                                            <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="User"
+                                                class="user_avatar">
+                                            <div>
+                                                <h5 class="user_name">Emily Smith</h5>
+                                                <p class="post_time"><i class="fas fa-clock"></i> 5 hours ago</p>
+                                            </div>
+                                        </div>
+                                        <p class="post_content">Check out my new recipe! 🍕😍</p>
+                                        <div class="post_actions">
+                                            <i class="far fa-thumbs-up"></i>
+                                            <i class="far fa-comment"></i>
+                                            <i class="fas fa-share"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="Upcoming_Bookings_cards">
+                                <div class="card social_card">
+                                    <div class="Upcoming_Bookings_card_body">
+                                        <div class="social_card_header d-flex align-items-center">
+                                            <img src="https://randomuser.me/api/portraits/men/50.jpg" alt="User"
+                                                class="user_avatar">
+                                            <div>
+                                                <h5 class="user_name">Michael Brown</h5>
+                                                <p class="post_time"><i class="fas fa-clock"></i> 1 day ago</p>
+                                            </div>
+                                        </div>
+                                        <p class="post_content">Started a new workout routine! 💪🔥</p>
+                                        <div class="post_actions">
+                                            <i class="far fa-thumbs-up"></i>
+                                            <i class="far fa-comment"></i>
+                                            <i class="fas fa-share"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- ============ Suggested Tours ========== -->
+                <div class="Upcoming_Bookings_home">
+                    <div class="Upcoming_Bookings_heading">
+                        <h3>Suggested Tours & Experiences</h3>
+                        <a href="list-tour.html">View All <i class="fas fa-arrow-right"></i></a>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <div class="Upcoming_Bookings_cards">
+                                <div class="card booking-card">
+                                    <div class="Upcoming_Bookings_card_body">
+                                        <img src="https://images.pexels.com/photos/30868732/pexels-photo-30868732/free-photo-of-tourists-observing-beach-in-black-and-white.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                                            alt="Beach Tour" class="booking-img">
+                                        <h5 class="Upcoming_Bookings_title">Beach Adventure</h5>
+                                        <p class="Upcoming_Bookings_cty">Explore the Maldives</p>
+                                        <div class="flex_book_date_time">
+                                            <p class="Upcoming_Bookings_date"><i class="fas fa-calendar-days"></i>
+                                                Available: Year-round</p>
+                                            <p class="Upcoming_Bookings_time"><i class="fas fa-clock"></i> Duration: 5
+                                                Days</p>
+                                        </div>
+                                        <button class="book_up_button">View Details</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="Upcoming_Bookings_cards">
+                                <div class="card booking-card">
+                                    <div class="Upcoming_Bookings_card_body">
+                                        <img src="https://images.unsplash.com/photo-1536763225213-b5592b525630"
+                                            alt="Mountain Trekking" class="booking-img">
+                                        <h5 class="Upcoming_Bookings_title">Mountain Trekking</h5>
+                                        <p class="Upcoming_Bookings_cty">Himalayan Adventure</p>
+                                        <div class="flex_book_date_time">
+                                            <p class="Upcoming_Bookings_date"><i class="fas fa-calendar-days"></i>
+                                                Best: April - Sept</p>
+                                            <p class="Upcoming_Bookings_time"><i class="fas fa-clock"></i> Duration: 7
+                                                Days</p>
+                                        </div>
+                                        <button class="book_up_button">View Details</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="Upcoming_Bookings_cards">
+                                <div class="card booking-card">
+                                    <div class="Upcoming_Bookings_card_body">
+                                        <img src="https://images.pexels.com/photos/169647/pexels-photo-169647.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                                            alt="City Tour" class="booking-img">
+                                        <h5 class="Upcoming_Bookings_title">City Lights</h5>
+                                        <p class="Upcoming_Bookings_cty">New York Night Tour</p>
+                                        <div class="flex_book_date_time">
+                                            <p class="Upcoming_Bookings_date"><i class="fas fa-calendar-days"></i>
+                                                Available: Daily</p>
+                                            <p class="Upcoming_Bookings_time"><i class="fas fa-clock"></i> Duration: 3
+                                                Hours</p>
+                                        </div>
+                                        <button class="book_up_button">View Details</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== Bootstrap JS ===== -->
+    <script src="./assets/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        function toggleSidebar() {
+            document.querySelector('.sidebar').classList.toggle('closed');
+        }
+    </script>
+</body>
+
+</html>

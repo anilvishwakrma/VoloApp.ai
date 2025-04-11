@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- ===== Font Awesome CDN ===== -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- ============ owl slider ========== -->
+    <link rel="stylesheet" href="./assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="./assets/css/owl.theme.default.min.css">
+
+    <!-- ===== Custom CSS ===== -->
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/header.css">
+    <link rel="stylesheet" href="./assets/css/style_pm.css">
+    <title>Subscription Management - Voloapp</title>
+</head>
+
+
+
+<body>
+
+    <div class="ALl_Inner_page">
+        <div class="Inner_flex_site_component Inner_width_Product">
+            <div class="Ineer_pages_second_box ">
+                <div class="business_details_header header_other_option_add">
+                    <div class="business_details_header_name_details">
+                        <button title="back" class="back_button" onclick="history.back()">
+                            <i class="fa-solid fa-arrow-left-long"></i>
+                        </button>
+                        <h1>Subscription Management</h1>
+                    </div>
+                </div>
+                <div class="section_content_ineer">
+                    <div class="subscription-status mb-4">
+                        <h5 class="heading_h5">Current Subscription Status</h5>
+                        <div class="business_details_section business-overview" style="padding: 0;">
+                            <p><strong>Active Plan:</strong> <span>Premium Business</span></p>
+                            <p><strong>Renewal Date:</strong> <span>April 15, 2025</span></p>
+                            <p><strong>Payment Method:</strong> <span>****-****-****-1234</span></p>
+                            <button class="sub_man_button">Change Plan</button>
+                        </div>
+                    </div>
+
+                    <div class="sub_mangnt_available_plans">
+                        <h5 class="heading_h5">Subscription Options</h5>
+                        <div class="row ">
+                            <div class="col">
+                                <div class="sub_mangnt_available_plans_box">
+                                    <h4 class="heading_h4">Basic</h4>
+                                    <ul>
+                                        <li>Feature 1</li>
+                                        <li>Feature 2</li>
+                                        <li>Limited Access</li>
+                                    </ul>
+                                    <button class="sub_man_button">Downgrade Plan</button>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="sub_mangnt_available_plans_box">
+                                    <h4 class="heading_h4">Premium</h4>
+                                    <ul>
+                                        <li>All Basic Features</li>
+                                        <li>Advanced Feature A</li>
+                                        <li>Priority Support</li>
+                                    </ul>
+                                    <button class="sub_man_button">Current Plan</button>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="sub_mangnt_available_plans_box">
+                                    <h4 class="heading_h4">Enterprise</h4>
+                                    <ul>
+                                        <li>All Premium Features</li>
+                                        <li>Dedicated Support</li>
+                                        <li>Custom Solutions</li>
+                                    </ul>
+                                    <button class="sub_man_button">Upgrade Now</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sub_mangnt_plan_comparison">
+                        <h5 class="heading_h5">Benefits & Features Comparison</h5>
+                        <div class="table-responsive">
+                            <table class="table table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th>Feature</th>
+                                        <th>Basic</th>
+                                        <th>Premium</th>
+                                        <th>Enterprise</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Number of Users</td>
+                                        <td>1</td>
+                                        <td>5</td>
+                                        <td>Unlimited</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Storage Space</td>
+                                        <td>1GB</td>
+                                        <td>10GB</td>
+                                        <td>100GB</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Priority Support</td>
+                                        <td><i class="fas fa-times text-danger"></i></td>
+                                        <td><i class="fas fa-check text-success"></i></td>
+                                        <td><i class="fas fa-check text-success"></i></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+
+                </div>
+                <div class="Inner_footer">
+                    <div class="business-details_footer">
+                        <button class="button_none_radi"><a href="#"><i class="fas fa-file-invoice-dollar me-2"></i>
+                                View Billing History</a></button>
+                        <button class="button_none_radi"><a href="#"><i class="fas fa-cog me-2"></i>
+                                Manage Payment Settings
+                            </a></button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="Ineer_pages_first_box">
+                <div class="billing-payment mb-4">
+                    <h4 class="heading_h4">Billing & Payment Management</h4>
+                    <div class="card">
+                        <div class="card-body">
+                            <p><strong>Next Billing Date:</strong> <span id="nextBillingDate">May 15,
+                                    2025</span></p>
+                            <p><strong>Amount Due:</strong> <span id="billingAmount">$29.99</span></p>
+                            <button class="sub_man_button">Update Payment Method</button>
+                        </div>
+                    </div>
+                    <div class="sub_man_payment_history">
+                        <h4 class="heading_h4">Payment History & Invoices</h4>
+                        <ul class="">
+                            <li class=" d-flex justify-content-between align-items-center">
+                                Payment on April 15, 2025 - $29.99 <a href="#"
+                                    class="btn btn-sm btn-outline-secondary">View
+                                    Invoice</a>
+                            </li>
+                            <li class=" d-flex justify-content-between align-items-center">
+                                Payment on March 15, 2025 - $29.99 <a href="#"
+                                    class="btn btn-sm btn-outline-secondary">View
+                                    Invoice</a>
+                            </li>
+                        </ul>
+                        <div class="a_link">
+                            <a href="#">View All Payment History <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sub_man_cancellation_refunds">
+                    <h4 class="heading_h4">Cancellation & Refunds</h4>
+                    <div class="card">
+                        <div class="card-body">
+                            <p>You can cancel your subscription at any time. Upon cancellation, your
+                                access will continue until the end of your current billing cycle.</p>
+                            <button class="sub_man_button">Cancel Subscription</button>
+                        </div>
+                    </div>
+                    <div class="refund-info mt-3">
+                        <h4 class="heading_h4">Refund Eligibility</h4>
+                        <p>Refunds are typically not provided for partial billing cycles. Please refer to our <a
+                                href="#">Refund Policy</a> for more details.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- ===== jq ===== -->
+    <script src="./assets/js/jquery.min.js"></script>
+    <!-- ===== owl slider js ===== -->
+    <script src="./assets/js/owl.carousel.min.js"></script>
+    <!-- ===== Bootstrap JS ===== -->
+    <script src="./assets/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip()
+        })
+    </script>
+
+    <style>
+        .custom-tooltip-bg .tooltip-inner {
+            background-color: #007bff;
+            /* Example blue color */
+            color: #fff;
+        }
+    </style>
+
+</body>
+
+</html>

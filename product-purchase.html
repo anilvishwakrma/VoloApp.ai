@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- ===== Font Awesome CDN ===== -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- ============ owl slider ========== -->
+    <link rel="stylesheet" href="./assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="./assets/css/owl.theme.default.min.css">
+
+    <!-- ===== Custom CSS ===== -->
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/header.css">
+    <link rel="stylesheet" href="./assets/css/style_pm.css">
+    <title>Product Purchase -Voloapp</title>
+</head>
+
+
+
+<body>
+
+    <div class="ALl_Inner_page">
+        <div class="Inner_flex_site_component Inner_width_Product">
+            <div class="Ineer_pages_second_box ">
+                <!-- ======== Header ======== -->
+                <div class="business_details_header header_other_option_add">
+                    <div class="business_details_header_name_details">
+                        <button title="back" class="back_button" onclick="history.back()"><i
+                                class="fa-solid fa-arrow-left-long"></i></button>
+                        <h1>Confirm Purchase</h1>
+                    </div>
+
+                </div>
+                <div class="section_content_ineer">
+                    <div class="">
+                        <div class="product_name_strong">
+                            <h5 class="heading_h5">iPhone 13 Pro – Like New</h5>
+                        </div>
+                        <div class="d-flex align-items-center mb-3">
+                            <span class="price_product">$850</span>
+                            <!-- <span class="badge bg-success ms-3">$15 Discount Applied</span> -->
+                        </div>
+                        <h4 class="heading_h4">Seller Information</h4>
+                        <div class="task-poster">
+                            <div class="poster-avatar">
+                                <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Sarah Johnson">
+                            </div>
+                            <div class="poster-info">
+                                <h5>Sarah Johnson</h5>
+                                <div class="poster-rating">
+                                    <i class="fas fa-star"></i> 4.8 (24 reviews)
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product_purchase_main_img">
+                            <img src="https://cdn.mos.cms.futurecdn.net/yDn3ZSXu9eSBxmXQDZ4PCF.jpg" alt="Product"
+                                class="product-image w-100 mb-3">
+                        </div>
+                        <div class="product_purchase_main_content">
+                            <h3 class="h5 fw-bold mb-3">Delivery & Pickup Options</h3>
+
+                            <div class="delivery-pickup-container">
+                                <div class="pickup-option-container mt-3">
+                                    <div class="form-check">
+                                        <input class="form-check-input pickup-option-checkbox" type="checkbox"
+                                            id="pickupOption" data-bs-toggle="collapse"
+                                            data-bs-target="#pickupLocationSelect" aria-expanded="false"
+                                            aria-controls="pickupLocationSelect">
+                                        <label class="form-check-label pickup-option-label" for="pickupOption">Pickup
+                                            Option</label>
+                                    </div>
+                                    <div class="collapse mt-2" id="pickupLocationSelect">
+                                        <h4 for="pickupLocation" class="heading_h4">Select Pickup Location (If
+                                            available)</h4>
+                                        <select class="form-select pickup-location-select-input" id="pickupLocation">
+                                            <option value="location1">Location 1</option>
+                                            <option value="location2">Location 2</option>
+                                            <option value="location3">Location 3</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="delivery-option-container mt-3">
+                                    <div class="form-check">
+                                        <input class="form-check-input delivery-option-checkbox" type="checkbox"
+                                            id="deliveryOption" data-bs-toggle="collapse"
+                                            data-bs-target="#deliveryAddressInput, #shippingMethodContainer, #shippingCostContainer"
+                                            aria-expanded="false"
+                                            aria-controls="deliveryAddressInput shippingMethodContainer shippingCostContainer">
+                                        <label class="form-check-label delivery-option-label"
+                                            for="deliveryOption">Delivery Option</label>
+                                    </div>
+                                    <div class="collapse mt-2" id="deliveryAddressInput">
+                                        <h3 for="shippingAddress" class="heading_h4">Shipping
+                                            Address</h3>
+                                        <textarea class="form-control delivery-address-textarea" id="shippingAddress"
+                                            rows="3"></textarea>
+                                    </div>
+                                </div>
+
+                                <div class="shipping-method-container mt-3 collapse" id="shippingMethodContainer">
+                                    <hd class="heading_h4">Shipping Method</hd>
+                                    <div class="shipping-method-options">
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input shipping-method-radio" type="radio"
+                                                name="shippingMethod" id="standardShipping" value="standard">
+                                            <label class="form-check-label shipping-method-label-radio"
+                                                for="standardShipping">Standard</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input shipping-method-radio" type="radio"
+                                                name="shippingMethod" id="expressShipping" value="express">
+                                            <label class="form-check-label shipping-method-label-radio"
+                                                for="expressShipping">Express</label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input shipping-method-radio" type="radio"
+                                                name="shippingMethod" id="sameDayShipping" value="same-day">
+                                            <label class="form-check-label shipping-method-label-radio"
+                                                for="sameDayShipping">Same-Day</label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="shipping-cost-container mt-3 collapse" id="shippingCostContainer">
+                                    <h4 for="shippingCost" class="heading_h4">Shipping Cost
+                                        Calculation (If
+                                        applicable)</h4>
+                                    <div class="input-group shipping-cost-input-group">
+                                        <span class="input-group-text shipping-cost-currency">$</span>
+                                        <input type="number" class="form-control shipping-cost-input" id="shippingCost"
+                                            placeholder="0.00">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="Ineer_pages_first_box">
+                <div class="custome_site_bare_inner sticky-top">
+                    <div class="">
+                        <!-- Payment Methods -->
+                        <div class="price-breakdown">
+                            <h4>Payment Details</h4>
+                            <p>Price: <span>$850.00</span></p>
+                            <p>Shipping: <span>$10 </span></p>
+                            <p>Fees: <span>$5 </span></p>
+                            <p class="total-cost">Total Cost: <span>$45</span></p>
+                        </div>
+                        <div class="Payment_main_box">
+                            <div class="event_booking_call_cont">
+                                <label>Payment Method</label>
+                                <select>
+                                    <option>Credit Card</option>
+                                    <option>PayPal</option>
+                                    <option>Wallet</option>
+                                    <option>Pay at Meeting Point</option>
+                                </select>
+                            </div>
+                            <div class="event_booking_call_cont">
+                                <label>Promo Code</label>
+                                <div class="promo_code_payment_option">
+                                    <input type="text" placeholder="Apply Promo Code">
+                                    <button class="apply_promo_succes">Apply</button>
+                                </div>
+                            </div>
+                            <div class="check_box_from_vaild">
+                                <div class="checkbox-group">
+                                    <input type="checkbox" id="terms-conditions">
+                                    <label for="terms-conditions">I agree to the terms of service and refund
+                                        policy.</label>
+                                </div>
+                            </div>
+                            <div class="business-details_footer">
+                                <button class="button_none_radi"><a href="">Place Order</a></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+
+        <!-- ===== jq ===== -->
+        <script src="./assets/js/jquery.min.js"></script>
+        <!-- ===== owl slider js ===== -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+            integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <!-- ===== Bootstrap JS ===== -->
+        <script src="./assets/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

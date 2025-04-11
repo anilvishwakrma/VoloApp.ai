@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- ===== Font Awesome CDN ===== -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- ============ owl slider ========== -->
+    <link rel="stylesheet" href="./assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="./assets/css/owl.theme.default.min.css">
+
+    <!-- ===== Custom CSS ===== -->
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/header.css">
+    <title>List Product - Voloapp</title>
+
+</head>
+
+<body>
+
+    <div class="volo_app_flex">
+        <div class="volo_app_site_bar">
+            <div class="sidebar">
+                <div class="side_barofile">
+                    <a class="side_mainLogo_class" href="#"><img src="./assets/images/logo/logo_crop.png" alt=""></a>
+                    <div class="user_profile_site_bar">
+                        <img src="https://cdn-icons-png.flaticon.com/512/21/21104.png" alt="">
+                        <h4>User name</h4>
+                    </div>
+                </div>
+                <div class="nav-item active"><a href="home-dashboard.html"><i class="fas fa-home"></i> Home</a></div>
+                <div class="nav-item"> <a href="flight-booking.html"><i class="fas fa-plane"></i> Bookings </a></div>
+                <div class="nav-item"> <a href="business-dashboard.html"><i class="fas fa-tachometer-alt"></i>
+                        Business Dashboard
+                    </a></div>
+                <div class="nav-item"> <a href="train-search.html"><i class="fas fa-train"></i> Book a Train </a>
+                </div>
+                <div class="nav-item"> <a href="car-rental.html"><i class="fas fa-car"></i> Car Rental </a>
+                </div>
+                <div class="nav-item"> <a href="task-listing.html"><i class="fas fa-tasks"></i> Tasks </a></div>
+                <div class="nav-item"> <a href="marketplace.html"><i class="fas fa-shopping-bag"></i> Marketplace </a>
+                </div>
+                <div class="nav-item"> <a href=""><i class="fas fa-comments"></i> Social </a></div>
+                <div class="nav-item"> <a href="list-service.html"><i class="fa fa-server"></i> List Services </a></div>
+                <div class="nav-item"> <a href=""><i class="fas fa-bell"></i> Notifications </a></div>
+                <div class="nav-item"> <a href="map-view.html"> <i class="fas fa-location-dot"></i> Map</a></div>
+                <div class="nav-item"> <a href=""><i class="fas fa-user"></i> Profile </a></div>
+                <hr>
+                <div class="nav-item"><a href="#"><i class="fas fa-question-circle"></i> Help & Support</a></div>
+                <div class="nav-item"><a href="#"><i class="fas fa-cog"></i> Settings</a></div>
+            </div>
+            <div class="nav-item"><a href="#"><i class="fas fa-cog"></i> Settings</a></div>
+        </div>
+        <div class="main_container">
+            <div class="container">
+                <div class="business_details_header header_other_option_add">
+                    <div class="business_details_header_name_details">
+                        <button title="back" class="back_button" onclick="history.back()"><i
+                                class="fa-solid fa-arrow-left-long"></i></button>
+                        <h1>List a New Product </h1>
+                    </div>
+                </div>
+                <div class="business-details">
+                    <div class="business_details_first_col">
+                        <!-- Product Information -->
+                        <div class="booking_form">
+                            <h5 class="heading_h5">Product Information
+                            </h5>
+                            <div class="bookin_input_box">
+                                <label>Product Title</label>
+                                <input type="text"
+                                    placeholder="Enter product name (e.g., Wireless Bluetooth Headphones)">
+                            </div>
+                            <div class="bookin_input_box">
+                                <label>Category</label>
+                                <select class="form-select">
+                                    <option>Select Category</option>
+                                    <option>Electronics</option>
+                                    <option>Fashion</option>
+                                    <option>Home & Kitchen</option>
+                                </select>
+                            </div>
+                            <div class="bookin_input_box">
+                                <label>Brand</label>
+                                <input type="text" placeholder="Enter brand name">
+                            </div>
+
+                            <div class="bookin_input_box">
+                                <label>Description</label>
+                                <textarea rows="4" placeholder="Detailed product description..."></textarea>
+                            </div>
+                            <h4 class="heading_h4">Media Upload</h4>
+                            <div class="">
+                                <div class="mb-3">
+                                    <input class="form-control" type="file" id="attachments" multiple>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="business_details_second_col">
+                        <div class="">
+                            <div id="">
+                                <h5 class="heading_h5">Payment Details</h5>
+                                <div class="row">
+                                    <div class="col-md-6 mb-3">
+                                        <div class="bookin_input_box">
+                                            <label for="price" class="form-label"><i class="bi bi-currency-dollar"></i>
+                                                Price</label>
+                                            <input type="number" class="form-control" id="price"
+                                                placeholder="Enter price">
+                                        </div>
+
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <div class="bookin_input_box">
+                                            <label for="currency">Currency</label>
+                                            <select id="currency">
+                                                <option>USD</option>
+                                                <option>EUR</option>
+                                                <option>GBP</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="Payment_main_box">
+                                    <div class="event_booking_call_cont">
+                                        <label>Payment Method</label>
+                                        <select>
+                                            <option>Credit Card</option>
+                                            <option>PayPal</option>
+                                            <option>Wallet</option>
+                                            <option>Pay at Meeting Point</option>
+                                        </select>
+                                    </div>
+                                    <div class="bookin_input_box">
+                                        <label>Stock Quantity</label>
+                                        <input type="number" placeholder="10 items">
+
+                                    </div>
+                                    <div class="event_booking_call_cont">
+                                        <label>Promo Code</label>
+                                        <div class="promo_code_payment_option">
+                                            <input type="text" placeholder="Apply Promo Code">
+                                            <button class="apply_promo_succes">Apply</button>
+                                        </div>
+                                    </div>
+                                    <div class="check_box_from_vaild">
+                                        <div class="checkbox-group">
+                                            <input type="checkbox" id="terms-conditions">
+                                            <label for="terms-conditions">I agree to the terms of service
+                                                and
+                                                refund
+                                                policy.</label>
+                                        </div>
+                                    </div>
+                                    <div class="mb-2">
+                                        <span class="badge stock-badge bg-success">In Stock</span>
+                                    </div>
+                                    <div class="section-card delivery-section">
+                                        <h5 class="heading_h5">Delivery Options</h5>
+                                        <div class="mb-3">
+                                            <div class="d-flex align-items-center mb-2">
+                                                <i class="fas fa-truck me-2 text-primary"></i>
+                                                <div>
+                                                    <div class="fw-bold">Standard Shipping</div>
+                                                    <small class="text-muted">3-5 business days</small>
+                                                </div>
+                                                <span class="ms-auto">$9.99</span>
+                                            </div>
+                                            <div class="d-flex align-items-center mb-2">
+                                                <i class="fas fa-bolt me-2 text-warning"></i>
+                                                <div>
+                                                    <div class="fw-bold">Express Shipping</div>
+                                                    <small class="text-muted">1-2 business days</small>
+                                                </div>
+                                                <span class="ms-auto">$19.99</span>
+                                            </div>
+                                            <div class="d-flex align-items-center">
+                                                <i class="fas fa-store me-2 text-success"></i>
+                                                <div>
+                                                    <div class="fw-bold">Local Pickup</div>
+                                                    <small class="text-muted">Los Angeles, CA</small>
+                                                </div>
+                                                <span class="ms-auto">Free</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-check form-switch mb-3">
+                                        <input class="form-check-input" type="checkbox" role="switch"
+                                            id="allowNegotiation">
+                                        <label class="form-check-label fw-bold" for="allowNegotiation">Allow
+                                            Price
+                                            Negotiation</label>
+                                        <small class="text-muted d-block mt-1">Enable this to allow buyers to
+                                            make
+                                            offers</small>
+                                    </div>
+                                    <div class="business-details_footer Inner_footer">
+                                        <button class="button_none_radi"><a href="">Place
+                                                Order</a></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="Inner_footer">
+                    <div class="business-details_footer ">
+                        <button class="button_none_radi"><a href="">Publish Listing</a></button>
+                        <button class="button_none_radi"><a href="">Preview Product</a></button>
+                        <button class="button_none_radi"><a href="">Save as Draft</a></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- ===== jq ===== -->
+    <script src="./assets/js/jquery.min.js"></script>
+    <!-- ===== owl slider js ===== -->
+    <script src="./assets/js/owl.carousel.min.js"></script>
+    <!-- ===== Bootstrap JS ===== -->
+    <script src="./assets/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

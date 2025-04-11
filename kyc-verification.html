@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KYC Verification - VoloApp</title>
+    <!-- ===== Bootsrap CDN ===== -->
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+
+    <!-- ===== Font Awesome CDN ===== -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- ===== Custom CSS ===== -->
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/header.css">
+
+</head>
+
+<body>
+
+    <div class="login_page">
+        <div class="kyc-container">
+            <h3 class="sing_up_Heading">Verify Your Identity</h3>
+            <p class="sing_up_Heading_p">To access premium features, please complete identity verification by submitting
+                the
+                required documents.</p>
+            <form>
+
+                <div class="sing_up_input">
+                    <label class="form-label">Full Name</label>
+                    <input type="text" value="" required>
+                </div>
+                <div class="sing_up_input">
+                    <label class="form-label">Date of Birth</label>
+                    <input type="date" value="" required>
+                </div>
+
+                <div class=" upload-box">
+                    <label>Upload Government ID</label>
+                    <input type="file" accept="image/*" hidden>
+                    <i class="fas fa-id-card fa-2x"></i>
+                    <p>Passport, National ID, or Driver’s License</p>
+                </div>
+
+                <div class=" upload-box">
+                    <label>Upload Selfie with ID</label>
+                    <input type="file" accept="image/*" hidden>
+                    <i class="fas fa-camera fa-2x"></i>
+                    <p>Take a selfie holding your ID</p>
+                </div>
+
+                <div class=" upload-box">
+                    <label>Upload Proof of Address</label>
+                    <input type="file" accept="image/*, application/pdf" hidden>
+                    <i class="fas fa-file-invoice fa-2x"></i>
+                    <p>Utility Bill, Bank Statement</p>
+                </div>
+
+                <div class=" check_sing_tems form-check">
+                    <input type="checkbox" class="form-check-input" required>
+                    <label class="form-check-label">I confirm that the information provided is accurate and complies
+                        with
+                        VoloApp’s policies.</label>
+                </div>
+
+                <button type="submit">
+                    Submit for Verification
+                </button>
+
+                <div class="kyc_links">
+                    <p><a href="#">Why do I need to verify my identity?</a></p>
+                    <p><a href="#">Contact Support</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- ===== Bootstrap JS ===== -->
+    <script src="./assets/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        crossorigin="anonymous">
+
+    <!-- Owl Carousel -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+        crossorigin="anonymous">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+        crossorigin="anonymous">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/header.css">
+    <title>Task Progress - Voloapp</title>
+</head>
+
+<body>
+    <div class="volo_app_flex">
+        <div class="volo_app_site_bar">
+            <div class="sidebar">
+                <div class="side_barofile">
+                    <a class="side_mainLogo_class" href="#"><img src="./assets/images/logo/logo_crop.png" alt=""></a>
+                    <div class="user_profile_site_bar">
+                        <img src="https://cdn-icons-png.flaticon.com/512/21/21104.png" alt="">
+                        <h4>User name</h4>
+                    </div>
+                </div>
+                <div class="nav-item active"><a href="home-dashboard.html"><i class="fas fa-home"></i> Home</a></div>
+                <div class="nav-item"> <a href="flight-booking.html"><i class="fas fa-plane"></i> Bookings </a></div>
+                <div class="nav-item"> <a href="business-dashboard.html"><i class="fas fa-tachometer-alt"></i>
+                        Business Dashboard
+                    </a></div>
+                <div class="nav-item"> <a href="train-search.html"><i class="fas fa-train"></i> Book a Train </a>
+                </div>
+                <div class="nav-item"> <a href="car-rental.html"><i class="fas fa-car"></i> Car Rental </a>
+                </div>
+                <div class="nav-item"> <a href="task-listing.html"><i class="fas fa-tasks"></i> Tasks </a></div>
+                <div class="nav-item"> <a href="marketplace.html"><i class="fas fa-shopping-bag"></i> Marketplace </a>
+                </div>
+                <div class="nav-item"> <a href=""><i class="fas fa-comments"></i> Social </a></div>
+                <div class="nav-item"> <a href="list-service.html"><i class="fa fa-server"></i> List Services </a></div>
+                <div class="nav-item"> <a href=""><i class="fas fa-bell"></i> Notifications </a></div>
+                <div class="nav-item"> <a href="map-view.html"> <i class="fas fa-location-dot"></i> Map</a></div>
+                <div class="nav-item"> <a href=""><i class="fas fa-user"></i> Profile </a></div>
+                <hr>
+                <div class="nav-item"><a href="#"><i class="fas fa-question-circle"></i> Help & Support</a></div>
+                <div class="nav-item"><a href="#"><i class="fas fa-cog"></i> Settings</a></div>
+            </div>
+            <div class="nav-item"><a href="#"><i class="fas fa-cog"></i> Settings</a></div>
+        </div>
+
+        <div class="main_container">
+            <div class="container">
+                <div class="business_details_header">
+                    <div class="business_details_header_name_details">
+                        <button title="back" class="back_button" onclick="history.back()"><i
+                                class="fa-solid fa-arrow-left-long"></i></button>
+                        <h1>Task Progress</h1>
+                    </div>
+                </div>
+                <div class="business-details">
+                    <div class="business_details_first_col">
+                        <div class="business_details_section business-overview" style="padding: 0;">
+                            <div class="task_details_info">
+                                <span class="task_status_show" style="background-color: orange;">In Progress</span>
+                                <h3 class="icon-label">Help Moving Furniture in Manhattan</h3>
+                                <div class="task_prosse_user_profile">
+                                    <strong>Task Poster :</strong>
+                                    <div class="task-poster">
+                                        <div class="poster-avatar">
+                                            <img src="https://randomuser.me/api/portraits/men/10.jpg"
+                                                alt="Sarah Johnson">
+                                        </div>
+                                        <div class="poster-info">
+                                            <h5>John Doe</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="task_prosse_user_profile">
+                                    <strong>Assigned Worker :</strong>
+                                    <div class="task-poster">
+                                        <div class="poster-avatar">
+                                            <img src="https://randomuser.me/api/portraits/women/12.jpg"
+                                                alt="Sarah Johnson">
+                                        </div>
+                                        <div class="poster-info">
+                                            <h5>Jane Smith</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p><strong>Payment Amount:</strong> &50</p>
+                                <p><strong>Due Date:</strong> DD/MM/YY</p>
+
+                                <div class="task_description_details">
+                                    <div class="Add_Ons_main">
+                                        <h4 class="heading_h4">Task Milestones</h4>
+                                        <div class="service-option">
+                                            <input type="checkbox" id="express">
+                                            <label for="express">50% Completed</label>
+                                        </div>
+                                        <div class="service-option">
+                                            <input type="checkbox" id="local">
+                                            <label for="local">Final Review Pending</label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <section class="task_progress_updates">
+                                    <h4 class="heading_h4">Progress Updates</h4>
+                                    <div class="task_progress-bar">
+                                        <div class="task_progress-bar-fill"></div>
+                                    </div>
+
+                                    <div class="update-item">
+                                        <p><strong>Jane Smith:</strong> Updated progress with images and video.</p>
+                                        <p><strong>John Doe:</strong> Approved.</p>
+                                    </div>
+
+                                    <div class="update-form">
+                                        <textarea class="form-control" rows="3" placeholder="Add update"></textarea>
+                                        <div class="mb-3">
+                                            <label for="updateImages" class="form-label">Upload Images</label>
+                                            <input class="form-control" type="file" id="updateImages" multiple
+                                                accept="image/*">
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="updateVideos" class="form-label">Upload Videos</label>
+                                            <input class="form-control" type="file" id="updateVideos" multiple
+                                                accept="video/*">
+                                        </div>
+                                        <button class="button_none_radi">Update Progress</button>
+                                    </div>
+                                </section>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="business_details_second_col">
+                        <section class="task-interactions">
+                            <div class="task-chat">
+                                <h4>Task Chat <i class="fas fa-comment-dots"></i></h4>
+                                <div class="chat-messages">
+                                    <p><strong>Jane Smith:</strong> Question about assembly.</p>
+                                    <p><strong>John Doe:</strong> Answered.</p>
+                                </div>
+                                <div class="chat-input">
+                                    <textarea class="form-control" rows="3" placeholder="Type a message"></textarea>
+                                    <button class="button_none_radi mt-2">Send Message</button>
+                                </div>
+                            </div>
+
+                            <div class="final-submission">
+                                <h4>Final Submission & Review</h4>
+                                <div class="business-details_footer">
+                                    <button class="button_none_radi">Mark Task as Completed</button>
+                                    <button class="button_none_radi">Request Revisions</button>
+                                </div>
+                            </div>
+                        </section>
+
+                        <style>
+                            .task-interactions {
+                                border: 1px solid #ddd;
+                                padding: 20px;
+                                margin-bottom: 20px;
+                            }
+
+                            .task-chat,
+                            .final-submission {
+                                margin-bottom: 20px;
+                            }
+                        </style>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== jq ===== -->
+    <script src="./assets/js/jquery.min.js"></script>
+    <!-- ===== owl slider js ===== -->
+    <script src="./assets/js/owl.carousel.min.js"></script>
+    <!-- ===== Bootstrap JS ===== -->
+    <script src="./assets/js/bootstrap.bundle.min.js"></script>
+
+
+
+</body>
+
+</html>

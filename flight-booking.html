@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- ===== Font Awesome CDN ===== -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- ============ owl slider ========== -->
+    <link rel="stylesheet" href="./assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="./assets/css/owl.theme.default.min.css">
+
+    <!-- ===== Custom CSS ===== -->
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/header.css">
+    <title>Review and Book Your Flight</title>
+
+</head>
+
+<body>
+
+    <div class="volo_app_flex">
+        <div class="volo_app_site_bar">
+            <div class="sidebar">
+                <div class="side_barofile">
+                    <a class="side_mainLogo_class" href="#"><img src="./assets/images/logo/logo_crop.png" alt=""></a>
+                    <div class="user_profile_site_bar">
+                        <img src="https://cdn-icons-png.flaticon.com/512/21/21104.png" alt="">
+                        <h4>User name</h4>
+                    </div>
+                </div>
+                <div class="nav-item active"><a href="home-dashboard.html"><i class="fas fa-home"></i> Home</a></div>
+                <div class="nav-item"> <a href="flight-booking.html"><i class="fas fa-plane"></i> Bookings </a></div>
+                <div class="nav-item"> <a href="business-dashboard.html"><i class="fas fa-tachometer-alt"></i>
+                        Business Dashboard
+                    </a></div>
+                <div class="nav-item"> <a href="train-search.html"><i class="fas fa-train"></i> Book a Train </a>
+                </div>
+                <div class="nav-item"> <a href="car-rental.html"><i class="fas fa-car"></i> Car Rental </a>
+                </div>
+                <div class="nav-item"> <a href="task-listing.html"><i class="fas fa-tasks"></i> Tasks </a></div>
+                <div class="nav-item"> <a href="marketplace.html"><i class="fas fa-shopping-bag"></i> Marketplace </a>
+                </div>
+                <div class="nav-item"> <a href=""><i class="fas fa-comments"></i> Social </a></div>
+                <div class="nav-item"> <a href="list-service.html"><i class="fa fa-server"></i> List Services </a></div>
+                <div class="nav-item"> <a href=""><i class="fas fa-bell"></i> Notifications </a></div>
+                <div class="nav-item"> <a href="map-view.html"> <i class="fas fa-location-dot"></i> Map</a></div>
+                <div class="nav-item"> <a href=""><i class="fas fa-user"></i> Profile </a></div>
+                <hr>
+                <div class="nav-item"><a href="#"><i class="fas fa-question-circle"></i> Help & Support</a></div>
+                <div class="nav-item"><a href="#"><i class="fas fa-cog"></i> Settings</a></div>
+            </div>
+            <div class="nav-item"><a href="#"><i class="fas fa-cog"></i> Settings</a></div>
+        </div>
+        <div class="main_container">
+            <div class="container">
+                <div class="business_details_header">
+                    <div class="business_details_header_name_details">
+                        <button title="back" class="back_button" onclick="history.back()"><i
+                                class="fa-solid fa-arrow-left-long"></i></button>
+                        <h1>Review and Book Your Flight</h1>
+                    </div>
+                </div>
+                <div class="business-details">
+                    <div class="business_details_first_col">
+                        <div class="business_details_section business-overview" style="padding: 0;">
+                            <h3 class="icon-label">✈️ Flight Details</h3>
+                            <p><strong>Airline:</strong> AirX Airlines
+                                <img class="air_line_img_logo"
+                                    src="https://i.insider.com/5ef650a3aee6a82efc4442a6?width=800&format=jpeg&auto=webp"
+                                    alt="Airline Logo">
+                            </p>
+                            <p><strong>Departure:</strong> 10:00 AM - JFK Airport</p>
+                            <p><strong>Arrival:</strong> 4:00 PM - LAX Airport</p>
+                            <p><strong>Duration:</strong> 6 Hours</p>
+                            <p><strong>Layovers:</strong> Non-Stop</p>
+                            <p><strong>Baggage:</strong> 1 Checked Bag + 1 Carry-On</p>
+                        </div>
+                        <form class="booking_form">
+                            <h4>Passenger Details</h4>
+                            <div class="bookin_input_box">
+                                <label>Full Name</label>
+                                <input type="text" placeholder="Enter your name as per passport">
+                            </div>
+                            <div class="bookin_input_box">
+                                <label>Date of Birth</label>
+                                <input type="date">
+                            </div>
+                            <div class="bookin_input_box">
+                                <label>Gender</label>
+                                <select>
+                                    <option>Male</option>
+                                    <option>Female</option>
+                                    <option>Other</option>
+                                </select>
+                            </div>
+                            <div class="bookin_input_box">
+                                <label>Passport Number</label>
+                                <input type="text" placeholder="Enter passport number">
+                            </div>
+                            <div class="bookin_input_box">
+                                <label>Passport Expiry Date</label>
+                                <input type="date">
+                            </div>
+                            <div class="bookin_input_box">
+                                <label>Email</label>
+                                <input type="email" placeholder="Enter your email">
+                            </div>
+                            <div class="bookin_input_box">
+                                <label>Phone Number</label>
+                                <input type="tel" placeholder="Enter your phone number">
+                            </div>
+                        </form>
+                    </div>
+                    <div class="business_details_second_col">
+                        <div class="service_booking_sonce">
+
+                            <div class="seat_selecte">
+                                <h4>Seats</h4>
+                                <div class="seat_selecte_box">
+                                    <div class="seat_box">
+                                        <input type="checkbox" id="seat_1" name="seat" value="A1">
+                                        <label for="seat_1"> A1</label>
+                                    </div>
+                                    <div class="seat_box">
+                                        <input type="checkbox" id="seat_2" name="seat" value="A2">
+                                        <label for="seat_2"> A2</label>
+                                    </div>
+                                    <div class="seat_box">
+                                        <input type="checkbox" id="seat_3" name="seat" value="A3">
+                                        <label for="seat_3"> A3</label>
+                                    </div>
+                                    <div class="seat_box">
+                                        <input type="checkbox" id="seat_4" name="seat" value="B1">
+                                        <label for="seat_4"> B1</label>
+                                    </div>
+                                    <div class="seat_box">
+                                        <input type="checkbox" id="seat_5" name="seat" value="B2">
+                                        <label for="seat_5"> B2</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="Add_Ons_main">
+                                <div class="service-option">
+                                    <h4>Add Ons</h4>
+                                    <input type="checkbox" id="Baggage" checked>
+                                    <label for="Baggage">Extra Baggage ($50)</label>
+                                </div>
+                                <div class="service-option">
+                                    <input type="checkbox" id="beard-trim">
+                                    <label for="beard-trim">Travel Insurance ($20)</label>
+                                </div>
+                                <div class="service-option">
+                                    <input type="checkbox" id="manicure">
+                                    <label for="manicure">Special Meal ($15)</label>
+                                </div>
+                            </div>
+                            <div class=" price-breakdown">
+                                <h4>Pricing Breakdown</h4>
+                                <p>Flight Price: <span>$300</span></p>
+                                <p>Taxes & Fees: <span>$50</span></p>
+                                <p>Add-Ons: <span id="addons-total">$0</span></p>
+                                <p class="total-cost">Total: <span>$350</span></p>
+                            </div>
+
+                            <div class="Payment_main_box">
+                                <div class="event_booking_call_cont">
+                                    <label> Payment Method</label>
+                                    <select>
+                                        <option>Credit Card</option>
+                                        <option>PayPal</option>
+                                        <option>Wallet</option>
+                                    </select>
+                                </div>
+                                <div class="event_booking_call_cont">
+                                    <label> Promo Code</label>
+                                    <div class="promo_code_payment_option">
+                                        <input type="text" placeholder="Apply Promo Code">
+                                        <button class="apply_promo_succes">Apply</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="business-details_footer">
+                                <button class="button_none_radi"><a href="booking-confirmation.html">Confirm
+                                        Booking</a></button>
+                                <button class="button_none_radi"><a href="">Contact Airline</a></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- ===== jq ===== -->
+    <script src="./assets/js/jquery.min.js"></script>
+    <!-- ===== owl slider js ===== -->
+    <script src="./assets/js/owl.carousel.min.js"></script>
+    <!-- ===== Bootstrap JS ===== -->
+    <script src="./assets/js/bootstrap.bundle.min.js"></script>
+
+
+</body>
+
+</html>

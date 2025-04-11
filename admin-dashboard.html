@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- ===== Font Awesome CDN ===== -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- ============ owl slider ========== -->
+    <link rel="stylesheet" href="./assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="./assets/css/owl.theme.default.min.css">
+
+    <!-- ===== Custom CSS ===== -->
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/header.css">
+    <link rel="stylesheet" href="./assets/css/style_pm.css">
+    <title>Admin Dashboard - Voloapp</title>
+</head>
+
+<body>
+    <div class="volo_app_flex">
+        <div class="volo_app_site_bar">
+            <div class="sidebar">
+                <div class="side_barofile">
+                    <a class="side_mainLogo_class" href="#"><img src="./assets/images/logo/logo_crop.png" alt=""></a>
+                    <div class="user_profile_site_bar">
+                        <img src="https://cdn-icons-png.flaticon.com/512/21/21104.png" alt="">
+                        <h4>User name</h4>
+                    </div>
+                </div>
+                <div class="nav-item active"><a href="home-dashboard.html"><i class="fas fa-home"></i> Home</a></div>
+                <div class="nav-item"> <a href="flight-booking.html"><i class="fas fa-plane"></i> Bookings </a></div>
+                <div class="nav-item"> <a href="business-dashboard.html"><i class="fas fa-tachometer-alt"></i>
+                        Business Dashboard
+                    </a></div>
+                <div class="nav-item"> <a href="train-search.html"><i class="fas fa-train"></i> Book a Train </a>
+                </div>
+                <div class="nav-item"> <a href="car-rental.html"><i class="fas fa-car"></i> Car Rental </a>
+                </div>
+                <div class="nav-item"> <a href="task-listing.html"><i class="fas fa-tasks"></i> Tasks </a></div>
+                <div class="nav-item"> <a href="marketplace.html"><i class="fas fa-shopping-bag"></i> Marketplace </a>
+                </div>
+                <div class="nav-item"> <a href=""><i class="fas fa-comments"></i> Social </a></div>
+                <div class="nav-item"> <a href="list-service.html"><i class="fa fa-server"></i> List Services </a></div>
+                <div class="nav-item"> <a href=""><i class="fas fa-bell"></i> Notifications </a></div>
+                <div class="nav-item"> <a href="map-view.html"> <i class="fas fa-location-dot"></i> Map</a></div>
+                <div class="nav-item"> <a href=""><i class="fas fa-user"></i> Profile </a></div>
+                <hr>
+                <div class="nav-item"><a href="#"><i class="fas fa-question-circle"></i> Help & Support</a></div>
+                <div class="nav-item"><a href="#"><i class="fas fa-cog"></i> Settings</a></div>
+            </div>
+            <div class="nav-item"><a href="#"><i class="fas fa-cog"></i> Settings</a></div>
+        </div>
+        <div class="main_container">
+            <div class="container">
+                <div class="business_details_header" style="background-color: #fff;">
+                    <div class="business_details_header_name_details">
+                        <button title="back" class="back_button" onclick="history.back()">
+                            <i class="fa-solid fa-arrow-left-long"></i>
+                        </button>
+                        <h1>Admin Dashboard</h1>
+                    </div>
+                    <div class="top_searching">
+                        <input type="text" class="search-input" placeholder="Search bookings, tasks, posts...">
+                        <button class="search-btn"><i class="fa fa-search"></i></button>
+                    </div>
+                    <button class="header_button_items">
+                        <a href="logout.html">Logout</a>
+                    </button>
+                </div>
+
+                <div class="addmin_deshboard_section">
+                    <div class=" Admin_desh_platform_overview addmin_deshboard_box" style="margin-top: 0;">
+                        <h5 class="heading_h5 mb-3">Platform Overview</h5>
+                        <div class="overview-cards row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4">
+                            <div class="col">
+                                <div class="card shadow-sm">
+                                    <div class="card-body text-center">
+                                        <i class="fas fa-users fa-2x mb-2 text-primary"></i>
+                                        <h6 class="card-title mb-0">Total Users</h6>
+                                        <p class="card-text fw-bold">15,000</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="card shadow-sm">
+                                    <div class="card-body text-center">
+                                        <i class="fas fa-building fa-2x mb-2 text-success"></i>
+                                        <h6 class="card-title mb-0">Total Businesses</h6>
+                                        <p class="card-text fw-bold">2,500</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="card shadow-sm">
+                                    <div class="card-body text-center">
+                                        <i class="fas fa-handshake fa-2x mb-2 text-info"></i>
+                                        <h6 class="card-title mb-0">Total Partners</h6>
+                                        <p class="card-text fw-bold">500</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="card shadow-sm">
+                                    <div class="card-body text-center">
+                                        <i class="fas fa-shopping-cart fa-2x mb-2 text-warning"></i>
+                                        <h6 class="card-title mb-0">Active Orders</h6>
+                                        <p class="card-text fw-bold">350</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="card shadow-sm">
+                                    <div class="card-body text-center">
+                                        <i class="far fa-calendar-check fa-2x mb-2 text-danger"></i>
+                                        <h6 class="card-title mb-0">Active Bookings</h6>
+                                        <p class="card-text fw-bold">600</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="card shadow-sm">
+                                    <div class="card-body text-center">
+                                        <i class="fas fa-money-bill-wave fa-2x mb-2 text-primary"></i>
+                                        <h6 class="card-title mb-0">Pending Payments</h6>
+                                        <p class="card-text fw-bold">$1,200</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="card shadow-sm">
+                                    <div class="card-body text-center">
+                                        <i class="fas fa-money-bill-alt fa-2x mb-2 text-success"></i>
+                                        <h6 class="card-title mb-0">Pending Withdrawals</h6>
+                                        <p class="card-text fw-bold">$500</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="card shadow-sm">
+                                    <div class="card-body text-center">
+                                        <i class="fas fa-exclamation-triangle fa-2x mb-2 text-warning"></i>
+                                        <h6 class="card-title mb-0">User Reports</h6>
+                                        <p class="card-text"><span class="fw-bold">25</span> (New)</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="card shadow-sm">
+                                    <div class="card-body text-center">
+                                        <i class="fas fa-flag fa-2x mb-2 text-danger"></i>
+                                        <h6 class="card-title mb-0">Violations</h6>
+                                        <p class="card-text"><span class="fw-bold">5</span> (Open)</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="Admin_desh_user_business_management addmin_deshboard_box">
+                        <h5 class="heading_h5 mb-3">User & Business Management</h5>
+                        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4">
+                            <div class="col">
+                                <div class="card shadow-sm">
+                                    <div class="card-body">
+                                        <h6 class="card-title"><i class="fas fa-users me-2 text-primary"></i> Active
+                                            Users
+                                        </h6>
+                                        <p class="card-text fw-bold">12,000</p>
+                                        <a href="#">View Details</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="card shadow-sm">
+                                    <div class="card-body">
+                                        <h6 class="card-title"><i class="fas fa-user-slash me-2 text-warning"></i>
+                                            Suspended
+                                            Users</h6>
+                                        <p class="card-text fw-bold">150</p>
+                                        <a href="#" class="btn btn-sm btn-outline-warning">Manage Suspensions</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="card shadow-sm">
+                                    <div class="card-body">
+                                        <h6 class="card-title"><i class="fas fa-briefcase me-2 text-info"></i> New
+                                            Business
+                                            Registrations
+                                        </h6>
+                                        <p class="card-text fw-bold">25 (Today)</p>
+                                        <a href="#" class="btn btn-sm btn-outline-info">Review Registrations</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="card shadow-sm">
+                                    <div class="card-body">
+                                        <h6 class="card-title"><i class="fas fa-hourglass-half me-2 text-warning"></i>
+                                            Pending Business
+                                            Approvals</h6>
+                                        <p class="card-text fw-bold">10</p>
+                                        <a href="#" class="btn btn-sm btn-outline-warning">Approve/Reject</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="card shadow-sm">
+                                    <div class="card-body">
+                                        <h6 class="card-title"><i class="fas fa-check-circle me-2 text-success"></i> KYC
+                                            Verified Users</h6>
+                                        <p class="card-text fw-bold">9,500</p>
+                                        <a href="#">View Verified</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="card shadow-sm">
+                                    <div class="card-body">
+                                        <h6 class="card-title"><i class="fas fa-question-circle me-2 text-danger"></i>
+                                            KYC
+                                            Pending
+                                            Verification</h6>
+                                        <p class="card-text fw-bold">2,500</p>
+                                        <a href="#" class="btn btn-sm btn-outline-danger">Process Verification</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                    <div class="Admin_desh_financial_reports addmin_deshboard_box">
+                        <h5 class="heading_h5">Financial & Transaction Reports</h5>
+                        <div class="business_details_section business-overview" style="padding: 0;">
+                            <p><strong>Total Revenue : </strong> $XX,XXX.XX</p>
+                            <p><strong>Total Commission Earned : </strong> $X,XXX.XX</p>
+                            <p><strong>Pending Payouts : </strong> $XXX.XX</p>
+                            <p><strong>Pending Withdrawals : </strong> $XX.XX</p>
+                        </div>
+                        <div class="recent-transactions">
+                            <h6>Recent Sales & Service Transactions</h6>
+                            <table class="table table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th>Transaction ID</th>
+                                        <th>Date & Time</th>
+                                        <th>Description</th>
+                                        <th>Amount</th>
+                                        <th>Status</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>#TRANS001</td>
+                                        <td>2025-04-02 17:25:00</td>
+                                        <td>Product Purchase - Item A</td>
+                                        <td>$XX.XX</td>
+                                        <td>Completed</td>
+                                    </tr>
+                                    <tr>
+                                        <td>#TRANS002</td>
+                                        <td>2025-04-02 17:10:00</td>
+                                        <td>Service Fee - Consultation</td>
+                                        <td>$X.XX</td>
+                                        <td>Paid</td>
+                                    </tr>
+                                    <tr>
+                                        <td>#TRANS003</td>
+                                        <td>2025-04-02 16:55:00</td>
+                                        <td>Commission - Sale #TRANS001</td>
+                                        <td>$X.XX</td>
+                                        <td>Credited</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <div class="">
+                                <button class="button_none_radi button_auto"><a
+                                        href="transaction-and-payment-management.html">View All Transactions &nbsp; <i
+                                            class="fas fa-arrow-right"></i></a></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="Admin_desh_support_compliance addmin_deshboard_box">
+                        <h5 class="heading_h5">Support & Compliance</h5>
+                        <div class="compliance-overview business_details_section business-overview" style="padding: 0;">
+                            <p><strong>Open Reports & Complaints : </strong> 12</p>
+                            <p><strong>Resolved Cases : </strong> 45</p>
+                            <p><strong>Unresolved Cases : </strong> 7</p>
+                        </div>
+                        <div class="admin-messages-tickets">
+                            <h6>Admin Messages & Support Tickets</h6>
+                            <div class="message-ticket-list">
+                                <div class="message-ticket-item">
+                                    <span class="item-type message"><i class="fas fa-envelope"></i></span>
+                                    <span class="item-details"><strong>Admin Message:</strong> Important platform update
+                                        -
+                                        April 2,
+                                        2025</span>
+                                    <span class="a_link"><a href="#">View</a></span>
+                                </div>
+                                <div class="message-ticket-item">
+                                    <span class="item-type ticket open"><i class="fas fa-ticket-alt"></i></span>
+                                    <span class="item-details"><strong>Support Ticket #SU005:</strong> Issue with
+                                        booking
+                                        cancellation</span>
+                                    <span class="a_link d-flex align-items-center"><a href="#">View</a> <span
+                                            style="margin: 0 5px;">|</span> <a href="#">Respond</a></span>
+                                </div>
+                                <div class="message-ticket-item">
+                                    <span class="item-type ticket resolved"><i class="fas fa-check-circle"></i></span>
+                                    <span class="item-details"><strong>Support Ticket #SU004:</strong> Payment not
+                                        processed
+                                        -
+                                        Resolved</span>
+                                    <span class="a_link"><a href="#">View</a></span>
+                                </div>
+                            </div>
+                            <div class="">
+                                <button class="button_none_radi button_auto">
+                                    <a href="transaction-and-payment-management.html"> View All Messages & Tickets
+                                        &nbsp; <i class="fas fa-arrow-right"></i></a>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="Admin_desh_marketing_advertisements addmin_deshboard_box">
+                        <h5 class="heading_h5">Marketing & Advertisements</h5>
+                        <div class="advertisement-overview business_details_section business-overview"
+                            style="padding: 0;">
+                            <p><strong>Active Advertisements : </strong> 8</p>
+                            <p><strong>Pending Advertisements : </strong> 3</p>
+                            <p><strong>Promoted Listings : </strong> 15</p>
+                            <p><strong>Featured Businesses : </strong> 5</p>
+                        </div>
+                        <div class="advertisement-list-detailed">
+                            <h6>Active & Pending Advertisements</h6>
+                            <ul class="list-group">
+                                <li class="list-group-item d-flex justify-content-between align-items-start">
+                                    <div class="ms-2 me-auto">
+                                        <div class="fw-bold">Banner Ad - Homepage Sidebar</div>
+                                        <small class="text-muted">Ad ID: #AD001 | Target: Homepage Sidebar</small>
+                                    </div>
+                                    <div>
+                                        <span class="badge bg-success rounded-pill mb-2">Active</span>
+                                        <div class="admin_desh_button_small">
+                                            <button type="button" title="View Details"><i
+                                                    class="fas fa-eye"></i></button>
+                                            <button type="button" title="Edit"><i class="fas fa-edit"></i></button>
+                                            <button type="button" title="Pause"><i
+                                                    class="fas fa-pause-circle"></i></button>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between align-items-start">
+                                    <div class="ms-2 me-auto">
+                                        <div class="fw-bold">Sponsored Listing - Product Category X</div>
+                                        <small class="text-muted">Ad ID: #AD002 | Target: Product Category X</small>
+                                    </div>
+                                    <div>
+                                        <span class="badge bg-warning rounded-pill mb-2">Pending</span>
+                                        <div class="admin_desh_button_small">
+                                            <button type="button" title="View Details" data-bs-toggle="tooltip"><i
+                                                    class="fas fa-eye"></i></button>
+                                            <button type="button" title="Edit" data-bs-toggle="tooltip"><i
+                                                    class="fas fa-edit"></i></button>
+                                            <button type="button" title="Approve" data-bs-toggle="tooltip"><i
+                                                    class="fas fa-check-circle"></i></button>
+                                            <button type="button" title="Reject" data-bs-toggle="tooltip"><i
+                                                    class="fas fa-times-circle"></i></button>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                            <div class="">
+                                <button class="button_none_radi button_auto mt-3 mb-2">
+                                    <a href="#">View All Advertisements &nbsp; <i class="fas fa-arrow-right"></i></a>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="promoted-featured-container d-flex mt-3">
+                            <div class="promoted-list-column w-50 pe-2">
+                                <h6>Promoted Listings</h6>
+                                <ul class="list-group">
+                                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                                        Product Y <span class="badge bg-primary badge-pill">Active</span>
+                                    </li>
+                                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                                        Service Z <span class="badge bg-primary badge-pill">Active</span>
+                                    </li>
+                                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                                        Item A <span class="badge bg-primary badge-pill">Active</span>
+                                    </li>
+                                </ul>
+
+                                <button class="button_none_radi button_auto mt-3 mb-2">
+                                    <a href="#">View All Promoted Listings&nbsp; <i class="fas fa-arrow-right"></i></a>
+                                </button>
+                            </div>
+
+                            <div class="featured-list-column w-50 ps-2">
+                                <h6>Featured Businesses</h6>
+                                <ul class="list-group">
+                                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                                        Business A <span class="badge bg-success badge-pill">Featured</span>
+                                    </li>
+                                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                                        Business B <span class="badge bg-success badge-pill">Featured</span>
+                                    </li>
+                                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                                        Company C <span class="badge bg-success badge-pill">Featured</span>
+                                    </li>
+                                </ul>
+                                <div class="">
+                                    <button class="button_none_radi button_auto mt-3 mb-2">
+
+                                        <a href="#">View All Featured Businesses &nbsp; <i
+                                                class="fas fa-arrow-right"></i></a>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="Inner_footer">
+                    <div class="business-details_footer user-business-footer-actions">
+                        <button class="button_none_radi "><a href="#"><i class="fas fa-flag me-2"></i> View User
+                            </a></button>
+                        <button class="button_none_radi"><a href="#"><i class="fas fa-list me-2"></i> Manage Business
+                            </a></button>
+                        <button class="button_none_radi"><a href="#"><i class="fas fa-money-bill-wave me-2"></i> Process
+                                Payouts & Earnings</a></button>
+                        <button class="button_none_radi"><a href="#"><i class="fas fa-cogs me-2"></i> Platform
+                                Settings</a></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ===== jq ===== -->
+    <script src="./assets/js/jquery.min.js"></script>
+    <!-- ===== owl slider js ===== -->
+    <script src="./assets/js/owl.carousel.min.js"></script>
+    <script src="./assets/js/owl.carousel.min.js"></script>
+    <!-- ===== Bootstrap JS ===== -->
+    <script src="./assets/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip()
+        })
+    </script>
+
+</body>
+
+</html>

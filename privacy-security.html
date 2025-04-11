@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- ===== Font Awesome CDN ===== -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- ============ owl slider ========== -->
+    <link rel="stylesheet" href="./assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="./assets/css/owl.theme.default.min.css">
+
+    <!-- ===== Custom CSS ===== -->
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/header.css">
+    <link rel="stylesheet" href="./assets/css/style_pm.css">
+    <title>Privacy & Security Settings - Voloapp</title>
+</head>
+
+
+<body>
+
+    <div class="to_grid_full_width">
+        <div class="container">
+            <div class="business_details_header header_other_option_add mt-3">
+                <div class="business_details_header_name_details">
+                    <button title="back" class="back_button" onclick="history.back()">
+                        <i class="fa-solid fa-arrow-left-long"></i>
+                    </button>
+                    <h1><i class="fas fa-shield-alt me-2"></i> Privacy & Security Settings</h1>
+                </div>
+
+            </div>
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="to_grid_full_width_box">
+                        <div class="Ac_setting_section">
+                            <h5 class="heading_h5"><i class="fas fa-user-lock me-2"></i> Account Security</h5>
+                            <button class="header_button_items"><i class="fas fa-key me-2"></i> Change
+                                Password</button>
+                            <div class="Two_Factor_Authenti mt-3">
+                                <span class=""><i class="fas fa-fingerprint me-2"></i> Two-Factor
+                                    Authentication</span>
+                                <div class="form-check form-switch">
+                                    <input class="form-check-input" type="checkbox" id="twoFactorAuth">
+                                    <label class="form-check-label" for="twoFactorAuth">Enable Two-Factor
+                                        Authentication</label>
+                                </div>
+                            </div>
+                            <div class="setting-section mt-3">
+                                <h4 class="heading_h4"><i class="fas fa-history me-2"></i> Recent Login Activity</h4>
+                                <div class="row row-cols-1 g-3">
+                                    <div class="col">
+                                        <div class="card shadow-sm">
+                                            <div class="card-body">
+                                                <h5 class="card-title"><i class="fas fa-desktop me-2 text-primary"></i>
+                                                    Desktop Login</h5>
+                                                <p class="card-text mb-0"><strong>IP:</strong> 192.168.1.100</p>
+                                                <p class="card-text text-muted mb-0">Device: Chrome</p>
+                                                <p class="card-text text-muted">Location: City, India</p>
+                                                <small class="text-muted">Logged in recently</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="card shadow-sm">
+                                            <div class="card-body">
+                                                <h5 class="card-title"><i
+                                                        class="fas fa-mobile-alt me-2 text-success"></i> Mobile Login
+                                                </h5>
+                                                <p class="card-text mb-0"><strong>IP:</strong> 203.0.113.45</p>
+                                                <p class="card-text text-muted mb-0">Device: Safari</p>
+                                                <p class="card-text text-muted">Location: City, India</p>
+                                                <small class="text-muted">Logged in recently</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button class="header_button_items"><i class="fas fa-eye me-2"></i>
+                                        View
+                                        Full Login History</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="to_grid_full_width_box">
+                        <div class="setting-section">
+                            <h5 class="heading_h5"><i class="fas fa-user-shield me-2"></i> Privacy Controls</h5>
+                            <div class="setting-item">
+                                <button class="header_button_items "><i class="fas fa-cogs me-2"></i> Manage
+                                    Privacy
+                                    Settings</button>
+                            </div>
+                            <div class="setting-item d-flex justify-content-between align-items-center mt-3">
+                                <span><i class="fas fa-eye-slash me-2"></i> Hide Online Status</span>
+                                <div class="form-check form-switch">
+                                    <input class="form-check-input" type="checkbox" id="hideOnlineStatus">
+                                    <label class="form-check-label" for="hideOnlineStatus">Enabled</label>
+                                </div>
+                            </div>
+                            <div class="setting-item mb-3 mt-2">
+                                <label for="profileVisibility" class="form-label"><i class="fas fa-users me-2"></i> Who
+                                    Can See
+                                    My Profile</label>
+                                <select class="form-select" id="profileVisibility">
+                                    <option value="public">Public</option>
+                                    <option value="friends">Friends</option>
+                                    <option value="private">Private</option>
+                                </select>
+                            </div>
+                            <div class="setting-item">
+                                <button class="header_button_items "><i class="fas fa-user-slash me-2"></i> Manage
+                                    Blocked
+                                    Users</button>
+                            </div>
+                        </div>
+
+                        <div class="setting-section mt-4">
+                            <h4 class="heading_h4"><i class="fas fa-database me-2"></i> Data & Sharing Preferences</h4>
+                            <div class="setting-item">
+                                <button class="header_button_items "><i class="fas fa-download me-2"></i> Download
+                                    My
+                                    Data</button>
+                            </div>
+                            <div class="setting-item d-flex justify-content-between align-items-center mt-3">
+                                <span><i class="fas fa-sliders-h me-2"></i> Control Data Collection for
+                                    Personalization</span>
+                                <div class="form-check form-switch">
+                                    <input class="form-check-input" type="checkbox" id="dataCollection">
+                                    <label class="form-check-label" for="dataCollection">Enabled</label>
+                                </div>
+                            </div>
+                            <div class="setting-item mt-2">
+                                <button class="btn btn-danger" data-bs-toggle="modal"
+                                    data-bs-target="#deleteAccountModal">
+                                    <i class="fas fa-trash-alt me-2"></i> Delete My Account
+                                </button>
+
+                                <div class="modal fade" id="deleteAccountModal" tabindex="-1"
+                                    aria-labelledby="deleteAccountModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title" id="deleteAccountModalLabel"><i
+                                                        class="fas fa-exclamation-triangle me-2"></i> Confirm Account
+                                                    Deletion
+                                                </h5>
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                    aria-label="Close"></button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <p><strong><i class="fas fa-exclamation-circle me-2"></i>
+                                                        Warning:</strong>
+                                                    Deleting your account will permanently remove all your data. This
+                                                    action
+                                                    cannot be undone. Are you sure you want to proceed?</p>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-secondary"
+                                                    data-bs-dismiss="modal">Cancel</button>
+                                                <button type="button" class="btn btn-danger"><i
+                                                        class="fas fa-trash-alt me-2"></i> Delete My Account</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="Inner_footer">
+                        <div class="business-details_footer">
+                            <button class="button_none_radi"><a href="#"><i class="fas fa-list-alt me-2"></i> View
+                                    Security Logs</a></button>
+                            <button class="button_none_radi"><a href="#"><i class="fas fa-file-contract me-3"></i>
+                                    Privacy Policy</a></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== jq ===== -->
+    <script src="./assets/js/jquery.min.js"></script>
+    <!-- ===== owl slider js ===== -->
+    <script src="./assets/js/owl.carousel.min.js"></script>
+    <!-- ===== Bootstrap JS ===== -->
+    <script src="./assets/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip()
+        })
+    </script>
+
+    <style>
+        .custom-tooltip-bg .tooltip-inner {
+            background-color: #007bff;
+            /* Example blue color */
+            color: #fff;
+        }
+    </style>
+
+</body>
+
+</html>

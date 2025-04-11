@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- ===== Font Awesome CDN ===== -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- ============ owl slider ========== -->
+    <link rel="stylesheet" href="./assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="./assets/css/owl.theme.default.min.css">
+
+    <!-- ===== Custom CSS ===== -->
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/header.css">
+    <title>Create a Post - Voloapp</title>
+
+</head>
+
+<body>
+
+    <div class="volo_app_flex">
+        <div class="volo_app_site_bar">
+            <div class="sidebar">
+                <div class="side_barofile">
+                    <a class="side_mainLogo_class" href="#"><img src="./assets/images/logo/logo_crop.png" alt=""></a>
+                    <div class="user_profile_site_bar">
+                        <img src="https://cdn-icons-png.flaticon.com/512/21/21104.png" alt="">
+                        <h4>User name</h4>
+                    </div>
+                </div>
+                <div class="nav-item active"><a href="home-dashboard.html"><i class="fas fa-home"></i> Home</a></div>
+                <div class="nav-item"> <a href="flight-booking.html"><i class="fas fa-plane"></i> Bookings </a></div>
+                <div class="nav-item"> <a href="business-dashboard.html"><i class="fas fa-tachometer-alt"></i>
+                        Business Dashboard
+                    </a></div>
+                <div class="nav-item"> <a href="train-search.html"><i class="fas fa-train"></i> Book a Train </a>
+                </div>
+                <div class="nav-item"> <a href="car-rental.html"><i class="fas fa-car"></i> Car Rental </a>
+                </div>
+                <div class="nav-item"> <a href="task-listing.html"><i class="fas fa-tasks"></i> Tasks </a></div>
+                <div class="nav-item"> <a href="marketplace.html"><i class="fas fa-shopping-bag"></i> Marketplace </a>
+                </div>
+                <div class="nav-item"> <a href=""><i class="fas fa-comments"></i> Social </a></div>
+                <div class="nav-item"> <a href="list-service.html"><i class="fa fa-server"></i> List Services </a></div>
+                <div class="nav-item"> <a href=""><i class="fas fa-bell"></i> Notifications </a></div>
+                <div class="nav-item"> <a href="map-view.html"> <i class="fas fa-location-dot"></i> Map</a></div>
+                <div class="nav-item"> <a href=""><i class="fas fa-user"></i> Profile </a></div>
+                <hr>
+                <div class="nav-item"><a href="#"><i class="fas fa-question-circle"></i> Help & Support</a></div>
+                <div class="nav-item"><a href="#"><i class="fas fa-cog"></i> Settings</a></div>
+            </div>
+            <div class="nav-item"><a href="#"><i class="fas fa-cog"></i> Settings</a></div>
+        </div>
+        <div class="main_container">
+            <div class="container">
+                <div class="business_details_header">
+                    <div class="business_details_header_name_details">
+                        <button title="back" class="back_button" onclick="history.back()"><i
+                                class="fa-solid fa-arrow-left-long"></i></button>
+                        <h1>Create a Post</h1>
+                    </div>
+                </div>
+
+                <div class="business-details">
+                    <div class="business_details_first_col">
+                        <div class="post_content_section">
+                            <div class="post_text_maition">
+                                <textarea class="form-control" id="richEditor"
+                                    placeholder="What’s on your mind?"></textarea>
+                            </div>
+
+                            <div class="mediaUpload_post_box">
+                                <h4 class="heading_h4"><i class="fas fa-paperclip"></i> Attach Image/Video</h4>
+                                <input type="file" multiple class="form-control" id="mediaUpload"
+                                    accept="image/*,video/*">
+
+                            </div>
+                            <div class="booking_form">
+                                <div class="bookin_input_box">
+                                    <h4 class="heading_h4">Paste a URL for Preview</h4>
+                                    <input type="text" id="linkInput" placeholder="Paste a link...">
+                                    <!-- <div id="linkPreview" class="preview-box"></div> -->
+                                </div>
+                            </div>
+
+                            <div class="need_social_visibility">
+                                <h4 class="heading_h4">Adding Mentions/Hashtags</h4>
+                                <select class="visibility_select">
+                                    <option selected>Public</option>
+                                    <option>Friends</option>
+                                    <option>Private</option>
+                                </select>
+                            </div>
+                            <div class="booking_form">
+                                <div class="bookin_input_box">
+                                    <h4 class="heading_h4">Add a location...</h4>
+                                    <input type="text" placeholder="📍 Add Location">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="business_details_second_col">
+                        <div class="post_preview_detais">
+                            <h4 class="heading_h4">Post Preview & Settings</h4>
+                            <div class="video_and_img_post_preview">
+                                <div id="mediaPreview" class="preview-box"></div>
+                            </div>
+
+                            <div id="postPreview" class="border p-3 mt-2"
+                                style="min-height: 150px; background-color: #fff;">
+                                Your post preview will appear here...</div>
+                        </div>
+                        <div class="business-details_footer">
+                            <button class="button_none_radi">Save as Draft</button>
+                            <button class="button_none_radi">Post Now</button>
+                            <!-- <button class="button_none_radi">Friends’ Activity</button> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+    <!-- ===== jq ===== -->
+    <script src="./assets/js/jquery.min.js"></script>
+    <!-- ===== owl slider js ===== -->
+    <script src="./assets/js/owl.carousel.min.js"></script>
+    <!-- ===== Bootstrap JS ===== -->
+    <script src="./assets/js/bootstrap.bundle.min.js"></script>
+
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.ckeditor.com/4.16.2/standard/ckeditor.js"></script>
+    <script>
+        CKEDITOR.replace('richEditor', {
+            removePlugins: 'toolbar,elementspath',
+            toolbar: [
+                ['Bold', 'Italic', 'EmojiPanel']
+            ]
+        });
+
+        document.getElementById('mediaUpload').addEventListener('change', function (event) {
+            const preview = document.getElementById('mediaPreview');
+            preview.innerHTML = '';
+            Array.from(event.target.files).forEach(file => {
+                const mediaElement = document.createElement(file.type.startsWith('image') ? 'img' :
+                    'video');
+                mediaElement.src = URL.createObjectURL(file);
+                mediaElement.style.maxWidth = '100%';
+                mediaElement.style.marginTop = '10px';
+                if (file.type.startsWith('video')) mediaElement.controls = true;
+                preview.appendChild(mediaElement);
+            });
+        });
+    </script>
+
+</body>
+
+</html>

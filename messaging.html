@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- ===== Font Awesome CDN ===== -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- ============ owl slider ========== -->
+    <link rel="stylesheet" href="./assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="./assets/css/owl.theme.default.min.css">
+
+    <!-- ===== Custom CSS ===== -->
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/header.css">
+    <title>Messaging -Voloapp</title>
+</head>
+
+<body>
+
+    <div class="volo_app_flex">
+        <div class="volo_app_site_bar">
+            <div class="sidebar">
+                <div class="side_barofile">
+                    <a class="side_mainLogo_class" href="#"><img src="./assets/images/logo/logo_crop.png" alt=""></a>
+                    <div class="user_profile_site_bar">
+                        <img src="https://cdn-icons-png.flaticon.com/512/21/21104.png" alt="">
+                        <h4>User name</h4>
+                    </div>
+                </div>
+                <div class="nav-item active"><a href="home-dashboard.html"><i class="fas fa-home"></i> Home</a></div>
+                <div class="nav-item"> <a href="flight-booking.html"><i class="fas fa-plane"></i> Bookings </a></div>
+                <div class="nav-item"> <a href="business-dashboard.html"><i class="fas fa-tachometer-alt"></i>
+                        Business Dashboard
+                    </a></div>
+                <div class="nav-item"> <a href="train-search.html"><i class="fas fa-train"></i> Book a Train </a>
+                </div>
+                <div class="nav-item"> <a href="car-rental.html"><i class="fas fa-car"></i> Car Rental </a>
+                </div>
+                <div class="nav-item"> <a href="task-listing.html"><i class="fas fa-tasks"></i> Tasks </a></div>
+                <div class="nav-item"> <a href="marketplace.html"><i class="fas fa-shopping-bag"></i> Marketplace </a>
+                </div>
+                <div class="nav-item"> <a href=""><i class="fas fa-comments"></i> Social </a></div>
+                <div class="nav-item"> <a href="list-service.html"><i class="fa fa-server"></i> List Services </a></div>
+                <div class="nav-item"> <a href=""><i class="fas fa-bell"></i> Notifications </a></div>
+                <div class="nav-item"> <a href="map-view.html"> <i class="fas fa-location-dot"></i> Map</a></div>
+                <div class="nav-item"> <a href=""><i class="fas fa-user"></i> Profile </a></div>
+                <hr>
+                <div class="nav-item"><a href="#"><i class="fas fa-question-circle"></i> Help & Support</a></div>
+                <div class="nav-item"><a href="#"><i class="fas fa-cog"></i> Settings</a></div>
+            </div>
+            <div class="nav-item"><a href="#"><i class="fas fa-cog"></i> Settings</a></div>
+        </div>
+        <div class="main_container">
+            <div class="container">
+                <div class="business_details_header header_other_option_add">
+                    <div class="business_details_header_name_details">
+                        <button title="back" class="back_button" onclick="history.back()"><i
+                                class="fa-solid fa-arrow-left-long"></i></button>
+                        <h1>Messages</h1>
+                    </div>
+                    <div class="top_searching">
+                        <input type="text" class="search-input" placeholder="Search bookings, tasks, posts...">
+                        <button class="search-btn"><i class="fa fa-search"></i></button>
+                    </div>
+                    <button class="header_new_sms_button">New Message</button>
+                </div>
+
+                <div class="business-details ">
+                    <div class="business_details_first_col">
+                        <div class="sms_all_send_unsend_list_data">
+                            <ul class="nav nav-tabs" id="myTab" role="tablist">
+                                <li class="" role="presentation">
+                                    <a class=" active" id="all-tab" data-bs-toggle="tab" data-bs-target="#all"
+                                        role="tab" aria-controls="all" aria-selected="true">All
+                                        Messages</a>
+                                </li>
+                                <li class="" role="presentation">
+                                    <a class="" id="unread_sms-tab" data-bs-toggle="tab" data-bs-target="#unread_sms"
+                                        role="tab" aria-controls="unread_sms" aria-selected="false">Unread sms</a>
+                                </li>
+                                <li class="" role="presentation">
+                                    <a class="" id="archived-tab" data-bs-toggle="tab" data-bs-target="#archived"
+                                        role="tab" aria-controls="archived" aria-selected="false">Archived</a>
+                                </li>
+                                <li class="" role="presentation">
+                                    <a class="" id="group-tab" data-bs-toggle="tab" data-bs-target="#group" role="tab"
+                                        aria-controls="group" aria-selected="false">Group
+                                        Chats</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="sms_all_show_privew_arci_group">
+                            <div class="tab-content" id="myTabContent">
+                                <div class="tab-pane fade show active" id="all" role="tabpanel"
+                                    aria-labelledby="all-tab">
+                                    <div class="conversation-list">
+                                        <div id="chatList">
+                                            <div class="chat_list_item_sms unread_sms" data-type="all unread_sms">
+                                                <img src="https://picsum.photos/40/40?random=1" alt="User 1"
+                                                    class="rounded-circle me-2">
+                                                <div class="sms_chat_info">
+                                                    <div class="d-flex justify-content-between">
+                                                        <span class="chat-name">User 1</span>
+                                                        <span class="chat-time">10:00 AM</span>
+                                                    </div>
+                                                    <span class="chat-message">Hello!</span>
+                                                </div>
+                                            </div>
+                                            <div class="chat_list_item_sms" data-type="all">
+                                                <img src="https://picsum.photos/40/40?random=2" alt="User 2"
+                                                    class="rounded-circle me-2">
+                                                <div class="sms_chat_info">
+                                                    <div class="d-flex justify-content-between">
+                                                        <span class="chat-name">User 2</span>
+                                                        <span class="chat-time">11:30 AM</span>
+                                                    </div>
+                                                    <span class="chat-message">How are you?</span>
+                                                </div>
+                                            </div>
+                                            <div class="chat_list_item_sms" data-type="all">
+                                                <img src="https://picsum.photos/40/40?random=3" alt="User 3"
+                                                    class="rounded-circle me-2">
+                                                <div class="sms_chat_info">
+                                                    <div class="d-flex justify-content-between">
+                                                        <span class="chat-name">User 3</span>
+                                                        <span class="chat-time">12:45 PM</span>
+                                                    </div>
+                                                    <span class="chat-message">Sent a photo.</span>
+                                                </div>
+                                            </div>
+                                            <div class="chat_list_item_sms" data-type="all archived">
+                                                <img src="https://picsum.photos/40/40?random=4" alt="user 4"
+                                                    class="rounded-circle me-2">
+                                                <div class="sms_chat_info">
+                                                    <div class="d-flex justify-content-between">
+                                                        <span class="chat-name">User 4</span>
+                                                        <span class="chat-time">1:00 PM</span>
+                                                    </div>
+                                                    <span class="chat-message">Archived message</span>
+                                                </div>
+                                            </div>
+                                            <div class="chat_list_item_sms" data-type="all group">
+                                                <img src="https://picsum.photos/40/40?random=5" alt="user 5"
+                                                    class="rounded-circle me-2">
+                                                <div class="sms_chat_info">
+                                                    <div class="d-flex justify-content-between">
+                                                        <span class="chat-name">Group Chat</span>
+                                                        <span class="chat-time">2:00 PM</span>
+                                                    </div>
+                                                    <span class="chat-message">Group message</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="unread_sms" role="tabpanel"
+                                    aria-labelledby="unread_sms-tab">
+                                    <div class="conversation-list">
+                                        <div id="chatList">
+                                            <div class="chat_list_item_sms unread_sms" data-type="all unread_sms">
+                                                <img src="https://picsum.photos/40/40?random=1" alt="User 1"
+                                                    class="rounded-circle me-2">
+                                                <div class="sms_chat_info">
+                                                    <div class="d-flex justify-content-between">
+                                                        <span class="chat-name">User 1</span>
+                                                        <span class="chat-time">10:00 AM</span>
+                                                    </div>
+                                                    <span class="chat-message">Hello!</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="archived" role="tabpanel" aria-labelledby="archived-tab">
+                                    <div class="conversation-list">
+                                        <div id="chatList">
+                                            <div class="chat_list_item_sms" data-type="all archived">
+                                                <img src="https://picsum.photos/40/40?random=4" alt="user 4"
+                                                    class="rounded-circle me-2">
+                                                <div class="sms_chat_info">
+                                                    <div class="d-flex justify-content-between">
+                                                        <span class="chat-name">User 4</span>
+                                                        <span class="chat-time">1:00 PM</span>
+                                                    </div>
+                                                    <span class="chat-message">Archived message</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="group" role="tabpanel" aria-labelledby="group-tab">
+                                    <div class="conversation-list">
+                                        <div id="chatList">
+                                            <div class="chat_list_item_sms" data-type="all group">
+                                                <img src="https://picsum.photos/40/40?random=5" alt="user 5"
+                                                    class="rounded-circle me-2">
+                                                <div class="sms_chat_info">
+                                                    <div class="d-flex justify-content-between">
+                                                        <span class="chat-name">Group Chat</span>
+                                                        <span class="chat-time">2:00 PM</span>
+                                                    </div>
+                                                    <span class="chat-message">Group message</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="business_details_second_col">
+                        <div class="chat_preview_sms-se">
+                            <button
+                                style="width: auto;height: auto;padding: 3px 19px; margin-bottom: 20px; float: left; margin-right: 10px;"
+                                class=""><a href="voice-call.html">Voice Coll Now</a></button>
+                            <button style="width: auto;height: auto;padding: 3px 19px; margin-bottom: 20px;" class=""><a
+                                    href="video-call.html">Video call Now</a></button>
+                            <div class="preview_header_sms">
+                                <h4>Chat Preview</h4>
+                                <p class="envelope_id_sms">Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                                    Libero, ut?</p>
+                            </div>
+                            <div class="preview-message">
+                                <p>Most recent message goes here...</p>
+                                <p class="typing_indicator_sms">Typing...</p>
+                            </div>
+
+                            <div class="new-message-section">
+                                <h4 class="heading_h4">New Message</h4>
+                                <div class="suggested_contacts_sms">
+                                    <p>Suggested Contacts</p>
+                                    <ul class="list-group">
+                                        <li class="list-group-item d-flex align-items-center">
+                                            <img src="https://picsum.photos/40/40?random=6" alt="Contact 1"
+                                                class="rounded-circle me-2">
+                                            <span>Contact 1</span>
+                                        </li>
+                                        <li class="list-group-item d-flex align-items-center">
+                                            <img src="https://picsum.photos/40/40?random=7" alt="Contact 2"
+                                                class="rounded-circle me-2">
+                                            <span>Contact 2</span>
+                                        </li>
+                                        <li class="list-group-item d-flex align-items-center">
+                                            <img src="https://picsum.photos/40/40?random=8" alt="Contact 3"
+                                                class="rounded-circle me-2">
+                                            <span>Contact 3</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="bookin_input_box">
+                                    <h4 class="heading_h4">Search Users</h4>
+                                    <div class="input-group">
+                                        <input type="text" class="form-control" placeholder="Search users...">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="business-details_footer">
+                            <button class=button_none_radi">Edit Profile</button>
+                            <button class=button_none_radi">View More</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+    <!-- ===== jq ===== -->
+    <script src="./assets/js/jquery.min.js"></script>
+    <!-- ===== owl slider js ===== -->
+    <script src="./assets/js/owl.carousel.min.js"></script>
+    <!-- ===== Bootstrap JS ===== -->
+    <script src="./assets/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

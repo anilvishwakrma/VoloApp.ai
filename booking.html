@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activity Booking - VoloApp</title>
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/header.css">
+    <link rel="stylesheet" href="./assets/css/booking.css">
+</head>
+
+<body>
+    <div class="volo_app_flex">
+        <div class="volo_app_site_bar">
+            <div class="sidebar">
+                <div class="side_barofile">
+                    <a class="side_mainLogo_class" href="#"><img src="./assets/images/logo/logo_crop.png" alt=""></a>
+                    <div class="user_profile_site_bar">
+                        <img src="https://cdn-icons-png.flaticon.com/512/21/21104.png" alt="">
+                        <h4>User name</h4>
+                    </div>
+                </div>
+                <div class="nav-item active"><a href="home-dashboard.html"><i class="fas fa-home"></i> Home</a></div>
+                <div class="nav-item"> <a href="flight-booking.html"><i class="fas fa-plane"></i> Bookings </a></div>
+                <div class="nav-item"> <a href="business-dashboard.html"><i class="fas fa-tachometer-alt"></i>
+                        Business Dashboard
+                    </a></div>
+                <div class="nav-item"> <a href="train-search.html"><i class="fas fa-train"></i> Book a Train </a>
+                </div>
+                <div class="nav-item"> <a href="car-rental.html"><i class="fas fa-car"></i> Car Rental </a>
+                </div>
+                <div class="nav-item"> <a href="task-listing.html"><i class="fas fa-tasks"></i> Tasks </a></div>
+                <div class="nav-item"> <a href="marketplace.html"><i class="fas fa-shopping-bag"></i> Marketplace </a>
+                </div>
+                <div class="nav-item"> <a href=""><i class="fas fa-comments"></i> Social </a></div>
+                <div class="nav-item"> <a href="list-service.html"><i class="fa fa-server"></i> List Services </a></div>
+                <div class="nav-item"> <a href=""><i class="fas fa-bell"></i> Notifications </a></div>
+                <div class="nav-item"> <a href="map-view.html"> <i class="fas fa-location-dot"></i> Map</a></div>
+                <div class="nav-item"> <a href=""><i class="fas fa-user"></i> Profile </a></div>
+                <hr>
+                <div class="nav-item"><a href="#"><i class="fas fa-question-circle"></i> Help & Support</a></div>
+                <div class="nav-item"><a href="#"><i class="fas fa-cog"></i> Settings</a></div>
+            </div>
+            <div class="nav-item"><a href="#"><i class="fas fa-cog"></i> Settings</a></div>
+        </div>
+        <div class="main_container">
+            <div class="container">
+                <div class="business-details">
+                    <div class="business_details_first_col">
+                        <!-- Header -->
+                        <div class="business_details_header">
+                            <div class="business_details_header_name_details">
+                                <button title="back" class="back_button" onclick="history.back()"><i
+                                        class="fa-solid fa-arrow-left-long"></i></button>
+                                <!-- <img src="https://images.pexels.com/photos/2033343/pexels-photo-2033343.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                                    alt="Business Logo"> -->
+                                <h1>Adventure City Tour</h1>
+                            </div>
+                            <!-- <span class="favorite-btn " title="save"> <i class="fa-regular fa-bookmark"></i> </span> -->
+                        </div>
+
+                        <section class="business_details_section business-overview">
+                            <h3>Adventure City Tour</h3>
+                            <p>Guided City Tour – Explore Landmarks & Culture"</p>
+                            <p>⭐ 4.8/5 (220 reviews)</p>
+                        </section>
+
+                    </div>
+
+                    <div class="business_details_second_col">
+                        <form class="booking_form">
+                            <div class="form-group">
+                                <label><i class="fa fa-calendar"></i> Select Date</label>
+                                <input type="date" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label><i class="fa fa-clock"></i> Choose Time (if applicable)</label>
+                                <select class="form-control">
+                                    <option>10:00 AM</option>
+                                    <option>2:00 PM</option>
+                                    <option>5:00 PM</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label><i class="fa fa-users"></i> Number of Participants</label>
+                                <input type="number" class="form-control" min="1" value="1" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Age Group</label>
+                                <select class="form-control">
+                                    <option>Adults</option>
+                                    <option>Family with Kids</option>
+                                    <option>Teens Only</option>
+                                </select>
+                            </div>
+                            <div class="booking_form_pricing">
+                                <p>Base Price per Person: <strong>$50</strong></p>
+                                <p>Discount Applied: <span class="discount-text">- $0</span></p>
+                                <p>Total Price: <strong class="total-price">$50</strong></p>
+                            </div>
+                            <div class="form-group">
+                                <label> <i class="fa fa-tag"></i> Promo Code</label>
+                                <div class="promo_code_payment_option">
+                                    <input type="text" placeholder="Apply Promo Code">
+                                    <button class="apply_promo_succes">Apply</button>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label><i class="fa fa-credit-card"></i> Select Payment Method</label>
+                                <select class="form-control" required>
+                                    <option>Credit Card</option>
+                                    <option>PayPal</option>
+                                    <option>Wallet</option>
+                                </select>
+                            </div>
+                            <div class="booking_form_button">
+                                <button type="submit" class="confirm-btn"><a href="booking-confirmation.html">Confirm
+                                        Booking</a></button>
+                                <button type="button" class="chat-btn">💬 Chat with Host</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <script src="./assets/js/bootstrap.bundle.min.js"></script>
+        <script src="./assets/js/booking.js"></script>
+
+</body>
+
+</html>

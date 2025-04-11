@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>ECG Caliper with Lock & Hide</title>
+    <style>
+        .ecg-container {
+            width: 100%;
+            height: 480px;
+            position: relative;
+            border: 2px solid #004080;
+            overflow: hidden;
+            background-color: white;
+            cursor: move;
+        }
+
+        .ecg-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transform-origin: top left;
+        }
+
+        .shaded-area {
+            position: absolute;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            display: none;
+        }
+
+        .shaded-left,
+        .shaded-right {
+            position: absolute;
+            top: 0;
+            width: 100px;
+            height: 100%;
+            background-color: rgba(0, 0, 128, 0.3);
+        }
+
+        .shaded-right {
+            right: 0;
+        }
+
+        .handle {
+            width: 40px;
+            height: 40px;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            cursor: ew-resize;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            z-index: 10;
+        }
+
+        .handle-right {
+            right: 100px;
+        }
+
+        img.arrow_img_ecg {
+            width: 25px;
+            height: 25px;
+            cursor: col-resize;
+            border: 1px solid #ffffff;
+            background-size: 85%;
+            border-radius: 30px;
+            background-color: #ffffff;
+            padding: 5px;
+        }
+
+        .caliper-info {
+            background-color: #004080;
+            color: white;
+            font-size: 18px;
+            padding: 10px;
+        }
+
+        .caliper-info span {
+            font-weight: bold;
+            color: #fff200;
+        }
+
+        .buttons button {
+            padding: 10px 20px;
+            font-size: 16px;
+            margin: 5px;
+            cursor: pointer;
+        }
+
+        .locked {
+            opacity: 0.6;
+            cursor: not-allowed;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="buttons">
+            <button onclick="zoomIn()">Zoom In</button>
+            <button onclick="zoomOut()">Zoom Out</button>
+            <button onclick="toggleCaliper()" id="caliperButton">Show Caliper</button>
+            <button onclick="toggleLock()" id="lockButton">Lock</button>
+        </div>
+
+        <div class="ecg-container">
+            <img src="https://ecglibrary.com/ecgs/norm_2x.png" class="ecg-image" id="ecgImage">
+
+            <div class="shaded-area shaded-left" id="shadedLeft"></div>
+            <div class="shaded-area shaded-right" id="shadedRight"></div>
+
+            <div class="handle handle-left" id="handleLeft">
+                <img class="arrow_img_ecg"
+                    src="https://okeefeecg.com/wp-content/themes/PGOKeefe%20ECG%20-%2023%20October%2024%20-%20Timed%20Test%20Updates%2C%20Log%20in%20with%20email/src/icons/test-calipers-slider.png">
+            </div>
+            <div class="handle handle-right" id="handleRight">
+                <img class="arrow_img_ecg"
+                    src="https://okeefeecg.com/wp-content/themes/PGOKeefe%20ECG%20-%2023%20October%2024%20-%20Timed%20Test%20Updates%2C%20Log%20in%20with%20email/src/icons/test-calipers-slider.png">
+            </div>
+        </div>
+
+        <div class="caliper-info">
+            Caliper Time Interval: <span id="timeInterval">0</span> msec
+        </div>
+    </div>
+
+    <script>
+        const ecgImage = document.getElementById('ecgImage');
+        const handleLeft = document.getElementById('handleLeft');
+        const handleRight = document.getElementById('handleRight');
+        const shadedLeft = document.getElementById('shadedLeft');
+        const shadedRight = document.getElementById('shadedRight');
+        const timeIntervalDisplay = document.getElementById('timeInterval');
+        const lockButton = document.getElementById('lockButton');
+        const caliperButton = document.getElementById('caliperButton');
+
+        let isDraggingLeft = false;
+        let isDraggingRight = false;
+        let zoomScale = 1;
+        let caliperVisible = false;
+        let isLocked = false;
+
+        const smallBoxWidth = 25;
+        const msecPerSmallBox = 40;
+
+        function updateTimeInterval() {
+            const leftPos = (handleLeft.offsetLeft + handleLeft.offsetWidth / 2) / zoomScale;
+            const rightPos = (handleRight.offsetLeft + handleRight.offsetWidth / 2) / zoomScale;
+            const boxCount = Math.abs(rightPos - leftPos) / smallBoxWidth;
+            const timeInterval = boxCount * msecPerSmallBox;
+            timeIntervalDisplay.textContent = Math.round(timeInterval);
+        }
+
+        function attachDragEvents() {
+            handleLeft.onmousedown = (e) => {
+                if (isLocked) return;
+                isDraggingLeft = true;
+            };
+
+            handleRight.onmousedown = (e) => {
+                if (isLocked) return;
+                isDraggingRight = true;
+            };
+        }
+
+        attachDragEvents();
+
+        document.addEventListener('mousemove', (e) => {
+            if (isLocked || (!isDraggingLeft && !isDraggingRight)) return;
+
+            const rect = ecgImage.getBoundingClientRect();
+
+            if (isDraggingLeft) {
+                let newLeft = (e.clientX - rect.left - handleLeft.offsetWidth / 2) / zoomScale;
+                newLeft = Math.max(0, Math.min(newLeft, handleRight.offsetLeft / zoomScale - 50));
+                handleLeft.style.left = `${newLeft * zoomScale}px`;
+                shadedLeft.style.width = `${newLeft * zoomScale}px`;
+            }
+
+            if (isDraggingRight) {
+                let newRight = (rect.right - e.clientX - handleRight.offsetWidth / 2 - e.clientX + rect.left) /
+                    zoomScale;
+                newRight = Math.max(0, Math.min(newRight, ecgImage.offsetWidth / zoomScale - handleLeft
+                    .offsetLeft / zoomScale - 50));
+                handleRight.style.right = `${newRight * zoomScale}px`;
+                shadedRight.style.width = `${newRight * zoomScale}px`;
+            }
+
+            updateTimeInterval();
+        });
+
+        document.addEventListener('mouseup', () => {
+            isDraggingLeft = false;
+            isDraggingRight = false;
+        });
+
+        function zoomIn() {
+            zoomScale += 0.2;
+            updateZoom();
+        }
+
+        function zoomOut() {
+            zoomScale = Math.max(0.6, zoomScale - 0.2);
+            updateZoom();
+        }
+
+        function updateZoom() {
+            ecgImage.style.transform = `scale(${zoomScale})`;
+            updateTimeInterval();
+        }
+
+        function toggleCaliper() {
+            caliperVisible = !caliperVisible;
+            const display = caliperVisible ? 'block' : 'none';
+
+            [handleLeft, handleRight, shadedLeft, shadedRight].forEach(el => el.style.display = display);
+
+            if (caliperVisible) {
+                handleLeft.style.left = '100px';
+                handleRight.style.right = '100px';
+                shadedLeft.style.width = '100px';
+                shadedRight.style.width = '100px';
+                updateTimeInterval();
+                caliperButton.textContent = 'Hide Caliper';
+            } else {
+                caliperButton.textContent = 'Show Caliper';
+            }
+        }
+
+        function toggleLock() {
+            isLocked = !isLocked;
+
+            [handleLeft, handleRight].forEach(el => {
+                el.classList.toggle('locked', isLocked);
+            });
+
+            if (isLocked) {
+                lockButton.innerHTML = 'Unlock';
+            } else {
+                lockButton.innerHTML = 'Lock';
+            }
+
+            attachDragEvents();
+        }
+
+        updateTimeInterval();
+
+        let caliperDistance = 0; // Stores distance between handles when locked
+
+        function attachDragEvents() {
+            handleLeft.onmousedown = (e) => {
+                if (isLocked) {
+                    startDragBoth(e, 'left');
+                } else {
+                    isDraggingLeft = true;
+                }
+            };
+
+            handleRight.onmousedown = (e) => {
+                if (isLocked) {
+                    startDragBoth(e, 'right');
+                } else {
+                    isDraggingRight = true;
+                }
+            };
+        }
+
+        function startDragBoth(e, handle) {
+            const leftPos = handleLeft.offsetLeft;
+            const rightPos = handleRight.offsetLeft;
+            caliperDistance = rightPos - leftPos;
+
+            if (handle === 'left') {
+                isDraggingLeft = true;
+            } else {
+                isDraggingRight = true;
+            }
+        }
+
+        document.addEventListener('mousemove', (e) => {
+            const rect = ecgImage.getBoundingClientRect();
+
+            if (isLocked) {
+                if (isDraggingLeft) {
+                    let newLeft = e.clientX - rect.left - handleLeft.offsetWidth / 2;
+                    newLeft = Math.max(0, newLeft);
+                    let newRight = newLeft + caliperDistance;
+
+                    if (newRight > ecgImage.offsetWidth - handleRight.offsetWidth) {
+                        newRight = ecgImage.offsetWidth - handleRight.offsetWidth;
+                        newLeft = newRight - caliperDistance;
+                    }
+
+                    handleLeft.style.left = `${newLeft}px`;
+                    handleRight.style.left = `${newRight}px`;
+
+                    updateShadedAreas();
+                } else if (isDraggingRight) {
+                    let newRight = e.clientX - rect.left - handleRight.offsetWidth / 2;
+                    newRight = Math.min(ecgImage.offsetWidth - handleRight.offsetWidth, newRight);
+                    let newLeft = newRight - caliperDistance;
+
+                    if (newLeft < 0) {
+                        newLeft = 0;
+                        newRight = newLeft + caliperDistance;
+                    }
+                    handleLeft.style.left = `${newLeft}px`;
+                    handleRight.style.left = `${newRight}px`;
+                    updateShadedAreas();
+                }
+            } else {
+                if (isDraggingLeft) {
+                    let
+                        newLeft = e.clientX - rect.left - handleLeft.offsetWidth / 2;
+                    newLeft = Math.max(0, Math.min(newLeft,
+                        handleRight.offsetLeft - 50));
+                    handleLeft.style.left = `${newLeft}px`;
+                    shadedLeft.style.width = `${newLeft}px`;
+                }
+                if (isDraggingRight) {
+                    let newRight = e.clientX - rect.left - handleRight.offsetWidth / 2;
+                    newRight = Math.max(handleLeft.offsetLeft + 50, newRight);
+                    handleRight.style.left = `${newRight}px`;
+                    shadedRight.style.width = `${ecgImage.offsetWidth - newRight}px`;
+                }
+            }
+            updateTimeInterval();
+        });
+
+        function
+        updateShadedAreas() {
+            const leftPos = handleLeft.offsetLeft;
+            const rightPos = handleRight.offsetLeft;
+            shadedLeft.style.width = `${leftPos}px`;
+            shadedRight.style.width = `${ecgImage.offsetWidth - rightPos -
+            handleRight.offsetWidth}px`;
+        }
+        document.addEventListener('mouseup', () => {
+            isDraggingLeft = false;
+            isDraggingRight = false;
+        });
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- ===== Font Awesome CDN ===== -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- ============ owl slider ========== -->
+    <link rel="stylesheet" href="./assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="./assets/css/owl.theme.default.min.css">
+
+    <!-- ===== Custom CSS ===== -->
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/header.css">
+    <title>Market Place - Voloapp</title>
+</head>
+
+<body>
+
+    <div class="ALl_Inner_page">
+        <div class="Inner_flex_site_component">
+            <div class="Ineer_pages_first_box">
+                <div class="custome_site_bare_inner sticky-top">
+                    <h5 class="heading_h4"><i class="fas fa-filter me-2"></i>Filters</h5>
+
+                    <div class="tesk_search_box border_button_one_px">
+                        <i class="fas fa-search"></i>
+                        <input type="text" class="form-control" placeholder="Search tasks...">
+                    </div>
+
+                    <div class="Categories_SITE border_button_one_px">
+                        <label class="heading_h4 mb-2">Category</label>
+                        <select>
+                            <option selected="">All Categories</option>
+                            <option>Electronics</option>
+                            <option>Fashion</option>
+                            <option>Home &amp; Garden</option>
+                            <option>Vehicles</option>
+                            <option>Sports</option>
+                            <option>Collectibles</option>
+                        </select>
+                    </div>
+                    <div class="Payment_ratting_site border_button_one_px mt-2">
+                        <h4 class="heading_h4">Price Range</h4>
+                        <div class="d-flex justify-content-between mb-2">
+                            <span>$10</span>
+                            <span>$500+</span>
+                        </div>
+                        <input type="range" min="10" max="500" step="10">
+                    </div>
+
+                    <div class="Filters_tpes_check_box border_button_one_px">
+                        <h4 class="heading_h4">Condition</h4>
+                        <div class="Filters_tpes_check_box_items mb-1">
+                            <input type="checkbox" id="oneTime" checked>
+                            <label for="oneTime">New</label>
+                        </div>
+                        <div class="Filters_tpes_check_box_items mb-1">
+                            <input type="checkbox" id="recurring" checked>
+                            <label for="recurring">Used</label>
+                        </div>
+                        <div class="Filters_tpes_check_box_items mb-1">
+                            <input type="checkbox" id="remote" checked>
+                            <label for="remote">Refurbished</label>
+                        </div>
+                    </div>
+
+                    <div class="Filters_tpes_check_box border_button_one_px">
+                        <label class="heading_h4">Seller Type</label>
+                        <div class="Filters_tpes_check_box_items">
+                            <input class="form-check-input" type="radio" name="sellerType" id="sellerAll" checked="">
+                            <label class="form-check-label" for="sellerAll">All Sellers</label>
+                        </div>
+                        <div class="Filters_tpes_check_box_items">
+                            <input class="form-check-input" type="radio" name="sellerType" id="sellerIndividual">
+                            <label class="form-check-label" for="sellerIndividual">Individuals</label>
+                        </div>
+                        <div class="Filters_tpes_check_box_items">
+                            <input class="form-check-input" type="radio" name="sellerType" id="sellerBusiness">
+                            <label class="form-check-label" for="sellerBusiness">Businesses</label>
+                        </div>
+                    </div>
+
+
+
+
+                    <button class="button_none_radi">Apply Filters</button>
+                </div>
+            </div>
+            <div class="Ineer_pages_second_box">
+                <div class="">
+                    <!-- ======== Header ======== -->
+                    <div class="business_details_header header_other_option_add">
+                        <div class="business_details_header_name_details">
+                            <button title="back" class="back_button" onclick="history.back()"><i
+                                    class="fa-solid fa-arrow-left-long"></i></button>
+                            <h1>Marketplace</h1>
+                        </div>
+                        <button class="header_button_items">
+                            <a href="bussiness-profile.html"><i class="fa-solid fa-plus me-2"></i> Sell an Item</a>
+                        </button>
+                    </div>
+                    <!-- ============ page Content =========== -->
+                    <div class="section_content_ineer">
+                        <div class="d-flex justify-content-between align-items-center mb-4">
+                            <h5 class="heading_h5">Product</h5>
+                            <div>
+                                <select>
+                                    <option selected> <strong>Sort by:</strong> Most Recent</option>
+                                    <option>Highest Paying</option>
+                                    <option>Closest Deadline</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6 col-lg-4">
+                                <div class="task_listing_card product_listing_card">
+                                    <div class="product_listimg_img">
+                                        <img src="https://loremflickr.com/200/300/electronics"
+                                            alt="Electronics Product">
+                                    </div>
+                                    <div class="product_card_cont">
+                                        <h5 class="task_list_title_text">Wireless Headphones</h5>
+                                        <p class="task_card_poster"><strong></strong>TechGadgets Store</p>
+                                        <div class="product_listing_loc_and_an">
+                                            <span class="product_price">$149.99</span>
+                                            <span class="seller-rating small">
+                                                <i class="fas fa-star text-warning"></i> 4.7
+                                            </span>
+                                        </div>
+                                        <div class="product_listing_loc_and_an">
+                                            <small class="text-muted">AudioGear</small>
+                                            <span class="location_tag_pro">
+                                                <i class="fas fa-map-marker-alt"></i> Los Angeles, CA
+                                            </span>
+                                        </div>
+                                        <div class="business-details_footer">
+                                            <button class="button_none_radi"><a href="task-details.html">View
+                                                    Details</a></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-4">
+                                <div class="task_listing_card product_listing_card">
+                                    <div class="product_listimg_img">
+                                        <img src="https://loremflickr.com/200/300/clothing" alt="Clothing Product">
+                                    </div>
+                                    <div class="product_card_cont">
+                                        <h5 class="task_list_title_text">Stylish Summer Dress</h5>
+                                        <p class="task_card_poster"><strong></strong>Fashion Boutique</p>
+                                        <div class="product_listing_loc_and_an">
+                                            <span class="product_price">$79.50</span>
+                                            <span class="seller-rating small">
+                                                <i class="fas fa-star text-warning"></i> 4.8
+                                            </span>
+                                        </div>
+                                        <div class="product_listing_loc_and_an">
+                                            <small class="text-muted">Apparel</small>
+                                            <span class="location_tag_pro">
+                                                <i class="fas fa-map-marker-alt"></i> Miami, FL
+                                            </span>
+                                        </div>
+                                        <div class="business-details_footer">
+                                            <button class="button_none_radi"><a href="task-details.html">View
+                                                    Details</a></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-4">
+                                <div class="task_listing_card product_listing_card">
+                                    <div class="product_listimg_img">
+                                        <img src="https://loremflickr.com/200/300/books" alt="Books Product">
+                                    </div>
+                                    <div class="product_card_cont">
+                                        <h5 class="task_list_title_text">Mystery Novel - Hardcover</h5>
+                                        <p class="task_card_poster"><strong></strong>Bookworm's Paradise</p>
+                                        <div class="product_listing_loc_and_an">
+                                            <span class="product_price">$29.95</span>
+                                            <span class="seller-rating small">
+                                                <i class="fas fa-star text-warning"></i> 4.6
+                                            </span>
+                                        </div>
+                                        <div class="product_listing_loc_and_an">
+                                            <small class="text-muted">Books</small>
+                                            <span class="location_tag_pro">
+                                                <i class="fas fa-map-marker-alt"></i> Chicago, IL
+                                            </span>
+                                        </div>
+                                        <div class="business-details_footer">
+                                            <button class="button_none_radi"><a href="task-details.html">View
+                                                    Details</a></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-4">
+                                <div class="task_listing_card product_listing_card">
+                                    <div class="product_listimg_img">
+                                        <img src="https://loremflickr.com/200/300/tools" alt="Tools Product">
+                                    </div>
+                                    <div class="product_card_cont">
+                                        <h5 class="task_list_title_text">Power Drill Set</h5>
+                                        <p class="task_card_poster"><strong></strong>Home Improvement Hub</p>
+                                        <div class="product_listing_loc_and_an">
+                                            <span class="product_price">$120.00</span>
+                                            <span class="seller-rating small">
+                                                <i class="fas fa-star text-warning"></i> 4.5
+                                            </span>
+                                        </div>
+                                        <div class="product_listing_loc_and_an">
+                                            <small class="text-muted">Tools</small>
+                                            <span class="location_tag_pro">
+                                                <i class="fas fa-map-marker-alt"></i> Seattle, WA
+                                            </span>
+                                        </div>
+                                        <div class="business-details_footer">
+                                            <button class="button_none_radi"><a href="task-details.html">View
+                                                    Details</a></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="Featured_Recommended_product">
+                            <h5 class="heading_h5">Featured & Recommended</h5>
+                            <div class="owl-carousel owl-theme Featured_Pro">
+                                <div class="item">
+                                    <div class="task_listing_card product_listing_card">
+                                        <div class="product_listimg_img">
+                                            <img src="https://loremflickr.com/200/300/electronics"
+                                                alt="Electronics Product">
+                                        </div>
+                                        <div class="product_card_cont">
+                                            <h5 class="task_list_title_text">Wireless Headphones</h5>
+                                            <p class="task_card_poster"><strong></strong>TechGadgets Store</p>
+                                            <div class="product_listing_loc_and_an">
+                                                <span class="product_price">$149.99</span>
+                                                <span class="seller-rating small">
+                                                    <i class="fas fa-star text-warning"></i> 4.7
+                                                </span>
+                                            </div>
+                                            <div class="product_listing_loc_and_an">
+                                                <small class="text-muted">AudioGear</small>
+                                                <span class="location_tag_pro">
+                                                    <i class="fas fa-map-marker-alt"></i> Los Angeles, CA
+                                                </span>
+                                            </div>
+                                            <div class="business-details_footer">
+                                                <button class="button_none_radi"><a href="task-details.html">View
+                                                        Details</a></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="task_listing_card product_listing_card">
+                                        <div class="product_listimg_img">
+                                            <img src="https://loremflickr.com/200/300/electronics"
+                                                alt="Electronics Product">
+                                        </div>
+                                        <div class="product_card_cont">
+                                            <h5 class="task_list_title_text">Wireless Headphones</h5>
+                                            <p class="task_card_poster"><strong></strong>TechGadgets Store</p>
+                                            <div class="product_listing_loc_and_an">
+                                                <span class="product_price">$149.99</span>
+                                                <span class="seller-rating small">
+                                                    <i class="fas fa-star text-warning"></i> 4.7
+                                                </span>
+                                            </div>
+                                            <div class="product_listing_loc_and_an">
+                                                <small class="text-muted">AudioGear</small>
+                                                <span class="location_tag_pro">
+                                                    <i class="fas fa-map-marker-alt"></i> Los Angeles, CA
+                                                </span>
+                                            </div>
+                                            <div class="business-details_footer">
+                                                <button class="button_none_radi"><a href="task-details.html">View
+                                                        Details</a></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="Inner_footer">
+                    <div class="business-details_footer">
+                        <button class="button_none_radi"><a href="add-product.html">Sell an Item</a></button>
+                        <button class="button_none_radi"><a href="">My Listings</a></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- ===== jq ===== -->
+        <script src="./assets/js/jquery.min.js"></script>
+        <!-- ===== owl slider js ===== -->
+        <script src="./assets/js/owl.carousel.min.js"></script>
+        <!-- ===== Bootstrap JS ===== -->
+        <script src="./assets/js/bootstrap.bundle.min.js"></script>
+
+
+        <script>
+            $('.Featured_Pro').owlCarousel({
+                loop: true,
+                margin: 10,
+                nav: true,
+                responsive: {
+                    0: {
+                        items: 2
+                    },
+                    600: {
+                        items: 3
+                    },
+                    1000: {
+                        items: 3
+                    }
+                }
+            })
+        </script>
+
+</body>
+
+</html>

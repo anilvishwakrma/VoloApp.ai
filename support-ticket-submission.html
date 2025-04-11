@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- ===== Font Awesome CDN ===== -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- ============ owl slider ========== -->
+    <link rel="stylesheet" href="./assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="./assets/css/owl.theme.default.min.css">
+
+    <!-- ===== Custom CSS ===== -->
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/header.css">
+
+    <title>Support Ticket Submission - VoloApp</title>
+</head>
+
+<body>
+    <div class="volo_app_flex">
+        <div class="volo_app_site_bar">
+            <div class="sidebar">
+                <div class="side_barofile">
+                    <a class="side_mainLogo_class" href="#"><img src="./assets/images/logo/logo_crop.png" alt=""></a>
+                    <div class="user_profile_site_bar">
+                        <img src="https://cdn-icons-png.flaticon.com/512/21/21104.png" alt="">
+                        <h4>User name</h4>
+                    </div>
+                </div>
+                <div class="nav-item active"><a href="home-dashboard.html"><i class="fas fa-home"></i> Home</a></div>
+                <div class="nav-item"> <a href="flight-booking.html"><i class="fas fa-plane"></i> Bookings </a></div>
+                <div class="nav-item"> <a href="business-dashboard.html"><i class="fas fa-tachometer-alt"></i>
+                        Business Dashboard
+                    </a></div>
+                <div class="nav-item"> <a href="train-search.html"><i class="fas fa-train"></i> Book a Train </a>
+                </div>
+                <div class="nav-item"> <a href="car-rental.html"><i class="fas fa-car"></i> Car Rental </a>
+                </div>
+                <div class="nav-item"> <a href="task-listing.html"><i class="fas fa-tasks"></i> Tasks </a></div>
+                <div class="nav-item"> <a href="marketplace.html"><i class="fas fa-shopping-bag"></i> Marketplace </a>
+                </div>
+                <div class="nav-item"> <a href=""><i class="fas fa-comments"></i> Social </a></div>
+                <div class="nav-item"> <a href="list-service.html"><i class="fa fa-server"></i> List Services </a></div>
+                <div class="nav-item"> <a href=""><i class="fas fa-bell"></i> Notifications </a></div>
+                <div class="nav-item"> <a href="map-view.html"> <i class="fas fa-location-dot"></i> Map</a></div>
+                <div class="nav-item"> <a href=""><i class="fas fa-user"></i> Profile </a></div>
+                <hr>
+                <div class="nav-item"><a href="#"><i class="fas fa-question-circle"></i> Help & Support</a></div>
+                <div class="nav-item"><a href="#"><i class="fas fa-cog"></i> Settings</a></div>
+            </div>
+            <div class="nav-item"><a href="#"><i class="fas fa-cog"></i> Settings</a></div>
+        </div>
+        <div class="ALl_Inner_page w-100">
+            <div class="Inner_flex_site_component Inner_width_Product">
+                <div class="Ineer_pages_second_box ">
+                    <!-- ======== Header ======== -->
+                    <div class="business_details_header header_other_option_add">
+                        <div class="business_details_header_name_details">
+                            <button title="back" class="back_button" onclick="history.back()"><i
+                                    class="fa-solid fa-arrow-left-long"></i></button>
+                            <h1>Support Ticket Submission</h1>
+                        </div>
+                    </div>
+
+                    <div class="section_content_ineer">
+                        <form>
+                            <div class="">
+                                <h5 class="heading_h5">User Information</h5>
+                                <div class="bookin_input_box">
+                                    <label for="name">Name</label>
+                                    <input type="text" id="name" placeholder="John Doe" disabled>
+                                </div>
+                                <div class="bookin_input_box">
+                                    <label for="email">Email Address</label>
+                                    <input type="email" id="email" placeholder="john.doe@example.com">
+                                </div>
+                            </div>
+
+                            <div class="">
+                                <h5 class="heading_h5">Issue Details</h5>
+                                <div class="bookin_input_box">
+                                    <label for="subject">Subject Line</label>
+                                    <input type="text" id="subject" placeholder="Short summary of the issue" required>
+                                </div>
+                                <div class="bookin_input_box">
+                                    <label for="category">Category</label>
+                                    <select class="form-select" id="category" required>
+                                        <option value="">Select a category</option>
+                                        <option value="account">Account Issues</option>
+                                        <option value="payments">Payments</option>
+                                        <option value="technical">Technical Issues</option>
+                                        <option value="bookings">Bookings</option>
+                                        <option value="refunds">Refunds</option>
+                                        <option value="business">Business Account</option>
+                                    </select>
+                                </div>
+                                <div class="bookin_input_box">
+                                    <label for="description">Description</label>
+                                    <textarea id="description" rows="5"
+                                        placeholder="Detailed explanation of the problem" required></textarea>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="attachments" class="form-label">Attachments</label>
+                                    <input type="file" class="form-control" id="attachments" multiple>
+                                    <div class="form-text">You can select multiple files. Allowed file types: PDF, DOC,
+                                        JPG, PNG. Max file </div>
+                                </div>
+                            </div>
+
+                            <div class="">
+                                <h5 class="heading_h5">Priority & Urgency</h5>
+                                <div class="">
+                                    <!-- <label>Priority</label> -->
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="priority" id="low"
+                                            value="low" checked>
+                                        <label class="form-check-label" for="low">Low (General inquiry)</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="priority" id="medium"
+                                            value="medium">
+                                        <label class="form-check-label" for="medium">Medium (Needs action soon)</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="priority" id="high"
+                                            value="high">
+                                        <label class="form-check-label" for="high">High (Urgent issue)</label>
+                                    </div>
+                                    <p id="response-time"></p>
+                                </div>
+                            </div>
+
+                            <div class="mt-3">
+                                <h5 class="heading_h5">Consent & Submission</h5>
+                                <div class=" form-check">
+                                    <input type="checkbox" class="form-check-input" id="terms" required>
+                                    <label class="form-check-label" for="terms">I agree to the Terms &
+                                        Conditions.</label>
+                                </div>
+                                <div class="business-details_footer">
+                                    <button class="button_none_radi button_auto"><a href="">Submit</a></button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="Inner_footer">
+                        <div class="business-details_footer">
+                            <button class="button_none_radi"><a href="">Track My Tickets</a></button>
+                            <button class="button_none_radi"><a href="">Start Live Chat</a></button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="Ineer_pages_first_box" style="padding: 10px; width: 40%;">
+                    <div class="card mb-4">
+                        <div class="card-header">Support Contact Options</div>
+                        <div class="card-body">
+                            <p><strong>Email:</strong> support@example.com</p>
+                            <p><strong>Phone:</strong> 1-800-SUPPORT</p>
+                            <button class="button_none_radi button_auto">
+                                <a href="#" class="">Start Live Chat</a>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header">Recent Tickets</div>
+                        <div class="card-body">
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">Ticket #1234 - Issue with login</li>
+                                <li class="list-group-item">Ticket #1235 - Refund request</li>
+                                <li class="list-group-item">Ticket #1236 - Payment error</li>
+                            </ul>
+                            <button class="button_none_radi button_auto">
+                                <a href="#" class="">Track My Tickets</a>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <!-- ===== jq ===== -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- ===== owl slider js ===== -->
+    <script src="./assets/js/owl.carousel.min.js"></script>
+    <!-- ===== Bootstrap JS ===== -->
+    <script src="./assets/js/bootstrap.bundle.min.js"></script>
+    <script>
+        $('.Gallery_slider').owlCarousel({
+            loop: true,
+            margin: 10,
+            nav: true,
+            responsive: {
+                0: {
+                    items: 1
+                },
+                600: {
+                    items: 3
+                },
+                1000: {
+                    items: 3
+                }
+            }
+        })
+    </script>
+
+</body>
+
+</html>
+</body>
+
+</html>

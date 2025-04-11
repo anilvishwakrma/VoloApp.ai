@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- ===== Font Awesome CDN ===== -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- ============ owl slider ========== -->
+    <link rel="stylesheet" href="./assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="./assets/css/owl.theme.default.min.css">
+
+    <!-- ===== Custom CSS ===== -->
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/header.css">
+    <title> List an Activity/Event - Voloapp</title>
+
+</head>
+
+<body>
+    <div class="volo_app_flex">
+        <div class="volo_app_site_bar">
+            <div class="sidebar">
+                <div class="side_barofile">
+                    <a class="side_mainLogo_class" href="#"><img src="./assets/images/logo/logo_crop.png" alt=""></a>
+                    <div class="user_profile_site_bar">
+                        <img src="https://cdn-icons-png.flaticon.com/512/21/21104.png" alt="">
+                        <h4>User name</h4>
+                    </div>
+                </div>
+                <div class="nav-item active"><a href="home-dashboard.html"><i class="fas fa-home"></i> Home</a></div>
+                <div class="nav-item"> <a href="flight-booking.html"><i class="fas fa-plane"></i> Bookings </a></div>
+                <div class="nav-item"> <a href="business-dashboard.html"><i class="fas fa-tachometer-alt"></i>
+                        Business Dashboard
+                    </a></div>
+                <div class="nav-item"> <a href="train-search.html"><i class="fas fa-train"></i> Book a Train </a>
+                </div>
+                <div class="nav-item"> <a href="car-rental.html"><i class="fas fa-car"></i> Car Rental </a>
+                </div>
+                <div class="nav-item"> <a href="task-listing.html"><i class="fas fa-tasks"></i> Tasks </a></div>
+                <div class="nav-item"> <a href="marketplace.html"><i class="fas fa-shopping-bag"></i> Marketplace </a>
+                </div>
+                <div class="nav-item"> <a href=""><i class="fas fa-comments"></i> Social </a></div>
+                <div class="nav-item"> <a href="list-service.html"><i class="fa fa-server"></i> List Services </a></div>
+                <div class="nav-item"> <a href=""><i class="fas fa-bell"></i> Notifications </a></div>
+                <div class="nav-item"> <a href="map-view.html"> <i class="fas fa-location-dot"></i> Map</a></div>
+                <div class="nav-item"> <a href=""><i class="fas fa-user"></i> Profile </a></div>
+                <hr>
+                <div class="nav-item"><a href="#"><i class="fas fa-question-circle"></i> Help & Support</a></div>
+                <div class="nav-item"><a href="#"><i class="fas fa-cog"></i> Settings</a></div>
+            </div>
+            <div class="nav-item"><a href="#"><i class="fas fa-cog"></i> Settings</a></div>
+        </div>
+        <div class="main_container">
+            <div class="container">
+                <div class="business_details_header header_other_option_add">
+                    <div class="business_details_header_name_details">
+                        <button title="back" class="back_button" onclick="history.back()">
+                            <i class="fa-solid fa-arrow-left-long"></i>
+                        </button>
+                        <h1>List an Activity/Event</h1>
+                    </div>
+                </div>
+                <div class="business-details Width_control">
+                    <div class="business_details_first_col" style="padding-top: 0;">
+                        <form class="booking_form">
+                            <h2 class="heading_h4">Event Information</h2>
+
+                            <div class="bookin_input_box">
+                                <label for="eventTitle">Event Title</label>
+                                <input type="text" id="eventTitle" placeholder="Short and engaging title">
+                            </div>
+
+                            <div class="bookin_input_box">
+                                <label for="eventType">Event Type</label>
+                                <select id="eventType">
+                                    <option value="public">Public</option>
+                                    <option value="private">Private</option>
+                                    <option value="invite">Invite-Only</option>
+                                </select>
+                            </div>
+
+                            <div class="bookin_input_box">
+                                <label for="category">Category</label>
+                                <select id="category">
+                                    <option value="concert">Concert</option>
+                                    <option value="workshop">Workshop</option>
+                                    <option value="fitness">Fitness</option>
+                                    <option value="networking">Networking</option>
+                                </select>
+                            </div>
+
+                            <div class="bookin_input_box">
+                                <label for="description" class="form-label">Description</label>
+                                <textarea class="form-control" id="description" rows="5"
+                                    placeholder="Detailed overview"></textarea>
+                            </div>
+
+                            <h4 class="heading_h4">Media & Branding</h4>
+                            <div class="mb-3">
+                                <label for="banner">Upload Event Banner</label>
+                                <input class="form-control" type="file" id="banner" accept="image/*">
+                            </div>
+                            <div class="mb-3">
+                                <label for="images">Upload Event Images</label>
+                                <input class="form-control" type="file" id="images" accept="image/*" multiple>
+                            </div>
+                            <div class="bookin_input_box">
+                                <label for="videos">Add Event Videos (Optional)</label>
+                                <input type="text" id="videos" placeholder="Video links">
+                            </div>
+
+                        </form>
+                    </div>
+                    <div class="business_details_second_col sticky-top">
+                        <h2 class="heading_h4">Date, Time & Location</h2>
+
+                        <div class="bookin_input_box">
+                            <label for="date"><i class="fas fa-calendar-alt"></i> Event Date & Time</label>
+                            <input type="datetime-local" id="date">
+                        </div>
+
+                        <div class="bookin_input_box">
+                            <label for="location"><i class="fas fa-map-marker-alt"></i> Location</label>
+                            <input type="text" id="location" placeholder="Venue or virtual link">
+                        </div>
+
+                        <h2 class="heading_h4 mt-3 mb-2">Ticketing & Pricing</h2>
+                        <div class="custom_check_box">
+                            <div class="check_block">
+                                <input data-index="0" id="freePaidToggle" type="checkbox" />
+                                <label for="freePaidToggle" class="check_label"></label>
+                            </div>
+                            <label class="check_box_label" for="freePaidToggle">Free or Paid Event</label>
+                        </div>
+
+                        <div class="bookin_input_box">
+                            <label for="price"><i class="fas fa-ticket-alt"></i> Ticket Price & Currency</label>
+                            <div class="input-group">
+                                <span class="input-group-text">$</span>
+                                <input type="number" class="form-control" id="price" placeholder="e.g., 20">
+                            </div>
+                        </div>
+
+                        <div class="bookin_input_box">
+                            <label for="attendees">Maximum Attendees (If limited)</label>
+                            <input type="number" id="attendees" placeholder="e.g., 100">
+                        </div>
+
+                        <div class="bookin_input_box">
+                            <label for="discount">Discount Codes & Promotions (Optional)</label>
+                            <input type="text" id="discount" placeholder="Discount codes">
+                        </div>
+
+                        <h2 class="heading_h4">Additional Options</h2>
+
+                        <div class="bookin_input_box">
+                            <label for="speakers">Guest Speaker/Host Details (If applicable)</label>
+                            <input type="text" id="speakers" placeholder="Speaker/Host names">
+                        </div>
+
+                        <div class="bookin_input_box">
+                            <label for="tags">Event Tags & Keywords (For discoverability)</label>
+                            <input type="text" id="tags" placeholder="e.g., music, workshop, city">
+                        </div>
+
+
+                        <div class="custom_check_box">
+                            <div class="check_block">
+                                <input data-index="0" id="check_allow" type="checkbox" />
+                                <label for="check_allow" class="check_label"></label>
+                            </div>
+                            <label class="check_box_label" for="check_allow">Allow Comments & RSVPs</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="Inner_footer">
+                    <div class="business-details_footer">
+                        <button class="button_none_radi"><a href="#">Publish Event</a></button>
+                        <button class="button_none_radi"><a href="#">Preview Event</a></button>
+                        <button class="button_none_radi"><a href="#">Save as Draft</a></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
+    </div>
+
+    <!-- ===== jq ===== -->
+    <script src="./assets/js/jquery.min.js"></script>
+    <!-- ===== owl slider js ===== -->
+    <script src="./assets/js/owl.carousel.min.js"></script>
+    <!-- ===== Bootstrap JS ===== -->
+    <script src="./assets/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        const priceRange = document.getElementById("priceRange");
+        const priceValue = document.getElementById("priceValue");
+        priceRange.addEventListener("input", function () {
+            priceValue.textContent = `$${this.value}`;
+        });
+    </script>
+</body>
+
+</html>

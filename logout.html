@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- ===== Font Awesome CDN ===== -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- ============ owl slider ========== -->
+    <link rel="stylesheet" href="./assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="./assets/css/owl.theme.default.min.css">
+
+    <!-- ===== Custom CSS ===== -->
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/header.css">
+    <link rel="stylesheet" href="./assets/css/style_pm.css">
+    <title>Logout & Account Deletion</title>
+
+    <style>
+        .explanation-text {
+            color: #6c757d;
+            margin-bottom: 15px;
+        }
+
+        .warning-text {
+            color: #dc3545;
+            margin-bottom: 15px;
+            font-weight: bold;
+            background-color: #ffe0b2;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ffb300;
+        }
+
+
+
+        .confirmation-box-css {
+            margin-top: 10px;
+            padding: 15px;
+            background-color: #f8f9fa;
+            border: 1px solid #dee2e6;
+            border-radius: 5px;
+            text-align: center;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out, padding 0.3s ease-out;
+        }
+
+        details[open] .confirmation-box-css {
+            max-height: 200px;
+            /* Adjust as needed */
+            padding: 15px;
+        }
+
+        .confirmation-box-css button {
+            margin: 0 5px;
+            padding: 8px 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            border: none;
+        }
+
+        .confirm-yes {
+            background-color: #dc3545;
+            color: white;
+        }
+
+        .confirm-no {
+            background-color: #6c757d;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="to_grid_full_width">
+        <div class="container">
+            <div class="business_details_header header_other_option_add mt-3">
+                <div class="business_details_header_name_details">
+                    <button title="back" class="back_button" onclick="history.back()">
+                        <i class="fa-solid fa-arrow-left-long"></i>
+                    </button>
+                    <h1>Logout & Account Deletion</h1>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="to_grid_full_width_box">
+                        <div>
+                            <section>
+                                <h5 class="heading_h5">🚪 Log Out of Your Account</h5>
+                                <p class="explanation-text">Logging out will keep your data secure and sign you out of
+                                    all
+                                    devices.
+                                </p>
+                                <button class="header_button_items">Log Out</button>
+                            </section>
+
+                            <section class="mt-3">
+                                <h5 class="heading_h5">⏸️ Temporarily Deactivate Account</h5>
+                                <p class="explanation-text">Deactivate your account temporarily. You can reactivate it
+                                    at any
+                                    time.
+                                </p>
+                                <button class="header_button_items">Deactivate Account</button>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="to_grid_full_width_box">
+                        <section>
+                            <h5 class="heading_h5">🛑 Permanently Delete Your Account</h5>
+                            <p class="warning-text">Deleting your account will permanently erase all data, including
+                                your
+                                profile, transactions, and personal information. This action cannot be undone.</p>
+                            <button class="header_button_items delete-button">Delete Account</button>
+                        </section>
+                    </div>
+                    <footer class="mt-3">
+                        <div class="business-details_footer">
+                            <button href="#" class="button_none_radi"><i class="fas fa-life-ring me-2"></i> Contact
+                                Support</button>
+                            <button href="#" class="button_none_radi"><i class="fas fa-file-contract me-2"></i> Privacy
+                                Policy</button>
+                        </div>
+                    </footer>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- ===== Font Awesome CDN ===== -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- ============ owl slider ========== -->
+    <link rel="stylesheet" href="./assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="./assets/css/owl.theme.default.min.css">
+
+    <!-- ===== Custom CSS ===== -->
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/header.css">
+    <title> Task Posting - Voloapp</title>
+
+</head>
+
+<body>
+    <div class="volo_app_flex">
+        <div class="volo_app_site_bar">
+            <div class="sidebar">
+                <div class="side_barofile">
+                    <a class="side_mainLogo_class" href="#"><img src="./assets/images/logo/logo_crop.png" alt=""></a>
+                    <div class="user_profile_site_bar">
+                        <img src="https://cdn-icons-png.flaticon.com/512/21/21104.png" alt="">
+                        <h4>User name</h4>
+                    </div>
+                </div>
+                <div class="nav-item active"><a href="home-dashboard.html"><i class="fas fa-home"></i> Home</a></div>
+                <div class="nav-item"> <a href="flight-booking.html"><i class="fas fa-plane"></i> Bookings </a></div>
+                <div class="nav-item"> <a href="business-dashboard.html"><i class="fas fa-tachometer-alt"></i>
+                        Business Dashboard
+                    </a></div>
+                <div class="nav-item"> <a href="train-search.html"><i class="fas fa-train"></i> Book a Train </a>
+                </div>
+                <div class="nav-item"> <a href="car-rental.html"><i class="fas fa-car"></i> Car Rental </a>
+                </div>
+                <div class="nav-item"> <a href="task-listing.html"><i class="fas fa-tasks"></i> Tasks </a></div>
+                <div class="nav-item"> <a href="marketplace.html"><i class="fas fa-shopping-bag"></i> Marketplace </a>
+                </div>
+                <div class="nav-item"> <a href=""><i class="fas fa-comments"></i> Social </a></div>
+                <div class="nav-item"> <a href="list-service.html"><i class="fa fa-server"></i> List Services </a></div>
+                <div class="nav-item"> <a href=""><i class="fas fa-bell"></i> Notifications </a></div>
+                <div class="nav-item"> <a href="map-view.html"> <i class="fas fa-location-dot"></i> Map</a></div>
+                <div class="nav-item"> <a href=""><i class="fas fa-user"></i> Profile </a></div>
+                <hr>
+                <div class="nav-item"><a href="#"><i class="fas fa-question-circle"></i> Help & Support</a></div>
+                <div class="nav-item"><a href="#"><i class="fas fa-cog"></i> Settings</a></div>
+            </div>
+            <div class="nav-item"><a href="#"><i class="fas fa-cog"></i> Settings</a></div>
+        </div>
+        <div class="main_container">
+            <div class="container">
+                <div class="business_details_header header_other_option_add">
+                    <div class="business_details_header_name_details">
+                        <button title="back" class="back_button" onclick="history.back()"><i
+                                class="fa-solid fa-arrow-left-long"></i></button>
+                        <h1>Post a New Task</h1>
+                    </div>
+                </div>
+                <div class="business-details Width_control">
+                    <div class="business_details_first_col" style="padding-top: 0;">
+                        <form class="booking_form">
+                            <h4 class="heading_h4"><i class="fas fa-info-circle me-2"></i>Task Information</h4>
+
+                            <div class="bookin_input_box">
+                                <label for="taskTitle">Task Title</label>
+                                <input type="text" id="taskTitle"
+                                    placeholder="Enter a brief title (e.g., Help Moving Boxes)" required>
+                            </div>
+                            <div class="bookin_input_box">
+                                <label for="taskCategory">Category</label>
+                                <select id="taskCategory" required>
+                                    <option value="" selected disabled>Select a category</option>
+                                    <option value="delivery">Delivery</option>
+                                    <option value="it-support">IT Support</option>
+                                    <option value="home-repairs">Home Repairs</option>
+                                    <option value="cleaning">Cleaning</option>
+                                    <option value="tutoring">Tutoring</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                            <div class="bookin_input_box">
+                                <label for="taskDescription">Task Description</label>
+                                <textarea id="taskDescription" rows="4"
+                                    placeholder="Provide more details for the task..." required></textarea>
+                            </div>
+                            <h4 class="heading_h4">Task Details</h4>
+                            <div class="bookin_input_box">
+                                <label>Task Type</label>
+                                <div>
+                                    <div class="redio_button_box">
+                                        <input class="form-check-input" type="radio" id="oneTime" name="taskType"
+                                            value="oneTime">
+                                        <label class="form-check-label" for="oneTime">One-time</label>
+                                    </div>
+                                    <div class="redio_button_box">
+                                        <input class="form-check-input" type="radio" id="recurring" name="taskType"
+                                            value="recurring">
+                                        <label class="form-check-label" for="recurring">Recurring</label>
+                                    </div>
+                                    <div class="redio_button_box">
+                                        <input class="form-check-input" type="radio" id="remote" name="taskLocation"
+                                            value="remote">
+                                        <label class="form-check-label" for="remote">Remote</label>
+                                    </div>
+                                    <div class="redio_button_box">
+                                        <input class="form-check-input" type="radio" id="inPerson" name="taskLocation"
+                                            value="inPerson">
+                                        <label class="form-check-label" for="inPerson">In-Person</label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <h4 class="heading_h4"><i class="fas fa-map-marker-alt me-2"></i>Location & Schedule</h4>
+
+                            <div class="bookin_input_box">
+                                <label for="taskLocation">Location</label>
+                                <input type="text" id="taskLocation" placeholder="Enter location or select from map...">
+                            </div>
+
+                            <div class="bookin_input_box">
+                                <label for="taskTime">Estimated Time Required</label>
+                                <select id="taskTime">
+                                    <option value="" selected disabled>Select duration</option>
+                                    <option value="1">Less than 1 hour</option>
+                                    <option value="1-3">1-3 hours</option>
+                                    <option value="3-5">3-5 hours</option>
+                                    <option value="5+">More than 5 hours</option>
+                                </select>
+                            </div>
+
+                            <div class="bookin_input_box">
+                                <div class="input-group">
+                                    <label for="paymentAmount">Payment Amount</label>
+                                    <input type="number" id="paymentAmount" placeholder="Enter amount (e.g., 50)"
+                                        required>
+                                </div>
+                            </div>
+                            <div class="bookin_input_box">
+                                <label>Payment Method</label>
+                                <select id="taskTime">
+                                    <option value="" selected disabled>Select duration</option>
+                                    <option value="Cash">Cash</option>
+                                    <option value="Bank Transfer">Bank Transfer</option>
+                                    <option value="Platform Payment">Platform Payment</option>
+                                </select>
+
+                            </div>
+                            <div class="bookin_input_box">
+                                <label for="taskDeadline">Task Deadline</label>
+                                <input type="date" id="taskDeadline" placeholder="Select a due date...">
+                            </div>
+                        </form>
+
+                    </div>
+                    <div class="business_details_second_col sticky-top">
+                        <h4 class="heading_h4"><i class="fas fa-cog me-2"></i> Attachments (Optional)</h4>
+                        <div class="">
+                            <div class="form-check form-switch">
+                                <input class="form-check-input" type="checkbox" id="multipleApplicants">
+                                <label class="form-check-label" for="multipleApplicants">Enable Multiple
+                                    Applicants</label>
+                            </div>
+                        </div>
+
+                        <div class="bookin_input_box">
+                            <label>Urgency Tag (Priority Task)?</label>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="urgency" id="urgencyYes" value="yes">
+                                <label class="form-check-label" for="urgencyYes">Yes</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="urgency" id="urgencyNo" value="no"
+                                    checked>
+                                <label class="form-check-label" for="urgencyNo">No</label>
+                            </div>
+                        </div>
+                        <div class="bookin_input_box">
+                            <label>Attachments</label>
+                            <div class="mb-3">
+                                <input class="form-control" type="file" id="attachments" multiple>
+                            </div>
+                        </div>
+                        <div class="business-details_footer">
+                            <button class="button_none_radi"><a href="task_posting.html">Post a Task</a></button>
+                            <button class="button_none_radi"><a href="">Save as Draft</a></button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== jq ===== -->
+    <script src="./assets/js/jquery.min.js"></script>
+    <!-- ===== owl slider js ===== -->
+    <script src="./assets/js/owl.carousel.min.js"></script>
+    <!-- ===== Bootstrap JS ===== -->
+    <script src="./assets/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        const priceRange = document.getElementById("priceRange");
+        const priceValue = document.getElementById("priceValue");
+        priceRange.addEventListener("input", function () {
+            priceValue.textContent = `$${this.value}`;
+        });
+    </script>
+</body>
+
+</html>

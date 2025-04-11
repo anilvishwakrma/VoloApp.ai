@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- ===== Font Awesome CDN ===== -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- ============ owl slider ========== -->
+    <link rel="stylesheet" href="./assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="./assets/css/owl.theme.default.min.css">
+
+    <!-- ===== Custom CSS ===== -->
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/header.css">
+    <title>Task Listing -Voloapp</title>
+</head>
+
+<body>
+
+    <div class="ALl_Inner_page">
+        <div class="Inner_flex_site_component">
+            <div class="Ineer_pages_first_box">
+                <div class="custome_site_bare_inner sticky-top">
+                    <h5 class="heading_h4"><i class="fas fa-filter me-2"></i>Filters</h5>
+
+                    <div class="tesk_search_box border_button_one_px">
+                        <i class="fas fa-search"></i>
+                        <input type="text" class="form-control" placeholder="Search tasks...">
+                    </div>
+
+                    <div class="Filters_tpes_check_box border_button_one_px">
+                        <h4 class="heading_h4">Task Type</h4>
+                        <div class="Filters_tpes_check_box_items mb-1">
+                            <input type="checkbox" id="oneTime" checked>
+                            <label for="oneTime">One-time</label>
+                        </div>
+                        <div class="Filters_tpes_check_box_items mb-1">
+                            <input type="checkbox" id="recurring" checked>
+                            <label for="recurring">Recurring</label>
+                        </div>
+                        <div class="Filters_tpes_check_box_items mb-1">
+                            <input type="checkbox" id="remote" checked>
+                            <label for="remote">Remote</label>
+                        </div>
+                        <div class="Filters_tpes_check_box_items">
+                            <input type="checkbox" id="inPerson" checked>
+                            <label for="inPerson">In-Person</label>
+                        </div>
+                    </div>
+
+                    <div class="Payment_ratting_site border_button_one_px">
+                        <h4 class="heading_h4">Payment Range</h4>
+                        <div class="d-flex justify-content-between mb-2">
+                            <span>$10</span>
+                            <span>$500+</span>
+                        </div>
+                        <input type="range" min="10" max="500" step="10">
+                    </div>
+
+                    <div class="Categories_SITE">
+                        <h4 class="heading_h4">Categories</h4>
+                        <select>
+                            <option selected>All Categories</option>
+                            <option>Delivery</option>
+                            <option>IT Support</option>
+                            <option>Home Repairs</option>
+                            <option>Cleaning</option>
+                            <option>Tutoring</option>
+                        </select>
+                    </div>
+
+                    <button class="button_none_radi">Apply Filters</button>
+                </div>
+            </div>
+            <div class="Ineer_pages_second_box">
+                <div class="">
+                    <!-- ======== Header ======== -->
+                    <div class="business_details_header header_other_option_add">
+                        <div class="business_details_header_name_details">
+                            <button title="back" class="back_button" onclick="history.back()"><i
+                                    class="fa-solid fa-arrow-left-long"></i></button>
+                            <h1>Available Tasks</h1>
+                        </div>
+
+                    </div>
+                    <!-- ============ page Content =========== -->
+                    <div class="section_content_ineer">
+                        <div class="d-flex justify-content-between align-items-center mb-4">
+                            <h5 class="heading_h5">124 Tasks Available</h5>
+                            <div>
+                                <select>
+                                    <option selected>Sort by: Most Recent</option>
+                                    <option>Highest Paying</option>
+                                    <option>Closest Deadline</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6 col-lg-4">
+                                <div class="task_listing_card ">
+                                    <span class="task_status_show">Open</span>
+                                    <h5 class="task_list_title_text">Grocery Delivery to Downtown</h5>
+                                    <p class="task_card_Description"> Lorem ipsum dolor sit amet consectetur adipisicing
+                                        elit. Hic, obcaecati?</p>
+                                    <p class="task_card_poster"> <strong>Posted by :</strong> John son</p>
+
+                                    <div class="tsk_card_loc_and_time">
+                                        <div>
+                                            <p class="task-location mb-1"><i class="fas fa-map-marker-alt"></i>
+                                                New
+                                                York, NY</p>
+                                            <p class="task-deadline mb-0"><i class="fas fa-clock"></i> Due
+                                                by
+                                                Tomorrow
+                                            </p>
+                                        </div>
+                                        <div class="text-end">
+                                            <p class="task-payment mb-0"><strong>$45</strong></p>
+                                        </div>
+                                    </div>
+                                    <button class="button_none_radi"><a href="task-details.html">Apply Now</a></button>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-4">
+                                <div class="task_listing_card ">
+                                    <span class="task_status_show">Open</span>
+                                    <h5 class="task_list_title_text">Grocery Delivery to Downtown</h5>
+                                    <p class="task_card_Description"> Lorem ipsum dolor sit amet consectetur adipisicing
+                                        elit. Hic, obcaecati?</p>
+                                    <p class="task_card_poster"> <strong>Posted by :</strong> John son</p>
+
+                                    <div class="tsk_card_loc_and_time">
+                                        <div>
+                                            <p class="task-location mb-1"><i class="fas fa-map-marker-alt"></i>
+                                                New
+                                                York, NY</p>
+                                            <p class="task-deadline mb-0"><i class="fas fa-clock"></i> Due
+                                                by
+                                                Tomorrow
+                                            </p>
+                                        </div>
+                                        <div class="text-end">
+                                            <p class="task-payment mb-0"><strong>$45</strong></p>
+                                        </div>
+                                    </div>
+                                    <button class="button_none_radi"><a href="task-details.html">Apply Now</a></button>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-4">
+                                <div class="task_listing_card ">
+                                    <span class="task_status_show">Open</span>
+                                    <h5 class="task_list_title_text">Grocery Delivery to Downtown</h5>
+                                    <p class="task_card_Description"> Lorem ipsum dolor sit amet consectetur adipisicing
+                                        elit. Hic, obcaecati?</p>
+                                    <p class="task_card_poster"> <strong>Posted by :</strong> John son</p>
+
+                                    <div class="tsk_card_loc_and_time">
+                                        <div>
+                                            <p class="task-location mb-1"><i class="fas fa-map-marker-alt"></i>
+                                                New
+                                                York, NY</p>
+                                            <p class="task-deadline mb-0"><i class="fas fa-clock"></i> Due
+                                                by
+                                                Tomorrow
+                                            </p>
+                                        </div>
+                                        <div class="text-end">
+                                            <p class="task-payment mb-0"><strong>$45</strong></p>
+                                        </div>
+                                    </div>
+                                    <button class="button_none_radi"><a href="task-details.html">Apply Now</a></button>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-4">
+                                <div class="task_listing_card ">
+                                    <span class="task_status_show">Open</span>
+                                    <h5 class="task_list_title_text">Grocery Delivery to Downtown</h5>
+                                    <p class="task_card_Description"> Lorem ipsum dolor sit amet consectetur adipisicing
+                                        elit. Hic, obcaecati?</p>
+                                    <p class="task_card_poster"> <strong>Posted by :</strong> John son</p>
+
+                                    <div class="tsk_card_loc_and_time">
+                                        <div>
+                                            <p class="task-location mb-1"><i class="fas fa-map-marker-alt"></i>
+                                                New
+                                                York, NY</p>
+                                            <p class="task-deadline mb-0"><i class="fas fa-clock"></i> Due
+                                                by
+                                                Tomorrow
+                                            </p>
+                                        </div>
+                                        <div class="text-end">
+                                            <p class="task-payment mb-0"><strong>$45</strong></p>
+                                        </div>
+                                    </div>
+                                    <button class="button_none_radi"><a href="task-details.html">Apply Now</a></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="Inner_footer">
+                    <div class="business-details_footer">
+                        <button class="button_none_radi"><a href="task_posting.html">Post a Task</a></button>
+                        <button class="button_none_radi"><a href="task-progress.html">View My Task</a></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== jq ===== -->
+    <script src="./assets/js/jquery.min.js"></script>
+    <!-- ===== owl slider js ===== -->
+    <script src="./assets/js/owl.carousel.min.js"></script>
+    <!-- ===== Bootstrap JS ===== -->
+    <script src="./assets/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - VoloApp</title>
+    <!-- ===== Bootsrap CDN ===== -->
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+
+    <!-- ===== Font Awesome CDN ===== -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- ===== Custom CSS ===== -->
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/header.css">
+
+</head>
+
+<body>
+
+    <div class="login_page">
+        <div class="sing_up-card" id="">
+            <h3 class="sing_up_Heading">Welcome Back to VoloApp!</h3>
+
+            <form>
+                <div class="sing_up_input">
+                    <input type="email" placeholder="Email" required>
+                </div>
+                <div class="sing_up_input position-relative password-field">
+                    <input type="password" placeholder="Password" required>
+                    <i class="fas fa-eye toggle-password"></i>
+                </div>
+                <div class=" check_sing_tems form-check">
+                    <input type="checkbox" class="form-check-input">
+                    <label class="form-check-label">Remember Me</label>
+                </div>
+                <button type="submit">
+                    <span class="span-mother">
+                        <span>L</span>
+                        <span>o</span>
+                        <span>g</span>
+                        <span>i</span>
+                        <span>n</span>
+                    </span>
+                    <span class="span-mother2">
+                        <span>L</span>
+                        <span>o</span>
+                        <span>g</span>
+                        <span>i</span>
+                        <span>n</span>
+                    </span>
+                </button>
+                <div class="text-center my-3">OR</div>
+                <button type="button" class="btn btn-google"><i class="fab fa-google"></i> Google</button>
+                <button type="button" class="btn btn-facebook"><i class="fab fa-facebook"></i> Facebook</button>
+            </form>
+            <p class="mt-3"><a href="forgot-password.html">Forgot Password?</a></p>
+            <p class="Already_login">Don’t have an account? <a class="Already_login_bnt" href="sing-up.html">Sign Up</a>
+            </p>
+        </div>
+    </div>
+
+
+
+
+    <!-- ===== Bootstrap JS ===== -->
+    <script src="./assets/js/bootstrap.bundle.min.js"></script>
+
+
+    <script>
+        document.querySelectorAll(".toggle-password").forEach(button => {
+            button.addEventListener("click", function () {
+                let input = this.previousElementSibling;
+                if (input.type === "password") {
+                    input.type = "text";
+                    this.classList.replace("fa-eye", "fa-eye-slash");
+                } else {
+                    input.type = "password";
+                    this.classList.replace("fa-eye-slash", "fa-eye");
+                }
+            });
+        });
+    </script>
+
+</body>
+
+</html>

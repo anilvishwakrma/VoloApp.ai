@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking Dashboard - VoloApp</title>
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+
+    <!-- ===== Font Awesome CDN ===== -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- ============ owl slider ========== -->
+    <link rel="stylesheet" href="./assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="./assets/css/owl.theme.default.min.css">
+
+    <!-- ===== Custom CSS ===== -->
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/header.css">
+
+</head>
+
+
+<body>
+    <div class="volo_app_flex">
+        <div class="volo_app_site_bar">
+            <div class="sidebar">
+                <div class="side_barofile">
+                    <a class="side_mainLogo_class" href="#"><img src="./assets/images/logo/logo_crop.png" alt=""></a>
+                    <div class="user_profile_site_bar">
+                        <img src="https://cdn-icons-png.flaticon.com/512/21/21104.png" alt="">
+                        <h4>User name</h4>
+                    </div>
+                </div>
+                <div class="nav-item active"><a href="home-dashboard.html"><i class="fas fa-home"></i> Home</a></div>
+                <div class="nav-item"> <a href="flight-booking.html"><i class="fas fa-plane"></i> Bookings </a></div>
+                <div class="nav-item"> <a href="business-dashboard.html"><i class="fas fa-tachometer-alt"></i>
+                        Business Dashboard
+                    </a></div>
+                <div class="nav-item"> <a href="train-search.html"><i class="fas fa-train"></i> Book a Train </a>
+                </div>
+                <div class="nav-item"> <a href="car-rental.html"><i class="fas fa-car"></i> Car Rental </a>
+                </div>
+                <div class="nav-item"> <a href="task-listing.html"><i class="fas fa-tasks"></i> Tasks </a></div>
+                <div class="nav-item"> <a href="marketplace.html"><i class="fas fa-shopping-bag"></i> Marketplace </a>
+                </div>
+                <div class="nav-item"> <a href=""><i class="fas fa-comments"></i> Social </a></div>
+                <div class="nav-item"> <a href="list-service.html"><i class="fa fa-server"></i> List Services </a></div>
+                <div class="nav-item"> <a href=""><i class="fas fa-bell"></i> Notifications </a></div>
+                <div class="nav-item"> <a href="map-view.html"> <i class="fas fa-location-dot"></i> Map</a></div>
+                <div class="nav-item"> <a href=""><i class="fas fa-user"></i> Profile </a></div>
+                <hr>
+                <div class="nav-item"><a href="#"><i class="fas fa-question-circle"></i> Help & Support</a></div>
+                <div class="nav-item"><a href="#"><i class="fas fa-cog"></i> Settings</a></div>
+            </div>
+            <div class="nav-item"><a href="#"><i class="fas fa-cog"></i> Settings</a></div>
+        </div>
+        <div class="main_container">
+            <div class="container">
+                <div class="business-details">
+                    <div class="business_details_first_col">
+                        <!-- Header -->
+                        <div class="business_details_header">
+                            <div class="business_details_header_name_details">
+                                <button title="back" class="back_button" onclick="history.back()"><i
+                                        class="fa-solid fa-arrow-left-long"></i></button>
+                                <img src="https://images.pexels.com/photos/2033343/pexels-photo-2033343.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                                    alt="Business Logo">
+                                <h1>Business Name</h1>
+                            </div>
+                            <span class="favorite-btn " title="save"> <i class="fa-regular fa-bookmark"></i> </span>
+                        </div>
+
+                        <!-- Overview -->
+                        <div class="business_details_section business-overview">
+                            <h3>Overview</h3>
+                            <p><strong>Type:</strong> Barbershop</p>
+                            <p>"Premium haircuts and grooming services in downtown"</p>
+                            <p>⭐ 4.8/5 from 320 users</p>
+                            <p><strong>Status:</strong> Open (9:00 AM - 7:00 PM)</p>
+                        </div>
+
+                        <!-- business-details_Gallery -->
+                        <div class="business_details_section">
+                            <h3>Gallery</h3>
+                            <div class="owl-carousel owl-theme Gallery_slider">
+                                <div class="item">
+                                    <div class="business-details_gallery_img">
+                                        <img src="https://images.pexels.com/photos/2033343/pexels-photo-2033343.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                                            alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="business_details_second_col">
+                        <!-- Services -->
+                        <div class="business_details_box">
+                            <h3 class="business_details_title">Services Offered</h3>
+
+                            <div class="business_details_service_card">
+                                <img src="https://images.pexels.com/photos/2033343/pexels-photo-2033343.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                                    alt="Haircut">
+                                <div class="business_details_name_prices">
+                                    <p class="business-details_service-name">Haircut</p>
+                                    <p class="business_details_service-price">$25</p>
+                                </div>
+                            </div>
+
+                            <div class="business_details_service_card">
+                                <img src="https://images.pexels.com/photos/2033343/pexels-photo-2033343.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                                    alt="Beard Trim">
+                                <div class="business_details_name_prices">
+                                    <p class="business-details_service-name">Beard Trim</p>
+                                    <p class="business_details_service-price">$15</p>
+                                </div>
+                            </div>
+
+                            <div class="business_details_service_card">
+                                <img src="https://images.pexels.com/photos/2033343/pexels-photo-2033343.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                                    alt="Head Massage">
+                                <div class="business_details_name_prices">
+                                    <p class="business-details_service-name">Head Massage</p>
+                                    <p class="business_details_service-price">$10</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Location & Contact -->
+                        <div class="business_details_section business-details_contact_info">
+                            <h3>Location & Contact</h3>
+                            <p>📍 123 Main Street, Cityville</p>
+                            <p>📞 <a href="tel:+123456789">+1 234 567 89</a></p>
+                            <p>🌐 <a href="#">Visit Website</a></p>
+                            <button class="button_none_radi">Get Directions</button>
+                        </div>
+
+                        <!-- Reviews -->
+                        <div class="business_details_section">
+                            <h3>Customer Reviews</h3>
+                            <div class="reviews_ratings_star">
+                                <!-- <h6>Reviews & Ratings</h6> -->
+                                <div class="task-poster">
+                                    <div class="poster-avatar">
+                                        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Sarah Johnson">
+                                    </div>
+                                    <div class="poster-info">
+                                        <h5>Sarah Johnson</h5>
+                                        <div class="poster-rating">
+                                            ⭐ 4.8 (24 reviews)
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="task-poster">
+                                    <div class="poster-avatar">
+                                        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Sarah Johnson">
+                                    </div>
+                                    <div class="poster-info">
+                                        <h5>Sarah Johnson</h5>
+                                        <div class="poster-rating">
+                                            ⭐ 4.8 (24 reviews)
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="task-poster">
+                                    <div class="poster-avatar">
+                                        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Sarah Johnson">
+                                    </div>
+                                    <div class="poster-info">
+                                        <h5>Sarah Johnson</h5>
+                                        <div class="poster-rating">
+                                            ⭐ 4.8 (24 reviews)
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Similar Businesses (Optional) -->
+                        <div class="business_details_section">
+                            <h3>Similar Businesses Nearby</h3>
+                            <p>✨ Check out nearby salons & barbershops</p>
+                        </div>
+
+                        <!-- Footer Actions -->
+                        <div class="business-details_footer">
+                            <button class="button_none_radi">Chat with Business</button>
+                            <button class="button_none_radi"><a href="service-booking.html">Book Now</a></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- ===== jq ===== -->
+    <script src="./assets/js/jquery.min.js"></script>
+    <!-- ===== owl slider js ===== -->
+    <script src="./assets/js/owl.carousel.min.js"></script>
+    <!-- ===== Bootstrap JS ===== -->
+    <script src="./assets/js/bootstrap.bundle.min.js"></script>
+    <script>
+        $('.Gallery_slider').owlCarousel({
+            loop: true,
+            margin: 10,
+            nav: true,
+            responsive: {
+                0: {
+                    items: 1
+                },
+                600: {
+                    items: 3
+                },
+                1000: {
+                    items: 3
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>

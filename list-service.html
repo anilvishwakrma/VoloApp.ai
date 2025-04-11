@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        crossorigin="anonymous">
+
+    <!-- Owl Carousel -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+        crossorigin="anonymous">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+        crossorigin="anonymous">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/header.css">
+    <title> List Service - Voloapp</title>
+</head>
+
+<body>
+    <div class="volo_app_flex">
+        <div class="volo_app_site_bar">
+            <div class="sidebar">
+                <div class="side_barofile">
+                    <a class="side_mainLogo_class" href="#"><img src="./assets/images/logo/logo_crop.png" alt=""></a>
+                    <div class="user_profile_site_bar">
+                        <img src="https://cdn-icons-png.flaticon.com/512/21/21104.png" alt="">
+                        <h4>User name</h4>
+                    </div>
+                </div>
+                <div class="nav-item active"><a href="home-dashboard.html"><i class="fas fa-home"></i> Home</a></div>
+                <div class="nav-item"> <a href="flight-booking.html"><i class="fas fa-plane"></i> Bookings </a></div>
+                <div class="nav-item"> <a href="business-dashboard.html"><i class="fas fa-tachometer-alt"></i>
+                        Business Dashboard
+                    </a></div>
+                <div class="nav-item"> <a href="train-search.html"><i class="fas fa-train"></i> Book a Train </a>
+                </div>
+                <div class="nav-item"> <a href="car-rental.html"><i class="fas fa-car"></i> Car Rental </a>
+                </div>
+                <div class="nav-item"> <a href="task-listing.html"><i class="fas fa-tasks"></i> Tasks </a></div>
+                <div class="nav-item"> <a href="marketplace.html"><i class="fas fa-shopping-bag"></i> Marketplace </a>
+                </div>
+                <div class="nav-item"> <a href=""><i class="fas fa-comments"></i> Social </a></div>
+                <div class="nav-item"> <a href="list-service.html"><i class="fa fa-server"></i> List Services </a></div>
+                <div class="nav-item"> <a href=""><i class="fas fa-bell"></i> Notifications </a></div>
+                <div class="nav-item"> <a href="map-view.html"> <i class="fas fa-location-dot"></i> Map</a></div>
+                <div class="nav-item"> <a href=""><i class="fas fa-user"></i> Profile </a></div>
+                <hr>
+                <div class="nav-item"><a href="#"><i class="fas fa-question-circle"></i> Help & Support</a></div>
+                <div class="nav-item"><a href="#"><i class="fas fa-cog"></i> Settings</a></div>
+            </div>
+            <div class="nav-item"><a href="#"><i class="fas fa-cog"></i> Settings</a></div>
+        </div>
+
+        <div class="main_container">
+            <div class="container">
+                <div class="business_details_header">
+                    <div class="business_details_header_name_details">
+                        <button title="back" class="back_button" onclick="history.back()"><i
+                                class="fa-solid fa-arrow-left-long"></i></button>
+                        <h1>List a New Service</h1>
+                    </div>
+                </div>
+                <div class="business-details">
+                    <div class="business_details_first_col">
+
+                        <form class="booking_form">
+                            <h5 class="heading_h5">Service Details</h5>
+                            <div class="bookin_input_box">
+                                <label>Service Title</label>
+                                <input type="text" placeholder="Enter your service title">
+                            </div>
+
+                            <div class="bookin_input_box">
+                                <label>Category</label>
+                                <select>
+                                    <option selected="" disabled="">Select a category</option>
+                                    <option>Beauty</option>
+                                    <option>Repairs</option>
+                                    <option>Home Cleaning</option>
+                                    <option>IT Support</option>
+                                    <option>Fitness</option>
+                                </select>
+                            </div>
+                            <div class="bookin_input_box">
+                                <label>Service Description</label>
+                                <textarea rows="3" placeholder="Describe the service in detail (e.g., $50)"></textarea>
+                            </div>
+                            <!-- Media Upload -->
+                            <div class="branding-section">
+                                <h5 class="heading_h5">Upload Media & Branding</h5>
+                                <div class="mb-3">
+                                    <label for="logoUpload" class="form-label">Upload Business Logo (If
+                                        applicable)</label>
+                                    <input class="form-control" type="file" id="logoUpload">
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="imageUpload1" class="form-label">Upload Service Image
+                                        1</label>
+                                    <input class="form-control" type="file" id="imageUpload1">
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="videoUpload1" class="form-label">Upload Service Video
+                                        1</label>
+                                    <input class="form-control" type="file" id="videoUpload1">
+                                </div>
+                            </div>
+                            <h5 class="heading_h5">Service Location</h5>
+                            <div class="bookin_input_box">
+                                <label for="serviceLocation"> Address</label>
+                                <input type="text" class="form-control" id="serviceLocation"
+                                    placeholder="Enter service address (Google Maps integration TBD)">
+                            </div>
+
+                            <!-- Availability -->
+                            <h5 class="heading_h5">Availability</h5>
+                            <div class="bookin_input_box">
+                                <label for="availability"> Choose Dates &amp; Times</label>
+                                <input type="text" id="availability" placeholder="Select dates and times">
+                            </div>
+                        </form>
+                    </div>
+
+                    <div class="business_details_second_col">
+                        <div class="service_booking_sonce">
+                            <div class="Add_Ons_main">
+                                <h5 class="heading_h5"> Pricing Type</h5>
+                                <div class="service-option">
+                                    <input type="radio" name="pricingType" id="fixedPrice" value="fixed" checked="">
+                                    <label class="form-check-label" for="fixedPrice">Fixed Price</label>
+                                </div>
+                                <div class="service-option">
+                                    <input type="radio" name="pricingType" id="customQuote" value="quote">
+                                    <label class="form-check-label" for="customQuote">Custom Quote</label>
+                                </div>
+                            </div>
+
+
+                            <div class="Payment_main_box">
+                                <div class="event_booking_call_cont">
+                                    <label> Payment Method</label>
+                                    <select>
+                                        <option>Credit Card</option>
+                                        <option>PayPal</option>
+                                        <option>Wallet</option>
+                                    </select>
+                                </div>
+
+                                <div id="fixedPriceFields">
+                                    <div class="bookin_input_box">
+                                        <label for="priceDescription">Price Description</label>
+                                        <textarea id="priceDescription" rows="3"
+                                            placeholder="Detailed overview of what is included"></textarea>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6 mb-3">
+                                            <div class="bookin_input_box">
+                                                <label for="price" class="form-label"><i
+                                                        class="bi bi-currency-dollar"></i>
+                                                    Price</label>
+                                                <input type="number" class="form-control" id="price"
+                                                    placeholder="Enter price">
+                                            </div>
+
+                                        </div>
+                                        <div class="col-md-6 mb-3">
+                                            <div class="bookin_input_box">
+                                                <label for="currency">Currency</label>
+                                                <select id="currency">
+                                                    <option>USD</option>
+                                                    <option>EUR</option>
+                                                    <option>GBP</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="bookin_input_box">
+                                    <label for="serviceDuration"> Service Duration</label>
+                                    <select id="">
+                                        <option selected="" disabled="">How long does the service take?</option>
+                                        <option>30 minutes</option>
+                                        <option>1 hour</option>
+                                        <option>Full day</option>
+                                    </select>
+                                </div>
+
+                                <div class="custom_check_box mt-3">
+                                    <div class="check_block">
+                                        <input data-index="0" id="check_allow" type="checkbox" />
+                                        <label for="check_allow" class="check_label"></label>
+                                    </div>
+                                    <label style="color: green;" class="check_box_label" for="check_allow">In-Person
+                                    </label>
+                                </div>
+
+                                <h5 class="heading_h5">Booking Options</h5>
+                                <div class="bookin_input_box">
+                                    <label> Booking Type</label>
+                                    <select>
+                                        <option value="instant">Instant Booking</option>
+                                        <option value="request">Request Based</option>
+                                    </select>
+                                </div>
+                                <div class="bookin_input_box">
+                                    <label for="insurance">Payment Methods</label>
+                                    <select id="insurance">
+                                        <option selected>Cash</option>
+                                        <option selected>Bank Transfer</option>
+                                        <option selected>PayPal</option>
+                                        <option>Credit Card</option>
+                                        <option>Crypto</option>
+                                    </select>
+                                </div>
+                                <div class="check_box_from_vaild">
+                                    <div class="checkbox-group">
+                                        <input type="checkbox" id="available-seats">
+                                        <label for="available-seats">Term and Conditions</label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="business-details_footer">
+                                <button class="button_none_radi"><a href="booking-confirmation.html">Confirm
+                                        Booking</a></button>
+                                <button class="button_none_radi"><a href="#">Contact Train Operator</a></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== jq ===== -->
+    <script src="./assets/js/jquery.min.js"></script>
+    <!-- ===== owl slider js ===== -->
+    <script src="./assets/js/owl.carousel.min.js"></script>
+    <!-- ===== Bootstrap JS ===== -->
+    <script src="./assets/js/bootstrap.bundle.min.js"></script>
+
+
+</body>
+
+</html>

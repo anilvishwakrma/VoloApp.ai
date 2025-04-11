@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VoloApp.io</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        header {
+            background-color: #fff;
+            padding: 20px 0;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .logo_welcome {
+            height: 80px;
+        }
+
+        main {
+            padding: 20px;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeIn 0.5s ease-out 0.2s forwards;
+        }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .hero {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .hero h1 {
+            font-size: 2em;
+            color: #555;
+        }
+
+        .features {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .features h2 {
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+        .feature-list {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .feature-item {
+            background-color: #fff;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+            text-align: center;
+            width: 150px;
+            /* Adjust as needed */
+            transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+        }
+
+        .feature-item:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .feature-icon {
+            font-size: 2em;
+            margin-bottom: 10px;
+            color: #007bff;
+            /* Example icon color */
+        }
+
+        .authentication {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .primary-button,
+        .secondary-button,
+        .guest-button {
+            padding: 10px 20px;
+            border-radius: 5px;
+            border: none;
+            cursor: pointer;
+            font-size: 1em;
+            margin: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .primary-button {
+            background-color: #007bff;
+            color: #fff;
+        }
+
+        .primary-button:hover {
+            background-color: #0056b3;
+        }
+
+        .secondary-button {
+            background-color: #f0f0f0;
+            color: #333;
+            border: 1px solid #ccc;
+        }
+
+        .secondary-button:hover {
+            background-color: #e0e0e0;
+        }
+
+        .guest-button {
+            background-color: transparent;
+            color: #555;
+            border: 1px solid #ccc;
+        }
+
+        .guest-button:hover {
+            background-color: #f9f9f9;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px 0;
+            background-color: #333;
+            color: #fff;
+            font-size: 0.8em;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        footer a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 5px;
+            transition: color 0.3s ease;
+        }
+
+        footer a:hover {
+            color: #ccc;
+        }
+
+        a {
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <section class="hero">
+            <img class="logo_welcome" src="./assets/images/logo/logo_crop.png" alt="VoloApp.io Logo">
+            <h1>Explore, Connect, and Book with Ease!</h1>
+        </section>
+
+        <section class="features">
+            <h2>Key Features</h2>
+            <div class="feature-list">
+                <a href="list-activity-event.html" class="feature-item">
+                    <div class="feature-icon">✨</div>
+                    <p>Activities</p>
+                </a>
+                <a href="list-service.html" class="feature-item">
+                    <div class="feature-icon">🛠️</div>
+                    <p>Services</p>
+                </a>
+                <a href="flight-search.html" class="feature-item">
+                    <div class="feature-icon">✈️</div>
+                    <p>Flights</p>
+                </a>
+                <a href="social-feed.html" class="feature-item">
+                    <div class="feature-icon">分享</div>
+                    <p>Social Sharing</p>
+                </a>
+            </div>
+        </section>
+
+        <section class="authentication">
+            <a href="login.html" class="primary-button">Sign Up</a>
+            <a href="login.html" class="secondary-button">Login</a>
+            <a href="home-dashboard.html" class="guest-button">Continue as Guest</a>
+        </section>
+    </main>
+
+    <footer>
+        <p><a href="privacy-security.html">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+    </footer>
+</body>
+
+</html>
